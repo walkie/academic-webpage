@@ -34,7 +34,7 @@ confS abbr name series = Venue name (Conference abbr (Just series))
 lncs = ("LNCS",)
 
 dsl   = Venue "DSL" . Conference "IFIP Working Conf. on Domain-Specific Languages"
-dtm   = conf "DTM" "ASME Int. Conf. on Design Theory and Methodology"
+detc  = conf "DETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
 gpce  = conf "GPCE" "Int. Conf. on Generative Programming and Component Engineering"
 gttse = conf "GTTSE" "Generative and Transformational Techniques in Software Engineering"
 icfp  = conf "ICFP" "ACM SIGPLAN Int. Conf. on Functional Programming"
@@ -221,12 +221,12 @@ vlhcc09 = appeared
   vlhcc
   (Pages 23 27)
 
-dtm09 = appeared
-  "dtm09-software-hardware-design"
+detc09 = appeared
+  "detc09-software-hardware-design"
   [me, Author "Paul" "Strauss", martin, Author "John" "Mueller", Author "Irem" "Tumer"]
   "A Formal Representation of Software-Hardware System Design"
   2009
-  dtm
+  detc
   (Pages 1387 1398)
 
 jfp09 = appeared
