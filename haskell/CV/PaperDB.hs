@@ -52,6 +52,14 @@ vamos = conf "VaMoS" "Int. Workshop on Variability Modelling of Software-Intensi
 -- * Papers
 --
 
+-- ** Lists of accepted/appeared papers.
+journals = [toplas13,jvlc13,tosem11,jfp09]
+chapters = [chapter12,gttse11]
+confWork = [vamos13,gpce12,icfp12,sle11,vlhcc11,dsl11,
+            foser10,vlhcc10,vlhcc09,dsl09a,dsl09b,detc09,vlhcc08]
+consortia = [vlhcc10dc,vlhcc08dc]
+thesis = [phdthesis,msthesis,qual]
+
 -- ** Under Review
 
 gpce13 = submitted
