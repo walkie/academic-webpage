@@ -135,7 +135,7 @@ msthesis = appearedNoPages
   `atURL` "http://hdl.handle.net/1957/26757"
 
 gttse11 = appeared
-  "gttse11-choice-calculus-tutorial"
+  "gttse11-variation-programming"
   [martin,me]
   "Variation Programming with the Choice Calculus"
   2012
