@@ -44,6 +44,7 @@ vlhccdc = conf (abbr ++ "-DC") ("Doctoral Consortium at " ++ name)
   where Venue name (Conference abbr _) = vlhcc
 
 -- ** Workshops
+fosd  = conf "FOSD" "Int. Workshop on Feature-Oriented Software Development"
 foser = conf "FoSER" "ACM SIGSOFT Workshop on the Future of Software Engineering Research"
 vamos = conf "VaMoS" "Int. Workshop on Variability Modelling of Software-Intensive Systems"
 
@@ -54,11 +55,11 @@ vamos = conf "VaMoS" "Int. Workshop on Variability Modelling of Software-Intensi
 
 -- ** Lists of papers by kind.
 
-drafts = [gpce13]
+drafts = []
 
 journals  = [toplas13,jvlc13,tosem11,jfp09]
 chapters  = [chapter12,gttse11]
-confWork  = [vamos13,gpce12,icfp12,sle11,vlhcc11,dsl11,
+confWork  = [fosd13,vamos13,gpce12,icfp12,sle11,vlhcc11,dsl11,
              foser10,vlhcc10,vlhcc09,dsl09a,dsl09b,detc09,vlhcc08]
 consortia = [vlhcc10dc,vlhcc08dc]
 thesis    = [phdthesis,msthesis,qual]
@@ -66,15 +67,15 @@ thesis    = [phdthesis,msthesis,qual]
 
 -- ** Under Review
 
-gpce13 = submitted
-  "gpce13-variational-graphs"
+
+-- ** 2013
+
+fosd13 = submitted
+  "fosd13-variational-graphs"
   [martin,me,sheng]
   "An Abstract Representation of Variational Graphs"
   2013
   gpce
-
-
--- ** 2013
 
 phdthesis = appearedNoPages
   "thesis-choice-calculus"
