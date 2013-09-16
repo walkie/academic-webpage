@@ -10,12 +10,16 @@ import CV.Paper
 --
 
 -- ** Authors
-me       = Author "Eric" "Walkingshaw"
-martin   = Author "Martin" "Erwig"
-klaus    = Author "Klaus" "Ostermann"
-sheng    = Author "Sheng" "Chen"
-tillmann = Author "Tillmann" "Rendel"
-duc      = Author "Duc" "Le"
+me        = Author "Eric" "Walkingshaw"
+martin    = Author "Martin" "Erwig"
+klaus     = Author "Klaus" "Ostermann"
+sheng     = Author "Sheng" "Chen"
+tillmann  = Author "Tillmann" "Rendel"
+duc       = Author "Duc" "Le"
+christian = Author "Christian" "Kästner"
+sven      = Author "Sven" "Apel"
+bodden    = Author "Eric" "Bodden"
+
 
 -- ** Institutions
 osu = "Oregon State University"
@@ -56,7 +60,7 @@ vamos = work "VaMoS" "Int. Workshop on Variability Modelling of Software-Intensi
 
 -- ** Lists of papers by kind.
 
-drafts = []
+drafts = [v]
 
 journals  = [toplas13,jvlc13,tosem11,jfp09]
 chapters  = [chapter12,gttse11]
@@ -67,6 +71,12 @@ thesis    = [phdthesis,msthesis,qual]
 
 
 -- ** Under Review
+
+v = draft
+  "variational-data"
+  [me,christian,martin,sven,bodden]
+  "Variational Data Structures: Exploring Trade-Offs in Computing With Variability"
+  2014
 
 
 -- ** 2013
