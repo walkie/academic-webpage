@@ -14,7 +14,7 @@ config = defaultConfiguration {
 
 compileTemplates = match "templates/*" (compile templateCompiler)
 
-mainTemplate = loadAndApplyTemplate "templates/default.html"
+mainTemplate = loadAndApplyTemplate "templates/main.html"
 postTemplate = loadAndApplyTemplate "templates/post.html"
 
 copyImages =
