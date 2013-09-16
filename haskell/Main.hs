@@ -63,8 +63,8 @@ processPosts =
 
 processHome :: Rules ()
 processHome = 
-  match "index.html" $ do
-    route idRoute
+  match "pages/index.html" $ do
+    route (constRoute "index.html")
     compile $ getResourceBody 
         >>= applyAsTemplate mainContext
         >>= mainTemplate mainContext
