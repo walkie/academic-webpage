@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Data.Monoid (mappend)
+import Data.Monoid ((<>))
 import Hakyll
 
 --import CV.Paper
@@ -12,10 +12,15 @@ config = defaultConfiguration {
   providerDirectory = ".."
 }
 
-compileTemplates = match "templates/*" (compile templateCompiler)
-
 mainTemplate = loadAndApplyTemplate "templates/main.html"
 postTemplate = loadAndApplyTemplate "templates/post.html"
+
+mainContext = defaultContext
+postContext = dateField "date" "%B %e, %Y" <> mainContext
+
+compileTemplates =
+  match "templates/*" $ 
+    compile templateCompiler
 
 copyImages =
   match "images/*" $ do
@@ -31,16 +36,18 @@ processPosts =
   match "posts/*" $ do
     route   $ setExtension "html"
     compile $ pandocCompiler
-        >>= mainTemplate postCtx
-        >>= postTemplate postCtx
+        >>= mainTemplate mainContext
+        >>= postTemplate postContext
         >>= relativizeUrls
 
 processHome = 
   match "index.html" $ do
     route idRoute
-    compile $ getResourceBody >>= mainTemplate defaultContext >>= relativizeUrls
+    compile $ getResourceBody 
+        >>= applyAsTemplate mainContext
+        >>= mainTemplate mainContext
+        >>= relativizeUrls
 
-main = hakyllWith config (compileTemplates >> processHome)
-
-postCtx :: Context String
-postCtx = dateField "date" "%B %e, %Y" `mappend` defaultContext
+main = hakyllWith config $ do
+  compileTemplates
+  processHome
