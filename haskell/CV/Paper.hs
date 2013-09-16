@@ -39,6 +39,9 @@ data VenueKind
       conferenceAbbr   :: Name,
       conferenceSeries :: Maybe (Name,Int)
     }
+  | Workshop {
+      workshopAbbr :: Name
+    }
   | Journal {
       journalAbbr    :: Name,
       journalVolume  :: Maybe Int,

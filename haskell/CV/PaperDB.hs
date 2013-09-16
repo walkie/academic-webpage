@@ -44,9 +44,10 @@ vlhccdc = conf (abbr ++ "-DC") ("Doctoral Consortium at " ++ name)
   where Venue name (Conference abbr _) = vlhcc
 
 -- ** Workshops
-fosd  = conf "FOSD" "Int. Workshop on Feature-Oriented Software Development"
-foser = conf "FoSER" "ACM SIGSOFT Workshop on the Future of Software Engineering Research"
-vamos = conf "VaMoS" "Int. Workshop on Variability Modelling of Software-Intensive Systems"
+work abbr name = Venue name (Workshop abbr)
+fosd  = work "FOSD" "Int. Workshop on Feature-Oriented Software Development"
+foser = work "FoSER" "ACM SIGSOFT Workshop on the Future of Software Engineering Research"
+vamos = work "VaMoS" "Int. Workshop on Variability Modelling of Software-Intensive Systems"
 
 
 --
