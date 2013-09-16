@@ -1,11 +1,30 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Data.Monoid ((<>))
-import Hakyll
+import Control.Applicative (empty)
+import Data.Monoid         ((<>))
+import Hakyll hiding (metadataField)
 
 --import CV.Paper
 --import CV.PaperDB
+
+
+-- * Configuration
+
+mainContext :: Context String
+mainContext =
+     constField "bootstrap" "//netdna.bootstrapcdn.com/bootstrap/3.0.0"
+  <> constField "jquery"    "//ajax.googleapis.com/ajax/libs/jquery/2.0.3"
+  <> defaultContext
+
+postContext :: Context String
+postContext =
+     dateField "date" "%B %e, %Y"
+  <> mainContext
+
+mainTemplate, postTemplate :: Context a -> Item a -> Compiler (Item String)
+mainTemplate = loadAndApplyTemplate "templates/main.html"
+postTemplate = loadAndApplyTemplate "templates/post.html"
 
 config :: Configuration
 config = defaultConfiguration {
@@ -13,17 +32,12 @@ config = defaultConfiguration {
   providerDirectory = ".."
 }
 
-mainTemplate, postTemplate :: Context a -> Item a -> Compiler (Item String)
-mainTemplate = loadAndApplyTemplate "templates/main.html"
-postTemplate = loadAndApplyTemplate "templates/post.html"
 
-mainContext, postContext :: Context String
-mainContext = defaultContext
-postContext = dateField "date" "%B %e, %Y" <> mainContext
+-- * Rules
 
 compileTemplates :: Rules ()
 compileTemplates =
-  match "templates/*" $ 
+  match "templates/*" $
     compile templateCompiler
 
 copyImages :: Rules ()
@@ -55,6 +69,9 @@ processHome =
         >>= applyAsTemplate mainContext
         >>= mainTemplate mainContext
         >>= relativizeUrls
+
+
+-- * Main
 
 main = hakyllWith config $ do
   compileTemplates
