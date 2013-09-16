@@ -70,7 +70,7 @@ thesis    = [phdthesis,msthesis,qual]
 
 -- ** 2013
 
-fosd13 = submitted
+fosd13 = accepted
   "fosd13-variational-graphs"
   [martin,me,sheng]
   "An Abstract Representation of Variational Graphs"
