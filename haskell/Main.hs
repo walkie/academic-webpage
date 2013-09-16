@@ -28,7 +28,7 @@ postTemplate = loadAndApplyTemplate "templates/post.html"
 
 config :: Configuration
 config = defaultConfiguration {
-  destinationDirectory = "/Users/walkie/Desktop/Temp/",
+  destinationDirectory = "../_site",
   providerDirectory = ".."
 }
 
