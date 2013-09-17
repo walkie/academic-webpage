@@ -52,6 +52,11 @@ copyCSS =
     route   idRoute
     compile compressCssCompiler
 
+processNews :: Rules ()
+processNews =
+  match "news/*" $ do
+    compile pandocCompiler
+
 processPosts :: Rules ()
 processPosts =
   match "posts/*" $ do
@@ -65,9 +70,15 @@ processHome :: Rules ()
 processHome = 
   match "pages/index.html" $ do
     route (constRoute "index.html")
-    compile $ getResourceBody 
-        >>= applyAsTemplate mainContext
-        >>= mainTemplate mainContext
+    compile $ do
+      
+      news <- recentFirst =<< loadAll "news/*"
+      let newsContext = listField "news" postContext (return news)
+                        <> mainContext
+      
+      getResourceBody 
+        >>= applyAsTemplate newsContext
+        >>= mainTemplate newsContext
         >>= relativizeUrls
 
 
@@ -75,4 +86,5 @@ processHome =
 
 main = hakyllWith config $ do
   compileTemplates
+  processNews
   processHome
