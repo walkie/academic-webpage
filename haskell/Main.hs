@@ -17,14 +17,13 @@ mainContext =
   <> constField "jquery"    "//ajax.googleapis.com/ajax/libs/jquery/2.0.3"
   <> defaultContext
 
-postContext :: Context String
-postContext =
+dateContext :: Context String
+dateContext =
      dateField "date" "%B %e, %Y"
   <> mainContext
 
-mainTemplate, postTemplate :: Context a -> Item a -> Compiler (Item String)
+mainTemplate :: Context a -> Item a -> Compiler (Item String)
 mainTemplate = loadAndApplyTemplate "templates/main.html"
-postTemplate = loadAndApplyTemplate "templates/post.html"
 
 config :: Configuration
 config = defaultConfiguration {
@@ -57,15 +56,6 @@ processNews =
   match "news/*" $ do
     compile pandocCompiler
 
-processPosts :: Rules ()
-processPosts =
-  match "posts/*" $ do
-    route   $ setExtension "html"
-    compile $ pandocCompiler
-        >>= mainTemplate mainContext
-        >>= postTemplate postContext
-        >>= relativizeUrls
-
 processHome :: Rules ()
 processHome = 
   match "pages/index.html" $ do
@@ -73,7 +63,7 @@ processHome =
     compile $ do
       
       news <- recentFirst =<< loadAll "news/*"
-      let newsContext = listField "news" postContext (return news)
+      let newsContext = listField "news" dateContext (return news)
                         <> mainContext
       
       getResourceBody 
@@ -86,5 +76,7 @@ processHome =
 
 main = hakyllWith config $ do
   compileTemplates
+  copyImages
+  copyCSS
   processNews
   processHome
