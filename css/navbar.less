@@ -1,6 +1,17 @@
+
+// orange color scheme
+// @navbackcolor: #FFEEC8;
+// @navhighcolor: #FFCD4A;
+// @navtextcolor: ???;
+
+// gray color scheme
+@navbackcolor: #EEE;
+@navhighcolor: #CCC;
+@navtextcolor: #777;
+
 .nav {
   width: 100%;
-  background-color: #FFEEC8;
+  background-color: @navbackcolor;
 }
 
 ul.nav-list {
@@ -22,7 +33,7 @@ ul.nav-list {
 .nav-elem a:link,
 .nav-elem a:visited {
   display: block;
-  color: #333;
+  color: @navtextcolor;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
@@ -31,5 +42,10 @@ ul.nav-list {
 }
 
 .nav-elem a:hover, .nav-elem a:active {
-  background-color: #FFCD4A;
+  background-color: @navhighcolor;
+}
+
+.nav-head a:link,
+.nav-head a:visited { 
+  color: @textcolor;
 }
