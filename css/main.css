@@ -1,23 +1,63 @@
-/* My definitions */
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .img-me {
+  float: left;
+  max-width: 150px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.nav {
+  width: 100%;
+  background-color: #FFEEC8;
+}
+
+ul.nav-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-right {
   float: right;
-  margin: 0px 20px 20px 20px;
 }
 
-.role {
-  font-size: 18px;
-}
-
-
-/* Bootstrap extensions and overrides */
-
-.navbar-brand {
-  color: #333333 !important;
-  font-size: 24px;
-}
-
-.navbar {
-  font-size: 18px;
+.nav-elem a:link,
+.nav-elem a:visited {
+  display: block;
+  color: #333;
   font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0px;
+}
+
+.nav-elem a:hover, .nav-elem a:active {
+  background-color: #FFCD4A;
 }

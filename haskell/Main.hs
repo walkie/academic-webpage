@@ -13,8 +13,7 @@ import Hakyll hiding (metadataField)
 
 mainContext :: Context String
 mainContext =
-     constField "bootstrap" "//netdna.bootstrapcdn.com/bootstrap/3.0.0"
-  <> constField "jquery"    "//ajax.googleapis.com/ajax/libs/jquery/2.0.3"
+     constField "jquery"    "//ajax.googleapis.com/ajax/libs/jquery/2.0.3"
   <> defaultContext
 
 dateContext :: Context String
