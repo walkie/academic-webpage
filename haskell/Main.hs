@@ -13,7 +13,7 @@ import Hakyll hiding (metadataField)
 
 mainContext :: Context String
 mainContext =
-     constField "jquery"    "//ajax.googleapis.com/ajax/libs/jquery/2.0.3"
+     constField "jquery" "//ajax.googleapis.com/ajax/libs/jquery/2.0.3"
   <> defaultContext
 
 dateContext :: Context String
@@ -25,10 +25,7 @@ mainTemplate :: Context a -> Item a -> Compiler (Item String)
 mainTemplate = loadAndApplyTemplate "templates/main.html"
 
 config :: Configuration
-config = defaultConfiguration {
-  destinationDirectory = "../_site",
-  providerDirectory = ".."
-}
+config = defaultConfiguration { destinationDirectory = "_site" }
 
 
 -- * Rules
@@ -38,17 +35,23 @@ compileTemplates =
   match "templates/*" $
     compile templateCompiler
 
+compileCSS :: Rules ()
+compileCSS = do
+  match "css/*.less" $ do
+    compile getResourceBody
+    less <- makePatternDependency "css/*.less"
+    rulesExtraDependencies [less] $ create ["css/all.css"] $ do
+      route idRoute
+      compile $ loadBody "css/all.less"
+        >>= makeItem
+        >>= withItemBody (unixFilter "lessc" ["-"])
+        >>= return . fmap compressCss
+
 copyImages :: Rules ()
 copyImages =
   match "images/*" $ do
     route   idRoute
     compile copyFileCompiler
-
-copyCSS :: Rules ()
-copyCSS =
-  match "css/*" $ do
-    route   idRoute
-    compile compressCssCompiler
 
 processNews :: Rules ()
 processNews =
@@ -82,8 +85,8 @@ processHome =
 
 main = hakyllWith config $ do
   compileTemplates
+  compileCSS
   copyImages
-  copyCSS
   processNews
   processText
   processHome
