@@ -1,0 +1,10 @@
+/* Bootstrap extensions and overrides */
+
+.navbar-brand {
+  color: #333333 !important;
+}
+
+.navbar {
+  font-size: 18px;
+  font-weight: 500;
+}
