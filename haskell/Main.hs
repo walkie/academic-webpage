@@ -53,7 +53,12 @@ copyCSS =
 
 processNews :: Rules ()
 processNews =
-  match "news/*" $ do
+  match "news/*" $
+    compile pandocCompiler
+
+processText :: Rules ()
+processText =
+  match "text/*" $
     compile pandocCompiler
 
 processHome :: Rules ()
@@ -62,13 +67,15 @@ processHome =
     route (constRoute "index.html")
     compile $ do
       
-      news <- recentFirst =<< loadAll "news/*"
-      let newsContext = listField "news" dateContext (return news)
+      news     <- recentFirst =<< loadAll "news/*"
+      overview <- loadBody "text/research-overview.md"
+      let homeContext = listField "news" dateContext (return news)
+                        <> constField "overview" overview
                         <> mainContext
       
       getResourceBody 
-        >>= applyAsTemplate newsContext
-        >>= mainTemplate newsContext
+        >>= applyAsTemplate homeContext
+        >>= mainTemplate homeContext
         >>= relativizeUrls
 
 
@@ -79,4 +86,5 @@ main = hakyllWith config $ do
   copyImages
   copyCSS
   processNews
+  processText
   processHome
