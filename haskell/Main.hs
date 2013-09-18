@@ -76,7 +76,6 @@ buildHome =
       getResourceBody 
         >>= applyAsTemplate homeContext
         >>= mainTemplate homeContext
-        >>= relativizeUrls
 
 buildTeaching :: Rules ()
 buildTeaching =
@@ -86,7 +85,6 @@ buildTeaching =
       loadBody "pages/teaching.md"
         >>= makeItem
         >>= mainTemplate mainContext
-        >>= relativizeUrls
 
 
 -- * Main
