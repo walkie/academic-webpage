@@ -48,7 +48,7 @@ compileTemplates =
 
 compileMarkdown :: Rules ()
 compileMarkdown =
-  match "**/*.md" $
+  match ("**/*.md" .&&. complement "pages/*.md") $
     compile pandocCompiler
 
 compileCSS :: Rules ()
@@ -89,12 +89,20 @@ buildHome =
 
 buildTeaching :: Rules ()
 buildTeaching =
-  create ["teaching.html"] $ do
-    route idRoute
+--   match ["teaching.html"] $ do
+--     route idRoute
+--     compile $ do
+--       loadBody "pages/teaching.md"
+--         >>= makeItem
+--         >>= mainTemplate (onPage "Teaching" <> mainContext)
+  
+  match "pages/teaching.md" $ do
+    route (constRoute "teaching.html")
     compile $ do
-      loadBody "pages/teaching.md"
-        >>= makeItem
-        >>= mainTemplate (onPage "Teaching" <> mainContext)
+      let context = onPage "Teaching" <> mainContext
+      pandocCompiler
+        >>= applyAsTemplate context
+        >>= mainTemplate context
 
 buildNews :: Rules ()
 buildNews =
