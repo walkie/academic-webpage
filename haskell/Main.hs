@@ -35,6 +35,11 @@ compileTemplates =
   match "templates/*" $
     compile templateCompiler
 
+compileMarkdown :: Rules ()
+compileMarkdown =
+  match "**/*.md" $
+    compile pandocCompiler
+
 compileCSS :: Rules ()
 compileCSS = do
   match "css/*.less" $ do
@@ -53,16 +58,6 @@ copyImages =
     route   idRoute
     compile copyFileCompiler
 
-processNews :: Rules ()
-processNews =
-  match "news/*" $
-    compile pandocCompiler
-
-processText :: Rules ()
-processText =
-  match "text/*" $
-    compile pandocCompiler
-
 processHome :: Rules ()
 processHome = 
   match "pages/index.html" $ do
@@ -70,9 +65,9 @@ processHome =
     compile $ do
       
       news     <- recentFirst =<< loadAll "news/*"
-      overview <- loadBody "text/research-overview.md"
+      research <- loadBody "research/overview.md"
       let homeContext = listField "news" dateContext (return news)
-                        <> constField "overview" overview
+                        <> constField "research" research
                         <> constField "onHome" ""
                         <> mainContext
       
@@ -86,8 +81,7 @@ processHome =
 
 main = hakyllWith config $ do
   compileTemplates
+  compileMarkdown
   compileCSS
   copyImages
-  processNews
-  processText
   processHome
