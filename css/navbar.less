@@ -1,17 +1,19 @@
 
 // orange color scheme
-// @navbackcolor: #FFEEC8;
-// @navhighcolor: #FFCD4A;
+// @navbgcolor: #FFEEC8;
+// @navhicolor: #FFCD4A;
 // @navtextcolor: ???;
 
 // gray color scheme
-@navbackcolor: #EEE;
-@navhighcolor: #CCC;
+@navbgcolor: #EEE;
+@navhicolor: #CCC;
 @navtextcolor: #777;
+
+@navpad: 10px;
 
 .nav {
   width: 100%;
-  background-color: @navbackcolor;
+  background-color: @navbgcolor;
 }
 
 ul.nav-list {
@@ -22,30 +24,32 @@ ul.nav-list {
   width: 100%;
 }
 
-.nav-left {
-  float: left;
-}
-
-.nav-right {
-  float: right;
-}
-
-.nav-elem a:link,
-.nav-elem a:visited {
+.nav-elem a {
   display: block;
+  padding: @navpad;
+  margin: 0px;
   color: @navtextcolor;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
-  padding: 10px;
-  margin: 0px;
 }
 
-.nav-elem a:hover, .nav-elem a:active {
-  background-color: @navhighcolor;
-}
-
-.nav-head a:link,
-.nav-head a:visited { 
+.nav-head a {
   color: @textcolor;
+  padding-left: 0px;
+  padding-right: 3 * @navpad;
+}
+
+.nav-elem a:active,
+.nav-elem a:hover,
+.nav-elem a:focus {
+  background-color: @navhicolor;
+}
+
+li.nav-left {
+  float: left;
+}
+
+li.nav-right {
+  float: right;
 }

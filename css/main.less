@@ -2,6 +2,9 @@
 @linkcolor: #FFCD4A;
 @textcolor: #333;
 
+@imgwidth: 150px;
+@imgmargin: 20px;
+
 body {
   background-color: #FFF;
   color: @textcolor;
@@ -24,8 +27,7 @@ a {
 
 .img-me {
   float: left;
-  max-width: 150px;
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  max-width: @imgwidth;
+  margin-right: @imgmargin;
+  margin-bottom: @imgmargin;
 }
