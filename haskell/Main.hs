@@ -89,13 +89,6 @@ buildHome =
 
 buildTeaching :: Rules ()
 buildTeaching =
---   match ["teaching.html"] $ do
---     route idRoute
---     compile $ do
---       loadBody "pages/teaching.md"
---         >>= makeItem
---         >>= mainTemplate (onPage "Teaching" <> mainContext)
-  
   match "pages/teaching.md" $ do
     route (constRoute "teaching.html")
     compile $ do
