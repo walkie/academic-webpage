@@ -1,8 +1,8 @@
 ---
-title: Moved to Marburg
+title: Moved to Philipps University of Marburg
 ---
 
-I'm very excited to be spending the next 13 months working as a post-doctoral
+I'm very excited to be spending the next 13 months working as a postdoctoral
 researcher with [Klaus Ostermann][Klaus] and his [research group][PS] at the
 Philipps University of Marburg!
 

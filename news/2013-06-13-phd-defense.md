@@ -1,5 +1,5 @@
 ---
-title: Finished with PhD
+title: Finished PhD
 ---
 
 I successfully defended my thesis, "The Choice Calculus: A Formal Language of
