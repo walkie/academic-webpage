@@ -21,11 +21,19 @@ dateContext =
      dateField "date" "%B %e, %Y"
   <> mainContext
 
+config :: Configuration
+config = defaultConfiguration { destinationDirectory = "_site" }
+
+
+-- * Helper Functions
+
 mainTemplate :: Context a -> Item a -> Compiler (Item String)
 mainTemplate = loadAndApplyTemplate "templates/main.html"
 
-config :: Configuration
-config = defaultConfiguration { destinationDirectory = "_site" }
+getNewsContext :: Compiler (Context String)
+getNewsContext = do
+  news <- recentFirst =<< loadAll "news/*"
+  return $ listField "news" dateContext (return news) <> mainContext
 
 
 -- * Rules
@@ -64,14 +72,13 @@ buildHome =
     route (constRoute "index.html")
     compile $ do
       
-      news     <- recentFirst =<< loadAll "news/*"
       research <- loadBody "research/overview.md"
       teaching <- loadBody "teaching/current.md"
-      let homeContext = listField "news" dateContext (return news)
-                        <> constField "research" research
-                        <> constField "teaching" teaching
-                        <> constField "onHome" ""
-                        <> mainContext
+      newsContext <- getNewsContext
+      let homeContext = constField "research" research
+                     <> constField "teaching" teaching
+                     <> constField "onHome" ""
+                     <> newsContext
       
       getResourceBody 
         >>= applyAsTemplate homeContext
@@ -86,6 +93,16 @@ buildTeaching =
         >>= makeItem
         >>= mainTemplate mainContext
 
+buildNews :: Rules ()
+buildNews =
+  match "pages/news.html" $ do
+    route (constRoute "news.html")
+    compile $ do
+      newsContext <- getNewsContext
+      getResourceBody
+        >>= applyAsTemplate newsContext
+        >>= mainTemplate newsContext
+    
 
 -- * Main
 
@@ -96,3 +113,4 @@ main = hakyllWith config $ do
   copyImages
   buildHome
   buildTeaching
+  buildNews
