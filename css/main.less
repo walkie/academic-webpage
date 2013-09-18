@@ -1,21 +1,35 @@
+// colors from http://oregonstate.edu/brand/color-palette-web
 
-@linkcolor: #FFCD4A;
-@textcolor: #333;
+@linkcolor: #C34500;
+@textcolor: #373737;
+@headcolor: @textcolor;
 
-@imgwidth: 150px;
-@imgmargin: 20px;
+@bodyfont: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+@headfont: "Ubuntu", @bodyfont;
+@headweight: 600;
 
 body {
   background-color: #FFF;
   color: @textcolor;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: @bodyfont;
   font-size: 100%;
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0px;
 }
 
+h1, h2, h3 {
+  color: @headcolor;
+  font-family: @headfont;
+  font-weight: @headweight;
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 150%; }
+h3 { font-size: 125%; }
+
 a {
   text-decoration: none;
+  color: @linkcolor;
 }
 
 .container {
@@ -27,7 +41,7 @@ a {
 
 .img-me {
   float: left;
-  max-width: @imgwidth;
-  margin-right: @imgmargin;
-  margin-bottom: @imgmargin;
+  max-width: 150px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
