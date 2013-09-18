@@ -35,6 +35,9 @@ getNewsContext = do
   news <- recentFirst =<< loadAll "news/*"
   return $ listField "news" dateContext (return news) <> mainContext
 
+onPage :: String -> Context String
+onPage p = constField ("on" ++ p) ""
+
 
 -- * Rules
 
@@ -75,14 +78,14 @@ buildHome =
       research <- loadBody "research/overview.md"
       teaching <- loadBody "teaching/current.md"
       newsContext <- getNewsContext
-      let homeContext = constField "research" research
-                     <> constField "teaching" teaching
-                     <> constField "onHome" ""
-                     <> newsContext
+      let context = constField "research" research
+                 <> constField "teaching" teaching
+                 <> onPage "Home"
+                 <> newsContext
       
       getResourceBody 
-        >>= applyAsTemplate homeContext
-        >>= mainTemplate homeContext
+        >>= applyAsTemplate context
+        >>= mainTemplate context
 
 buildTeaching :: Rules ()
 buildTeaching =
@@ -91,7 +94,7 @@ buildTeaching =
     compile $ do
       loadBody "pages/teaching.md"
         >>= makeItem
-        >>= mainTemplate mainContext
+        >>= mainTemplate (onPage "Teaching" <> mainContext)
 
 buildNews :: Rules ()
 buildNews =
@@ -99,9 +102,10 @@ buildNews =
     route (constRoute "news.html")
     compile $ do
       newsContext <- getNewsContext
+      let context = onPage "News" <> newsContext
       getResourceBody
-        >>= applyAsTemplate newsContext
-        >>= mainTemplate newsContext
+        >>= applyAsTemplate context
+        >>= mainTemplate context
     
 
 -- * Main
