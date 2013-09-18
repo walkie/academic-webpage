@@ -35,15 +35,21 @@ ul.nav-list {
 }
 
 .nav-head a {
-  color: @textcolor;
   padding-left: 0px;
   padding-right: 3 * @navpad;
+  color: @textcolor;
 }
 
 .nav-elem a:active,
 .nav-elem a:hover,
 .nav-elem a:focus {
   background-color: @navhicolor;
+}
+
+.nav-head a:active,
+.nav-head a:hover,
+.nav-head a:focus {
+  background-color: @navbgcolor;
 }
 
 li.nav-left {

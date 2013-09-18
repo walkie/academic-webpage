@@ -73,6 +73,7 @@ processHome =
       overview <- loadBody "text/research-overview.md"
       let homeContext = listField "news" dateContext (return news)
                         <> constField "overview" overview
+                        <> constField "onHome" ""
                         <> mainContext
       
       getResourceBody 
