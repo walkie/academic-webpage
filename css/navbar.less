@@ -1,14 +1,8 @@
-
-// orange color scheme
-// @navBG: #FFEEC8;
-// @navHi: #FFCD4A;
-// @navText: ???;
-
-// gray color scheme
-@navBG:   #EEE;
-@navHi:   #CCC;
-@navAct:  #DDD;
-@navText: #777;
+@navBG:   @osuWebGray;
+@navHi:   @osuWebOrange;
+@navAct:  @osuWebOrange;
+@navHead: #EEE;
+@navText: #EEE;
 
 @navPad: 10px;
 
@@ -39,7 +33,7 @@ ul.nav-list {
 .nav-head a {
   padding-left: 0px;
   padding-right: 3 * @navPad;
-  color: @textColor;
+  color: @navHead;
 }
 
 .nav-elem a:active,
@@ -55,7 +49,7 @@ ul.nav-list {
 }
 
 .nav-active a {
-  background-color: @navHi;
+  background-color: @navAct;
 }
 
 li.nav-left {

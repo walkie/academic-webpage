@@ -1,13 +1,14 @@
-@linkColor: #C34500;
-@textColor: #373737;
-@headColor: @textColor;
+@headColor: @osuWebGray;
+@textColor: @osuWebGray;
+@linkColor: @osuOrange;
+@bgColor:   #FFF;
 
 @bodyFont: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
 @headFont: "Ubuntu", @bodyFont;
 @headWeight: 600;
 
 body {
-  background-color: #FFF;
+  background-color: @bgColor;
   color: @textColor;
   font-family: @bodyFont;
   font-size: 100%;
@@ -16,9 +17,12 @@ body {
 }
 
 h1, h2, h3, h4 {
-  color: @headColor;
   font-family: @headFont;
   font-weight: @headWeight;
+}
+  
+h2, h3, h4 {
+  color: @headColor;
 }
 
 h1 { font-size: 200%; }
