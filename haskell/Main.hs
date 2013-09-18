@@ -58,22 +58,34 @@ copyImages =
     route   idRoute
     compile copyFileCompiler
 
-processHome :: Rules ()
-processHome = 
+buildHome :: Rules ()
+buildHome = 
   match "pages/index.html" $ do
     route (constRoute "index.html")
     compile $ do
       
       news     <- recentFirst =<< loadAll "news/*"
       research <- loadBody "research/overview.md"
+      teaching <- loadBody "teaching/current.md"
       let homeContext = listField "news" dateContext (return news)
                         <> constField "research" research
+                        <> constField "teaching" teaching
                         <> constField "onHome" ""
                         <> mainContext
       
       getResourceBody 
         >>= applyAsTemplate homeContext
         >>= mainTemplate homeContext
+        >>= relativizeUrls
+
+buildTeaching :: Rules ()
+buildTeaching =
+  create ["teaching.html"] $ do
+    route idRoute
+    compile $ do
+      loadBody "pages/teaching.md"
+        >>= makeItem
+        >>= mainTemplate mainContext
         >>= relativizeUrls
 
 
@@ -84,4 +96,5 @@ main = hakyllWith config $ do
   compileMarkdown
   compileCSS
   copyImages
-  processHome
+  buildHome
+  buildTeaching
