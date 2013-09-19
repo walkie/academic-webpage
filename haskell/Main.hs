@@ -27,8 +27,9 @@ config = defaultConfiguration { destinationDirectory = "_site" }
 
 -- * Helper Functions
 
-mainTemplate :: Context a -> Item a -> Compiler (Item String)
-mainTemplate = loadAndApplyTemplate "templates/main.html"
+mainTemplate :: Context String -> Item String -> Compiler (Item String)
+mainTemplate context item = applyAsTemplate context item
+    >>= loadAndApplyTemplate "templates/main.html" context
 
 getNewsContext :: Compiler (Context String)
 getNewsContext = do
@@ -74,7 +75,6 @@ buildHome =
   match "pages/index.html" $ do
     route (constRoute "index.html")
     compile $ do
-      
       research <- loadBody "research/overview.md"
       teaching <- loadBody "teaching/current.md"
       newsContext <- getNewsContext
@@ -82,20 +82,14 @@ buildHome =
                  <> constField "teaching" teaching
                  <> onPage "Home"
                  <> newsContext
-      
-      getResourceBody 
-        >>= applyAsTemplate context
-        >>= mainTemplate context
+      getResourceBody >>= mainTemplate context
 
 buildTeaching :: Rules ()
 buildTeaching =
   match "pages/teaching.md" $ do
     route (constRoute "teaching.html")
-    compile $ do
-      let context = onPage "Teaching" <> mainContext
-      pandocCompiler
-        >>= applyAsTemplate context
-        >>= mainTemplate context
+    compile $ pandocCompiler
+      >>= mainTemplate (onPage "Teaching" <> mainContext)
 
 buildNews :: Rules ()
 buildNews =
@@ -103,10 +97,8 @@ buildNews =
     route (constRoute "news.html")
     compile $ do
       newsContext <- getNewsContext
-      let context = onPage "News" <> newsContext
       getResourceBody
-        >>= applyAsTemplate context
-        >>= mainTemplate context
+        >>= mainTemplate (onPage "News" <> newsContext)
     
 
 -- * Main
