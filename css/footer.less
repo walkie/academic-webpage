@@ -1,15 +1,19 @@
 @footBG: @navBG;
-@footText: @navText;
-@footPad: @navPad / 2;
+@footFontSize: 12px;
+@footTextColor: @navText;
+@footPad: 9px;
 
 #footer {
   background-color: @footBG;
 }
 
-.footer-text{
-  color: @footText;
-  font-size: 80%;
-  text-align: right;
+.footer-text {
+  color: @footTextColor;
+  font-size: @footFontSize;
   padding-top: @footPad;
   padding-bottom: @footPad;
+}
+  
+.footer-contact {
+  float: right;
 }

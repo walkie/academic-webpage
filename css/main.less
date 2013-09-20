@@ -9,7 +9,7 @@
 
 @hMargin: 100px;
 @vMargin: 30px;
-@footHeight: 30px;
+@footHeight: 34px;
 
 
 /* Margins and positioning */
@@ -28,7 +28,7 @@ html, body {
 }
 
 #content {
-  padding-bottom: @footHeight + @vMargin - 20px;
+  padding-bottom: @footHeight + @vMargin;
 }
 
 #header {
@@ -36,7 +36,7 @@ html, body {
 }
 
 #footer {
-  height: @footHeight;
+  // height: @footHeight;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -50,6 +50,10 @@ html, body {
   padding-right: @hMargin;
   padding-left: @hMargin;
   margin: 0;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 

@@ -70,6 +70,12 @@ copyImages =
     route   idRoute
     compile copyFileCompiler
 
+copyJavascript :: Rules ()
+copyJavascript =
+  match "js/*" $ do
+    route   idRoute
+    compile copyFileCompiler
+
 buildHome :: Rules ()
 buildHome = 
   match "pages/index.html" $ do
@@ -122,6 +128,7 @@ main = hakyllWith config $ do
   compileMarkdown
   compileCSS
   copyImages
+  copyJavascript
   buildHome
   buildTeaching
   buildNews
