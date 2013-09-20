@@ -105,7 +105,8 @@ buildPubs =
   match "pages/publications.html" $ do
     route (constRoute "publications.html")
     compile $ do
-      let context = listField "pubs" mainContext pubItems <> mainContext
+      let context = listField "pubs" mainContext pubItems
+                 <> mainContext
       getResourceBody
         >>= mainTemplate (onPage "Pubs" <> context)
   where pubItems = mapM (makeItem . paperString) pubs
