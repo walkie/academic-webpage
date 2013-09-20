@@ -75,8 +75,8 @@ buildHome =
   match "pages/index.html" $ do
     route (constRoute "index.html")
     compile $ do
-      research <- loadBody "research/overview.md"
-      teaching <- loadBody "teaching/current.md"
+      research <- loadBody "blurbs/research-overview.md"
+      teaching <- loadBody "blurbs/teaching-current.md"
       newsContext <- getNewsContext
       let context = constField "research" research
                  <> constField "teaching" teaching
