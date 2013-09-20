@@ -47,11 +47,11 @@ appeared  = paper Appeared
 accepted  = paper Accepted
 submitted = paper Submitted
 
-journal  = appeared Journal
-chapter  = appeared Chapter
-conf     = appeared Conference
-workshop = appeared Workshop
-thesis   = appeared Thesis
+journal    = appeared Journal
+chapter    = appeared Chapter
+conference = appeared Conference
+workshop   = appeared Workshop
+thesis     = appeared Thesis
 
 
 -- Optional field setters.

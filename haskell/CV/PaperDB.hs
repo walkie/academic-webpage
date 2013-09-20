@@ -68,7 +68,7 @@ chapters  = [chapter12,gttse11]
 confWork  = [fosd13,vamos13,gpce12,icfp12,sle11,vlhcc11,dsl11,
              foser10,vlhcc10,vlhcc09,dsl09a,dsl09b,detc09,vlhcc08]
 consortia = [vlhcc10dc,vlhcc08dc]
-thesis    = [phdthesis,msthesis,qual]
+theses    = [phdthesis,msthesis,qual]
 
 
 -- ** Under Review
@@ -88,7 +88,7 @@ fosd13 = accepted Workshop
   2013
   @@ gpce
 
-phdthesis = appeared Thesis
+phdthesis = thesis
   "thesis-choice-calculus"
   [walkingshaw]
   "The Choice Calculus: A Formal Language of Variation"
@@ -103,7 +103,7 @@ toplas13 = accepted Journal
   2013
   @@ toplas
 
-jvlc13 = appeared Journal
+jvlc13 = journal
   "jvlc13-probula"
   [erwig,walkingshaw]
   "A Visual Language for Explaining Probabilistic Reasoning"
@@ -111,7 +111,7 @@ jvlc13 = appeared Journal
   `onPages` Pages 88 109
   @@ jvlc `setVolume` 24 `setNumber` 2
 
-vamos13 = appeared Workshop
+vamos13 = workshop
   "vamos13-cc-select"
   [erwig,ostermann,tillmann,walkingshaw]
   "Adding Configuration to the Choice Calculus"
@@ -122,7 +122,7 @@ vamos13 = appeared Workshop
 
 -- ** 2012
 
-gpce12 = appeared Conference
+gpce12 = conference
   "gpce12-compositional-cc"
   [walkingshaw,erwig]
   "A Calculus for Modeling and Implementing Variation"
@@ -130,7 +130,7 @@ gpce12 = appeared Conference
   `onPages` Pages 132 140
   @@ gpce
 
-icfp12 = appeared Conference
+icfp12 = conference
   "icfp12-variational-type-errors"
   [cheng,erwig,walkingshaw]
   "An Error-Tolerant Type System for Variational Lambda Calculus"
@@ -151,7 +151,7 @@ chapter12 = appeared Chapter
 
 -- ** 2011
 
-msthesis = appeared Thesis
+msthesis = thesis
   "msthesis-game-theory-dsls"
   [walkingshaw]
   "Domain-Specific Language Support for Experimental Game Theory"
@@ -167,7 +167,7 @@ gttse11 = appeared Chapter
   `onPages` Pages 55 99
   @@ gttse
 
-vlhcc11 = appeared Conference
+vlhcc11 = conference
   "vlhcc11-ifdef-confirmed-harmful"
   [le,walkingshaw,erwig]
   "#ifdef Confirmed Harmful: Promoting Understandable Software Variation"
@@ -175,7 +175,7 @@ vlhcc11 = appeared Conference
   `onPages` Pages 143 150
   @@ vlhcc
 
-dsl11 = appeared Conference
+dsl11 = conference
   "dsl11-causation-dsl"
   [walkingshaw,erwig]
   "A DSEL for Studying and Explaining Causation"
@@ -183,7 +183,7 @@ dsl11 = appeared Conference
   `onPages` Pages 143 167
   @@ dsl
 
-sle11 = appeared Conference
+sle11 = conference
   "sle11-semantics-first"
   [erwig,walkingshaw]
   "Semantics First! Rethinking the Language Design Process"
@@ -191,7 +191,7 @@ sle11 = appeared Conference
   `onPages` Pages 243 262
   @@ sle `setSeries` lncs 6940
 
-tosem11 = appeared Journal
+tosem11 = journal
   "tosem11-choice-calculus"
   [erwig,walkingshaw]
   "The Choice Calculus: A Representation for Software Variation"
@@ -202,7 +202,7 @@ tosem11 = appeared Journal
 
 -- ** 2010
 
-foser10 = appeared Workshop
+foser10 = workshop
   "foser10-program-fields"
   [erwig,walkingshaw]
   "Program Fields for Continuous Software"
@@ -210,7 +210,7 @@ foser10 = appeared Workshop
   `onPages` Pages 105 108
   @@ foser
 
-vlhcc10 = appeared Conference
+vlhcc10 = conference
   "vlhcc10-neuron-diagrams"
   [erwig,walkingshaw]
   "Causal Reasoning with Neuron Diagrams"
@@ -226,7 +226,7 @@ vlhcc10dc = appeared Consortium
   `onPages` Pages 247 248
   @@ vlhccdc
 
-qual = appeared Thesis
+qual = thesis
   "qualifier-variation-survey"
   [walkingshaw]
   "Features and Feature Models: A Survey of Variation Representations"
@@ -237,7 +237,7 @@ qual = appeared Thesis
 
 -- ** 2009
 
-vlhcc09 = appeared Conference
+vlhcc09 = conference
   "vlhcc09-visual-explanations-probability"
   [erwig,walkingshaw]
   "Visual Explanations of Probabilistic Reasoning"
@@ -245,7 +245,7 @@ vlhcc09 = appeared Conference
   `onPages` Pages 23 27
   @@ vlhcc
 
-detc09 = appeared Conference
+detc09 = conference
   "detc09-software-hardware-design"
   [walkingshaw, Author "Paul" "Strauss", erwig, Author "John" "Mueller", Author "Irem" "Tumer"]
   "A Formal Representation of Software-Hardware System Design"
@@ -253,7 +253,7 @@ detc09 = appeared Conference
   `onPages` Pages 1387 1398
   @@ detc
 
-jfp09 = appeared Journal
+jfp09 = journal
   "jfp09-hagl"
   [walkingshaw,erwig]
   "A Domain-Specific Language for Experimental Game Theory"
@@ -261,7 +261,7 @@ jfp09 = appeared Journal
   `onPages` Pages 645 661
   @@ jfp `setVolume` 19
   
-dsl09a = appeared Conference
+dsl09a = conference
   "dsl09-explaining-probability"
   [erwig,walkingshaw]
   "A DSL for Explaining Probabilistic Reasoning"
@@ -270,7 +270,7 @@ dsl09a = appeared Conference
   `withNote` "Best paper"
   @@ dsl `setSeries` lncs 5658
 
-dsl09b = appeared Conference
+dsl09b = conference
   "dsl09-hagl-expressiveness"
   [walkingshaw,erwig]
   "Varying Domain Representations in Hagl -- Extending the Expressiveness of a DSL for Experimental Game Theory"
@@ -281,7 +281,7 @@ dsl09b = appeared Conference
 
 -- ** 2008
 
-vlhcc08 = appeared Conference
+vlhcc08 = conference
   "vlhcc08-explaining-strategies"
   [erwig,walkingshaw]
   "A Visual Language for Representing and Explaining Strategies in Game Theory"
