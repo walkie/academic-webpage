@@ -5,8 +5,8 @@ import Control.Applicative (empty)
 import Data.Monoid         ((<>))
 import Hakyll hiding (metadataField)
 
---import CV.Paper
---import CV.PaperDB
+import CV.PaperDB
+import CV.ToHtml
 
 
 -- * Configuration
@@ -99,6 +99,17 @@ buildNews =
       newsContext <- getNewsContext
       getResourceBody
         >>= mainTemplate (onPage "News" <> newsContext)
+
+buildPubs :: Rules ()
+buildPubs =
+  match "pages/publications.html" $ do
+    route (constRoute "publications.html")
+    compile $ do
+      let context = listField "pubs" mainContext pubItems <> mainContext
+      getResourceBody
+        >>= mainTemplate (onPage "Pubs" <> context)
+  where pubItems = mapM (makeItem . paperString) pubs
+    
     
 
 -- * Main
@@ -111,3 +122,4 @@ main = hakyllWith config $ do
   buildHome
   buildTeaching
   buildNews
+  buildPubs
