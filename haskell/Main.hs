@@ -77,9 +77,11 @@ buildHome =
     compile $ do
       research <- loadBody "blurbs/research-overview.md"
       teaching <- loadBody "blurbs/teaching-current.md"
+      links <- loadBody "blurbs/links.md"
       newsContext <- getNewsContext
       let context = constField "research" research
                  <> constField "teaching" teaching
+                 <> constField "links" links
                  <> onPage "Home"
                  <> newsContext
       getResourceBody >>= mainTemplate context
