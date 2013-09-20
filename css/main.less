@@ -7,16 +7,64 @@
 @headFont: "Ubuntu", @bodyFont;
 @headWeight: 600;
 
+@hMargin: 100px;
+@vMargin: 30px;
+@footHeight: 30px;
+
+
+/* Margins and positioning */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#page {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#content {
+  padding-bottom: @footHeight + @vMargin - 20px;
+}
+
+#header {
+  margin-bottom: @vMargin;
+}
+
+#footer {
+  height: @footHeight;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.break {
+  clear: both;
+}
+
+.container {
+  padding-right: @hMargin;
+  padding-left: @hMargin;
+  margin: 0;
+}
+
+
+/* Fonts and colors */
+
 body {
   background-color: @bgColor;
   color: @textColor;
   font-family: @bodyFont;
   font-size: 100%;
   line-height: 1.4;
-  margin: 0px;
 }
 
 h1, h2, h3, h4 {
+  margin-top: @vMargin;
   font-family: @headFont;
   font-weight: @headWeight;
 }
@@ -33,15 +81,4 @@ h4 { font-size: 100%; }
 a {
   text-decoration: none;
   color: @linkColor;
-}
-
-.break {
-  clear: both;
-}
-
-.container {
-  padding-right: 100px;
-  padding-left: 100px;
-  margin-right: auto;
-  margin-left: auto;
 }
