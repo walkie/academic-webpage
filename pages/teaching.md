@@ -2,6 +2,8 @@
 title: Teaching
 ---
 
+# Teaching
+
 ## Upcoming Course
 
 **CS 609 Diskussionsseminar: Human Factors in Programming Languages**
