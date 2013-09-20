@@ -1,6 +1,8 @@
 
 module CV.Paper where
 
+-- * Representation
+
 type Key   = String
 type Name  = String
 type Title = String
