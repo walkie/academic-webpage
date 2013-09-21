@@ -55,6 +55,12 @@ conference = appeared Conference
 workshop   = appeared Workshop
 thesis     = appeared Thesis
 
+isStatus :: Status -> Paper -> Bool
+isStatus s p = s == _status p
+
+isKind :: Kind -> Paper -> Bool
+isKind k p = k == _kind p
+
 
 -- Optional field setters.
 infix 3 @@

@@ -26,8 +26,13 @@ baseContext =
 staticContext :: Context String
 staticContext =
        listField "news" baseContext (loadAll "news/*" >>= recentFirst)
-    <> listField "pubs" baseContext (mapM (makeItem . paperString) pubs)
+    <> listField "pubs" baseContext (pubItems pubs)
+    <> listField "journals"  baseContext (pubItems journals)
+    <> listField "chapters"  baseContext (pubItems chapters)
+    <> listField "confWork"  baseContext (pubItems confWork)
+    <> listField "theses"    baseContext (pubItems theses)
     <> baseContext
+  where pubItems = mapM (makeItem . paperString)
 
 -- | Makes the contents of several directories available as template fields.
 --   The content of a file dir/file.ext will be available as $dir-file$.

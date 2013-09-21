@@ -63,12 +63,14 @@ y08 = [vlhcc08,vlhcc08dc]
 
 pubs = concat [y13,y12,y11,y10,y09,y08]
 
-journals  = [toplas13,jvlc13,tosem11,jfp09]
-chapters  = [chapter12,gttse11]
-confWork  = [fosd13,vamos13,gpce12,icfp12,sle11,vlhcc11,dsl11,
-             foser10,vlhcc10,vlhcc09,dsl09a,dsl09b,detc09,vlhcc08]
-consortia = [vlhcc10dc,vlhcc08dc]
-theses    = [phdthesis,msthesis,qual]
+journals    = filter (isKind Journal) pubs
+chapters    = filter (isKind Chapter) pubs
+conferences = filter (isKind Conference) pubs
+workshops   = filter (isKind Workshop) pubs
+confWork    = filter (\p -> isKind Conference p || isKind Workshop p) pubs
+consortia   = filter (isKind Consortium) pubs
+theses      = filter (isKind Thesis) pubs
+reports     = filter (isKind Report) pubs
 
 
 -- ** Under Review
@@ -273,7 +275,7 @@ dsl09a = conference
 dsl09b = conference
   "dsl09-hagl-expressiveness"
   [walkingshaw,erwig]
-  "Varying Domain Representations in Hagl -- Extending the Expressiveness of a DSL for Experimental Game Theory"
+  "Varying Domain Representations in Hagl – Extending the Expressiveness of a DSL for Experimental Game Theory"
   2009
   `onPages` Pages 310 334
   @@ dsl `setSeries` lncs 5658

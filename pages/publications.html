@@ -4,4 +4,37 @@ title: Publications
 
 <h1>Publications</h1>
 
-$partial("templates/pub-list.html")$
+
+<h2 class="pub-head">Journal Articles</h2>
+
+<ol class="pub-list">
+$for(journals)$
+  <li class="pub-item">$body$</li>
+$endfor$
+</ol>
+
+
+<h2 class="pub-head">Peer-Reviewed Book Chapters</h2>
+
+<ol class="pub-list">
+$for(chapters)$
+  <li class="pub-item">$body$</li>
+$endfor$
+</ol>
+
+
+<h2 class="pub-head">Peer-Reviewed Conference and Workshop Papers</h2>
+
+<ol class="pub-list">
+$for(confWork)$
+  <li class="pub-item">$body$</li>
+$endfor$
+</ol>
+
+<h2 class="pub-head">Theses and Other Papers</h2>
+
+<ol class="pub-list">
+$for(theses)$
+  <li class="pub-item">$body$</li>
+$endfor$
+</ol>
