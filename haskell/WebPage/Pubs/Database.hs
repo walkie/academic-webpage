@@ -2,7 +2,7 @@
 
 module WebPage.Pubs.Database where
 
-import Paper
+import WebPage.Pubs.Paper
 
 
 --
@@ -63,14 +63,14 @@ y08 = [vlhcc08,vlhcc08dc]
 
 allPubs = concat [drafts,y13,y12,y11,y10,y09,y08]
 
-journals    = filter (isKind Journal) pubs
-chapters    = filter (isKind Chapter) pubs
-conferences = filter (isKind Conference) pubs
-workshops   = filter (isKind Workshop) pubs
-confWork    = filter (\p -> isKind Conference p || isKind Workshop p) pubs
-consortia   = filter (isKind Consortium) pubs
-theses      = filter (isKind Thesis) pubs
-reports     = filter (isKind Report) pubs
+journals    = filter (isKind Journal) allPubs
+chapters    = filter (isKind Chapter) allPubs
+conferences = filter (isKind Conference) allPubs
+workshops   = filter (isKind Workshop) allPubs
+confWork    = filter (\p -> isKind Conference p || isKind Workshop p) allPubs
+consortia   = filter (isKind Consortium) allPubs
+theses      = filter (isKind Thesis) allPubs
+reports     = filter (isKind Report) allPubs
 
 
 -- ** Under Review

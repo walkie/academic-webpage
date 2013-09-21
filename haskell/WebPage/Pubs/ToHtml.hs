@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Web.Pubs.ToHtml (pubStr,pubListStr) where
+module WebPage.Pubs.ToHtml (pubStr,pubListStr) where
 
 import Data.Monoid (mconcat)
 
@@ -11,7 +11,7 @@ import qualified Text.Blaze.Html5 as E
 import qualified Text.Blaze.Html5.Attributes as A
 import Text.Blaze.Html.Renderer.String (renderHtml)
 
-import Paper hiding (paper,venue)
+import WebPage.Pubs.Paper hiding (paper,venue)
 
 
 -- * Exported functions

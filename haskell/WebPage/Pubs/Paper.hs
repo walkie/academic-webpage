@@ -1,5 +1,5 @@
 
-module Web.Pubs.Paper where
+module WebPage.Pubs.Paper where
 
 -- * Representation
 
