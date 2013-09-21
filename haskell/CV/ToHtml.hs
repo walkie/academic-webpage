@@ -1,15 +1,48 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module CV.ToHtml where
+module CV.ToHtml (pubStr,pubListStr) where
+
+import Data.Monoid (mconcat)
 
 import Prelude hiding (div,span)
 
-import Text.Blaze.Html5 (AttributeValue,Html,toMarkup,toValue,(!))
+import Text.Blaze.Html5 (AttributeValue,Html,ToMarkup(..),toValue,(!))
 import qualified Text.Blaze.Html5 as E
 import qualified Text.Blaze.Html5.Attributes as A
 import Text.Blaze.Html.Renderer.String (renderHtml)
 
 import CV.Paper hiding (paper,venue)
+
+
+-- * Exported functions
+
+pubStr :: Paper -> String
+pubStr = renderHtml . paper
+
+pubListStr :: [Paper] -> String
+pubListStr = renderHtml . pubList
+
+
+-- * Internal functions
+
+comma :: Html -> Html
+comma = (>> ", ")
+
+parens :: Html -> Html
+parens h = "(" >> h >> ")"
+
+pre :: Html -> Html -> Html
+pre = (>>)
+
+fromTo :: ToMarkup a => a -> a -> Html
+fromTo a b = toMarkup a >> "–" >> toMarkup b
+
+opt' :: (a -> Html) -> (Html -> Html) -> Maybe a -> Html
+opt' to f (Just a) = f (to a)
+opt' _  _ Nothing  = ""
+
+opt :: ToMarkup a => (Html -> Html) -> Maybe a -> Html
+opt = opt' toMarkup
 
 div :: AttributeValue -> Html -> Html
 div a = E.div ! A.class_ a
@@ -21,31 +54,53 @@ asList :: [Html] -> Html
 asList []      = ""
 asList [a]     = a
 asList [a,b]   = a >> " and " >> b
-asList [a,b,c] = a >> ", " >> b >> ", and " >> c
-asList (a:as)  = a >> ", " >> asList as
+asList [a,b,c] = comma a >> comma b >> "and " >> c
+asList (a:as)  = comma a >> asList as
 
 author :: Author -> Html
 author (Author f l) = toMarkup (f ++ " " ++ l)
 
 authors :: [Author] -> Html
-authors = div "pub-authors" . asList . map author
+authors = asList . map author
 
-title :: Title -> Html
-title = div "pub-title" . toMarkup
+series :: (Name, Int) -> Html
+series (n,i) = toMarkup n >> " " >> toMarkup i
+
+pages :: Pages -> Html
+pages (Pages     a b) = fromTo a b
+pages (PagesIn v a b) = fromTo (col a) (col b)
+  where col p = show v ++ ":" ++ show p
 
 year :: Year -> Html
 year = span "pub-year" . toMarkup
 
 venue :: Venue -> Html
-venue _ = "To do"
+venue (Venue long short kind _ eds vol num ser) =
+  span "pub-venue" $ do
+    opt comma kind
+    span "pub-venue-name" $ do
+      toMarkup long
+      opt (pre " " . parens) short
+      ", "
+    opt' authors (comma . parens . pre "ed. ") eds
+    opt' series comma ser
+    opt (comma . pre "vol. ") vol
+    opt (comma . pre "num. ") num
+
+details :: Paper -> Html
+details p = div "pub-details" $ do
+  maybe "Draft paper, " venue (_venue p)
+  opt' pages comma (_pages p)
+  span "pub-year" $ toMarkup (_year p)
 
 paper :: Paper -> Html
 paper p = do
-    title (_title p)
-    authors (_authors p)
-    div "pub-details" $ do
-      maybe "Draft paper" venue (_venue p) >> ", "
-      year (_year p) >> "."
+  div "pub-title"   $ toMarkup (_title p)
+  div "pub-authors" $ authors (_authors p)
+  div "pub-details" $ details p
 
-paperString :: Paper -> String
-paperString = renderHtml . paper
+pubItem :: Paper -> Html
+pubItem = (E.li ! A.class_ "pub-item") . paper
+
+pubList :: [Paper] -> Html
+pubList = (E.ol ! A.class_ "pub-list") . mconcat . map pubItem

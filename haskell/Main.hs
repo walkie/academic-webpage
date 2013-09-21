@@ -32,7 +32,7 @@ staticContext =
     <> listField "confWork"  baseContext (pubItems confWork)
     <> listField "theses"    baseContext (pubItems theses)
     <> baseContext
-  where pubItems = mapM (makeItem . paperString)
+  where pubItems = mapM (makeItem . pubStr)
 
 -- | Makes the contents of several directories available as template fields.
 --   The content of a file dir/file.ext will be available as $dir-file$.
