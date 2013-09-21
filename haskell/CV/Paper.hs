@@ -29,20 +29,22 @@ data Pages = Pages   Int Int
 -- ** Papers
 
 data Paper = Paper {
-  _status  :: Status,
-  _kind    :: Kind,
-  _key     :: Key,
-  _authors :: [Author],
-  _title   :: Title,
-  _year    :: Year,
-  _venue   :: Maybe Venue,
-  _pages   :: Maybe Pages,
-  _url     :: Maybe URL,
-  _note    :: Maybe String
+  _status   :: Status,
+  _kind     :: Kind,
+  _key      :: Key,
+  _authors  :: [Author],
+  _title    :: Title,
+  _year     :: Year,
+  _venue    :: Maybe Venue,
+  _pages    :: Maybe Pages,
+  _url      :: Maybe URL,
+  _note     :: Maybe String,
+  _pdfLink  :: Maybe String,
+  _abstract :: Maybe String
 } deriving (Eq,Show)
 
 -- Minimum definition.
-paper s k e a t y = Paper s k e a t y Nothing Nothing Nothing Nothing
+paper s k e a t y = Paper s k e a t y Nothing Nothing Nothing Nothing Nothing Nothing
 
 draft     = paper Draft DraftPaper 
 appeared  = paper Appeared
@@ -64,10 +66,12 @@ isKind k p = k == _kind p
 
 -- Optional field setters.
 infix 3 @@
-p @@ a       = p { _venue = Just a }
-onPages  p a = p { _pages = Just a }
-atURL    p a = p { _url   = Just a }
-withNote p a = p { _note  = Just a }
+p @@ a          = p { _venue    = Just a }
+onPages     p a = p { _pages    = Just a }
+atURL       p a = p { _url      = Just a }
+withNote    p a = p { _note     = Just a }
+setPdfLink  p a = p { _pdfLink  = Just a }
+setAbstract p a = p { _abstract = Just a }
 
 
 -- ** Venues
