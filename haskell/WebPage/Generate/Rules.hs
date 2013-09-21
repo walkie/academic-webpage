@@ -18,6 +18,7 @@ rules = do
   compileMarkdown
   compileCSS
   copyFiles
+  loadAbstracts
   buildPages
 
 

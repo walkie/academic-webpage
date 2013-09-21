@@ -34,6 +34,9 @@ comma = (>> ", ")
 parens :: Html -> Html
 parens h = "(" >> h >> ")"
 
+bracks :: Html -> Html
+bracks h = "[" >> h >> "]"
+
 pre :: Html -> Html -> Html
 pre = (>>)
 
@@ -101,8 +104,24 @@ details p = div "pub-details" $ do
   span "pub-year" $ toMarkup (_year p)
 
 pdfLink :: String -> Html
-pdfLink key = "[" >> (E.a ! A.href url) "PDF" >> "]"
-  where url = toValue ("papers/" ++ key ++ ".pdf")
+pdfLink = span "pub-pdf-link" . (E.a "PDF" !) . A.href . toValue
+
+absLink :: String -> Html
+absLink key = span (toValue ("pub-abstract-link " ++ key))
+            $ E.a "Abstract" ! A.href (toValue script)
+  where script = "javascript:toggleAbstract('" ++ key ++ "');"
+
+abstract :: String -> String -> Html
+abstract key txt = div (toValue ("pub-abstract " ++ key)) (toMarkup txt)
+
+links :: Html -> Html
+links = span "pub-links" . bracks
+
+absPdf :: String -> Maybe String -> Maybe String -> Html
+absPdf _ Nothing Nothing = ""
+absPdf _ Nothing (Just pdf) = links (pdfLink pdf)
+absPdf k (Just abs) Nothing = links (absLink k)
+absPdf k (Just abs) (Just pdf) = links (comma (absLink k) >> pdfLink pdf)
 
 paper :: Paper -> Html
 paper p = do
@@ -110,7 +129,8 @@ paper p = do
   div "pub-authors" $ authors (_authors p)
   div "pub-details" $ details p
   maybe "" note (_note p)
-  div "pub-links" $ pdfLink (_key p)
+  absPdf (_key p) (_abstract p) (_pdfLink p)
+  maybe "" (abstract (_key p)) (_abstract p)
 
 pubItem :: Paper -> Html
 pubItem = (E.li ! A.class_ "pub-item") . paper
