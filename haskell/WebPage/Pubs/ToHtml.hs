@@ -112,7 +112,7 @@ absLink key = span (toValue ("pub-abstract-link " ++ key))
   where script = "javascript:toggleAbstract('" ++ key ++ "');"
 
 abstract :: String -> String -> Html
-abstract key txt = div (toValue ("pub-abstract " ++ key)) (toMarkup txt)
+abstract key txt = div (toValue ("pub-abstract " ++ key)) (preEscapedToMarkup txt)
 
 links :: Html -> Html
 links = span "pub-links" . bracks

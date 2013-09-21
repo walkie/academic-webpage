@@ -71,7 +71,7 @@ addAbstract fs p
     | Just i <- lookupItem abs fs = p `setAbstract` itemBody i
     | otherwise = p
   where
-    abs = "papers/" ++ _key p ++ ".abstract.txt"
+    abs = "papers/" ++ _key p ++ ".abstract.md"
 
 -- | Build a list field of publications.
 pubListField :: String -> [Paper] -> Context String
@@ -81,7 +81,7 @@ pubListField id = listField id baseContext . mapM (makeItem . pubStr)
 getPubContext :: Compiler (Context String)
 getPubContext = do
     pdfs <- loadAll "papers/*.pdf"
-    txts <- loadAll "papers/*.abstract.txt"
+    txts <- loadAll "papers/*.abstract.md"
     let pubs = map (addAbstract txts . linkPdf pdfs) allPubs
     return $ pubListField "pubs"     pubs
           <> pubListField "journals" (ofKind Journal pubs)

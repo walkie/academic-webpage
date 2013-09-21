@@ -54,8 +54,8 @@ copyFiles =
 
 loadAbstracts :: Rules ()
 loadAbstracts =
-  match "papers/*.abstract.txt" $
-    compile getResourceBody
+  match "papers/*.abstract.md" $
+    compile pandocCompiler
 
 buildPages :: Rules()
 buildPages =
