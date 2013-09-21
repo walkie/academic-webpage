@@ -7,6 +7,7 @@ import System.FilePath
 
 import Hakyll
 
+import WebPage.Generate.Base
 import WebPage.Pubs
 
 
