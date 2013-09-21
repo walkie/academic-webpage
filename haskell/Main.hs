@@ -1,43 +1,49 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Control.Applicative (empty)
-import Data.Monoid         ((<>))
-import Hakyll hiding (metadataField)
+import Data.List (intercalate)
+import Data.Monoid ((<>))
+import System.FilePath
+
+import Hakyll
 
 import CV.PaperDB
 import CV.ToHtml
 
 
--- * Configuration
-
-mainContext :: Context String
-mainContext =
-     constField "jquery" "//ajax.googleapis.com/ajax/libs/jquery/2.0.3"
-  <> defaultContext
-
-dateContext :: Context String
-dateContext =
-     dateField "date" "%B %e, %Y"
-  <> mainContext
-
 config :: Configuration
 config = defaultConfiguration { destinationDirectory = "_site" }
 
 
--- * Helper Functions
+-- * Contexts
 
-mainTemplate :: Context String -> Item String -> Compiler (Item String)
-mainTemplate context item = applyAsTemplate context item
-    >>= loadAndApplyTemplate "templates/main.html" context
+baseContext :: Context String
+baseContext =
+       dateField  "date"   "%B %e, %Y"
+    <> constField "jquery" "//ajax.googleapis.com/ajax/libs/jquery/2.0.3"
+    <> defaultContext
 
-getNewsContext :: Compiler (Context String)
-getNewsContext = do
-  news <- recentFirst =<< loadAll "news/*"
-  return $ listField "news" dateContext (return news) <> mainContext
+staticContext :: Context String
+staticContext =
+       listField "news" baseContext (loadAll "news/*" >>= recentFirst)
+    <> listField "pubs" baseContext (mapM (makeItem . paperString) pubs)
+    <> baseContext
 
-onPage :: String -> Context String
-onPage p = constField ("on" ++ p) ""
+-- | Makes the contents of several directories available as template fields.
+--   The content of a file dir/file.ext will be available as $dir-file$.
+dynamicContext :: Compiler (Context String)
+dynamicContext = loadAll ("blurbs/*" .||. "research/*" .||. "teaching/*")
+    >>= return . foldr (<>) staticContext . map item
+  where item (Item id body) = constField (name id) body
+        name = intercalate "-" . splitDirectories . dropExtension . toFilePath
+
+-- | Apply the main template to a page of a given name.
+mainTemplate :: String -> Item String -> Compiler (Item String)
+mainTemplate page item = do
+    context <- fmap (onPage <>) dynamicContext
+    applyAsTemplate context item
+      >>= loadAndApplyTemplate "templates/main.html" context
+  where onPage = constField ("on-" ++ page) ""
 
 
 -- * Rules
@@ -64,61 +70,23 @@ compileCSS = do
         >>= withItemBody (unixFilter "lessc" ["-"])
         >>= return . fmap compressCss
 
-copyImages :: Rules ()
-copyImages =
-  match "images/*" $ do
+copyFiles :: Rules ()
+copyFiles =
+  match ("images/*" .||. "js/*") $ do
     route   idRoute
     compile copyFileCompiler
 
-copyJavascript :: Rules ()
-copyJavascript =
-  match "js/*" $ do
-    route   idRoute
-    compile copyFileCompiler
-
-buildHome :: Rules ()
-buildHome = 
-  match "pages/index.html" $ do
-    route (constRoute "index.html")
-    compile $ do
-      research <- loadBody "blurbs/research-overview.md"
-      teaching <- loadBody "blurbs/teaching-current.md"
-      links <- loadBody "blurbs/links.md"
-      newsContext <- getNewsContext
-      let context = constField "research" research
-                 <> constField "teaching" teaching
-                 <> constField "links" links
-                 <> onPage "Home"
-                 <> newsContext
-      getResourceBody >>= mainTemplate context
-
-buildTeaching :: Rules ()
-buildTeaching =
-  match "pages/teaching.md" $ do
-    route (constRoute "teaching.html")
-    compile $ pandocCompiler
-      >>= mainTemplate (onPage "Teaching" <> mainContext)
-
-buildNews :: Rules ()
-buildNews =
-  match "pages/news.html" $ do
-    route (constRoute "news.html")
-    compile $ do
-      newsContext <- getNewsContext
-      getResourceBody
-        >>= mainTemplate (onPage "News" <> newsContext)
-
-buildPubs :: Rules ()
-buildPubs =
-  match "pages/publications.html" $ do
-    route (constRoute "publications.html")
-    compile $ do
-      let context = listField "pubs" mainContext pubItems
-                 <> mainContext
-      getResourceBody
-        >>= mainTemplate (onPage "Pubs" <> context)
-  where pubItems = mapM (makeItem . paperString) pubs
-    
+buildPages :: Rules()
+buildPages =
+  match "pages/*" $ do
+    route (customRoute (flip addExtension "html" . takeBaseName . toFilePath))
+    compile $ do 
+      path <- fmap toFilePath getUnderlying
+      let content = case takeExtension path of
+            ".html" -> getResourceBody
+            ".md"   -> pandocCompiler
+            _       -> error ("Unexpected file type: " ++ path)
+      content >>= mainTemplate (takeBaseName path)
     
 
 -- * Main
@@ -127,9 +95,5 @@ main = hakyllWith config $ do
   compileTemplates
   compileMarkdown
   compileCSS
-  copyImages
-  copyJavascript
-  buildHome
-  buildTeaching
-  buildNews
-  buildPubs
+  copyFiles
+  buildPages
