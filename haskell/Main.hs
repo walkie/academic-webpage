@@ -32,7 +32,7 @@ staticContext =
 -- | Makes the contents of several directories available as template fields.
 --   The content of a file dir/file.ext will be available as $dir-file$.
 dynamicContext :: Compiler (Context String)
-dynamicContext = loadAll ("blurbs/*" .||. "research/*" .||. "teaching/*")
+dynamicContext = loadAll ("misc/*" .||. "research/*" .||. "teaching/*")
     >>= return . foldr (<>) staticContext . map item
   where item (Item id body) = constField (name id) body
         name = intercalate "-" . splitDirectories . dropExtension . toFilePath
