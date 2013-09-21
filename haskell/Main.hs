@@ -11,41 +11,32 @@ import WebPage.Generate.Base
 import WebPage.Pubs
 
 
-config :: Configuration
-config = defaultConfiguration { destinationDirectory = "_site" }
-
 
 -- * Contexts
 
-baseContext :: Context String
-baseContext =
-       dateField  "date"   "%B %e, %Y"
-    <> constField "jquery" "//ajax.googleapis.com/ajax/libs/jquery/2.0.3"
-    <> defaultContext
-
-staticContext :: Context String
-staticContext =
-       listField "news" baseContext (loadAll "news/*" >>= recentFirst)
-    <> listField "pubs" baseContext (pubItems pubs)
-    <> listField "journals"  baseContext (pubItems journals)
-    <> listField "chapters"  baseContext (pubItems chapters)
-    <> listField "confWork"  baseContext (pubItems confWork)
-    <> listField "theses"    baseContext (pubItems theses)
-    <> baseContext
-  where pubItems = mapM (makeItem . pubStr)
+newsContext :: Context String
+newsContext = listField "news" baseContext (loadAll "news/*" >>= recentFirst)
 
 -- | Makes the contents of several directories available as template fields.
 --   The content of a file dir/file.ext will be available as $dir-file$.
-dynamicContext :: Compiler (Context String)
-dynamicContext = loadAll ("misc/*" .||. "research/*" .||. "teaching/*")
-    >>= return . foldr (<>) staticContext . map item
+getFileContext :: Compiler (Context String)
+getFileContext = do
+    loadAll ("misc/*" .||. "research/*" .||. "teaching/*")
+      >>= return . foldr (<>) baseContext . map item
   where item (Item id body) = constField (name id) body
         name = intercalate "-" . splitDirectories . dropExtension . toFilePath
+
+getContext :: Compiler (Context String)
+getContext = do
+  pubContext  <- getPubContext
+  fileContext <- getFileContext
+  return (fileContext <> pubContext <> newsContext <> baseContext)
+
 
 -- | Apply the main template to a page of a given name.
 mainTemplate :: String -> Item String -> Compiler (Item String)
 mainTemplate page item = do
-    context <- fmap (onPage <>) dynamicContext
+    context <- fmap (onPage <>) getContext
     applyAsTemplate context item
       >>= loadAndApplyTemplate "templates/main.html" context
   where onPage = constField ("on-" ++ page) ""
@@ -77,9 +68,14 @@ compileCSS = do
 
 copyFiles :: Rules ()
 copyFiles =
-  match ("images/*" .||. "js/*" .||. "papers/*") $ do
+  match ("images/*" .||. "js/*" .||. "papers/*.pdf") $ do
     route   idRoute
     compile copyFileCompiler
+
+loadAbstracts :: Rules ()
+loadAbstracts =
+  match "papers/*.abstract.txt" $
+    compile getResourceBody
 
 buildPages :: Rules()
 buildPages =

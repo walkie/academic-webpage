@@ -63,6 +63,12 @@ isStatus s p = s == _status p
 isKind :: Kind -> Paper -> Bool
 isKind k p = k == _kind p
 
+ofKind :: Kind -> [Paper] -> [Paper]
+ofKind = filter . isKind
+
+ofKinds :: [Kind] -> [Paper] -> [Paper]
+ofKinds ks = filter (\p -> any (flip isKind p) ks)
+
 
 -- Optional field setters.
 infix 3 @@
