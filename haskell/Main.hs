@@ -7,8 +7,7 @@ import System.FilePath
 
 import Hakyll
 
-import CV.PaperDB
-import CV.ToHtml
+import WebPage.Pubs
 
 
 config :: Configuration

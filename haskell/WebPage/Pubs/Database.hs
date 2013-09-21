@@ -1,8 +1,8 @@
 {-# LANGUAGE PatternGuards, TupleSections #-}
 
-module CV.PaperDB where
+module WebPage.Pubs.Database where
 
-import CV.Paper
+import Paper
 
 
 --

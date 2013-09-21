@@ -1,5 +1,5 @@
 
-module CV.Paper where
+module Web.Pubs.Paper where
 
 -- * Representation
 
