@@ -74,6 +74,10 @@ pages (PagesIn v a b) = fromTo (col a) (col b)
 year :: Year -> Html
 year = span "pub-year" . toMarkup
 
+note :: String -> Html
+note "Best paper" = div "pub-note pub-best" "Best paper"
+note s = div "pub-note" (toMarkup s)
+
 venue :: Venue -> Html
 venue (Venue long short kind _ eds vol num ser) =
   span "pub-venue" $ do
@@ -98,6 +102,7 @@ paper p = do
   div "pub-title"   $ toMarkup (_title p)
   div "pub-authors" $ authors (_authors p)
   div "pub-details" $ details p
+  maybe "" note (_note p)
 
 pubItem :: Paper -> Html
 pubItem = (E.li ! A.class_ "pub-item") . paper
