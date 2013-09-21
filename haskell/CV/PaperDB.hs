@@ -61,7 +61,7 @@ y10 = [foser10,vlhcc10,vlhcc10dc,qual]
 y09 = [vlhcc09,detc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
 
-pubs = concat [y13,y12,y11,y10,y09,y08]
+allPubs = concat [drafts,y13,y12,y11,y10,y09,y08]
 
 journals    = filter (isKind Journal) pubs
 chapters    = filter (isKind Chapter) pubs
