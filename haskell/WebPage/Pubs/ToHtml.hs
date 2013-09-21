@@ -1,6 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module WebPage.Pubs.ToHtml (pubStr,pubListStr) where
+module WebPage.Pubs.ToHtml (
+  pubStr,
+  pubListStr
+) where
 
 import Data.Monoid (mconcat)
 

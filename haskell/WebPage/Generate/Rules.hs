@@ -1,48 +1,27 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Main where
 
-import Data.List (intercalate)
-import Data.Monoid ((<>))
+module WebPage.Generate.Rules (rules) where
+
 import System.FilePath
 
 import Hakyll
 
 import WebPage.Generate.Base
+import WebPage.Generate.Context
 import WebPage.Pubs
 
 
+-- * Exported functions
 
--- * Contexts
-
-newsContext :: Context String
-newsContext = listField "news" baseContext (loadAll "news/*" >>= recentFirst)
-
--- | Makes the contents of several directories available as template fields.
---   The content of a file dir/file.ext will be available as $dir-file$.
-getFileContext :: Compiler (Context String)
-getFileContext = do
-    loadAll ("misc/*" .||. "research/*" .||. "teaching/*")
-      >>= return . foldr (<>) baseContext . map item
-  where item (Item id body) = constField (name id) body
-        name = intercalate "-" . splitDirectories . dropExtension . toFilePath
-
-getContext :: Compiler (Context String)
-getContext = do
-  pubContext  <- getPubContext
-  fileContext <- getFileContext
-  return (fileContext <> pubContext <> newsContext <> baseContext)
+rules = do
+  compileTemplates
+  compileMarkdown
+  compileCSS
+  copyFiles
+  buildPages
 
 
--- | Apply the main template to a page of a given name.
-mainTemplate :: String -> Item String -> Compiler (Item String)
-mainTemplate page item = do
-    context <- fmap (onPage <>) getContext
-    applyAsTemplate context item
-      >>= loadAndApplyTemplate "templates/main.html" context
-  where onPage = constField ("on-" ++ page) ""
-
-
--- * Rules
+-- * Internal functions
 
 compileTemplates :: Rules ()
 compileTemplates =
@@ -88,13 +67,3 @@ buildPages =
             ".md"   -> pandocCompiler
             _       -> error ("Unexpected file type: " ++ path)
       content >>= mainTemplate (takeBaseName path)
-    
-
--- * Main
-
-main = hakyllWith config $ do
-  compileTemplates
-  compileMarkdown
-  compileCSS
-  copyFiles
-  buildPages
