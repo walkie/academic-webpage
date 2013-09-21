@@ -96,7 +96,7 @@ phdthesis = thesis
   "The Choice Calculus: A Formal Language of Variation"
   2013
   `atURL` "http://hdl.handle.net/1957/40652"
-  @@ venue ("PhD thesis. " ++ osu)
+  @@ venue osu `setVenueKind` "PhD thesis"
 
 toplas13 = accepted Journal
   "toplas13-variational-typing"
@@ -159,7 +159,7 @@ msthesis = thesis
   "Domain-Specific Language Support for Experimental Game Theory"
   2011
   `atURL` "http://hdl.handle.net/1957/26757"
-  @@ venue ("MS thesis. " ++ osu)
+  @@ venue osu `setVenueKind` "MS thesis"
 
 gttse11 = appeared Chapter
   "gttse11-variation-programming"
@@ -234,7 +234,7 @@ qual = thesis
   "Features and Feature Models: A Survey of Variation Representations"
   2010
   `atURL` "http://hdl.handle.net/1957/19243"
-  @@ venue ("Compendium of Computer Science Doctoral Qualifying Exams. " ++ osu)
+  @@ venue ("Compendium of Computer Science Doctoral Qualifying Exams, " ++ osu)
 
 
 -- ** 2009

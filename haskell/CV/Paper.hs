@@ -75,6 +75,7 @@ withNote p a = p { _note  = Just a }
 data Venue = Venue {
   _longName  :: Name,
   _shortName :: Maybe Name,
+  _venueKind :: Maybe Name,
   _publisher :: Maybe Name,
   _editors   :: Maybe [Author],
   _volume    :: Maybe Int,
@@ -83,11 +84,12 @@ data Venue = Venue {
 } deriving (Eq,Show)
 
 -- Minimum definition.
-venue l = Venue l Nothing Nothing Nothing Nothing Nothing Nothing
+venue l = Venue l Nothing Nothing Nothing Nothing Nothing Nothing Nothing
 short s l = venue l `setShortName` s
 
 -- Optional field setters.
 setShortName v a = v { _shortName = Just a }
+setVenueKind v a = v { _venueKind = Just a }
 setPublisher v a = v { _publisher = Just a }
 setEditor    v a = v { _editors   = Just a }
 setVolume    v a = v { _volume    = Just a }
