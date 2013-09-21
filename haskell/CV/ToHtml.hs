@@ -2,7 +2,7 @@
 
 module CV.ToHtml where
 
-import Prelude hiding (span)
+import Prelude hiding (div,span)
 
 import Text.Blaze.Html5 (AttributeValue,Html,toMarkup,toValue,(!))
 import qualified Text.Blaze.Html5 as E
@@ -11,6 +11,8 @@ import Text.Blaze.Html.Renderer.String (renderHtml)
 
 import CV.Paper hiding (paper,venue)
 
+div :: AttributeValue -> Html -> Html
+div a = E.div ! A.class_ a
 
 span :: AttributeValue -> Html -> Html
 span a = E.span ! A.class_ a
@@ -26,10 +28,10 @@ author :: Author -> Html
 author (Author f l) = toMarkup (f ++ " " ++ l)
 
 authors :: [Author] -> Html
-authors = span "pub-authors" . asList . map author
+authors = div "pub-authors" . asList . map author
 
 title :: Title -> Html
-title = span "pub-title" . toMarkup
+title = div "pub-title" . toMarkup
 
 year :: Year -> Html
 year = span "pub-year" . toMarkup
@@ -39,10 +41,11 @@ venue _ = "To do"
 
 paper :: Paper -> Html
 paper p = do
-    authors (_authors p) >> ". "
-    title (_title p) >> ". "
-    maybe "Draft paper" venue (_venue p) >> ", "
-    year (_year p) >> "."
+    title (_title p)
+    authors (_authors p)
+    div "pub-details" $ do
+      maybe "Draft paper" venue (_venue p) >> ", "
+      year (_year p) >> "."
 
 paperString :: Paper -> String
 paperString = renderHtml . paper
