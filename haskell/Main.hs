@@ -77,7 +77,7 @@ compileCSS = do
 
 copyFiles :: Rules ()
 copyFiles =
-  match ("images/*" .||. "js/*") $ do
+  match ("images/*" .||. "js/*" .||. "papers/*") $ do
     route   idRoute
     compile copyFileCompiler
 

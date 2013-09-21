@@ -97,12 +97,17 @@ details p = div "pub-details" $ do
   opt' pages comma (_pages p)
   span "pub-year" $ toMarkup (_year p)
 
+pdfLink :: String -> Html
+pdfLink key = "[" >> (E.a ! A.href url) "PDF" >> "]"
+  where url = toValue ("papers/" ++ key ++ ".pdf")
+
 paper :: Paper -> Html
 paper p = do
   div "pub-title"   $ toMarkup (_title p)
   div "pub-authors" $ authors (_authors p)
   div "pub-details" $ details p
   maybe "" note (_note p)
+  div "pub-links" $ pdfLink (_key p)
 
 pubItem :: Paper -> Html
 pubItem = (E.li ! A.class_ "pub-item") . paper
