@@ -2,6 +2,7 @@
 @footFontSize: 12px;
 @footTextColor: @navText;
 @footPad: 20px;
+@footMapPad: 30px;
 
 #footer {
   background-color: @footBG;
@@ -17,11 +18,12 @@
 
 .foot-about {
   width: 260px;
-  padding-right: 50px;
+  margin-right: 20px;
 }
 
 .foot-map {
-  width: 140px;
+  padding-left: @footMapPad;
+  padding-right: @footMapPad;
 }
 
 .foot-head {
