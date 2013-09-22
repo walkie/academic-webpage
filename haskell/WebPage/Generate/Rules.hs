@@ -58,10 +58,15 @@ loadAbstracts =
     compile pandocCompiler
 
 buildPages :: Rules()
-buildPages =
-  match "pages/*" $ do
-    route (customRoute (flip addExtension "html" . takeBaseName . toFilePath))
-    compile $ do 
+buildPages = do
+    match "pages/*" $ do
+      route (customRoute (flip addExtension "html" . takeBaseName . toFilePath))
+      compilePage
+    match "projects/*" $ do
+      route (customRoute (flip addExtension "html" . dropExtension . toFilePath))
+      compilePage
+  where
+    compilePage = compile $ do 
       path <- fmap toFilePath getUnderlying
       let content = case takeExtension path of
             ".html" -> getResourceBody

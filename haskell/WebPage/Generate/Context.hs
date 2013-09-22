@@ -30,6 +30,7 @@ mainTemplate page item = do
     context <- fmap (onPage <>) getContext
     applyAsTemplate context item
       >>= loadAndApplyTemplate "templates/main.html" context
+      >>= relativizeUrls
   where onPage = constField ("on-" ++ page) ""
 
 
