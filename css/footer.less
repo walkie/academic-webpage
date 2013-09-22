@@ -3,6 +3,7 @@
 @footTextColor: @navText;
 @footPad: 20px;
 @footMapPad: 30px;
+@madebyFontSize: 10px;
 
 #footer {
   background-color: @footBG;
@@ -42,4 +43,14 @@
 
 .foot-contact {
   margin-top: 1em;
+}
+
+.foot-madeby {
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  right: @hMargin;
+  padding-top: @footPad;
+  padding-bottom: @footPad;
+  font-size: @madebyFontSize;
 }
