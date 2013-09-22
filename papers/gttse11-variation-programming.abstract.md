@@ -10,6 +10,6 @@ kinds of variation structures. In this tutorial we will first present the
 motivation, general ideas, and principles that underlie the choice calculus.
 This is followed by a closer look at the semantics. We will then present
 practical applications based on several small example scenarios and consider
-the concepts of ``variation programming'' and ``variation querying''. The
+the concepts of "variation programming" and "variation querying". The
 practical applications involve work with a Haskell library that supports
 variation programming and experimentation with the choice calculus.
