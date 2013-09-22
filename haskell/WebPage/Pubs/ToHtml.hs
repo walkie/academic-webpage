@@ -5,6 +5,8 @@ module WebPage.Pubs.ToHtml (
   pubListStr
 ) where
 
+import Data.List (intersperse)
+import Data.Maybe (catMaybes)
 import Data.Monoid (mconcat)
 
 import Prelude hiding (div,span)
@@ -103,6 +105,9 @@ details p = div "pub-details" $ do
   opt' pages comma (_pages p)
   span "pub-year" $ toMarkup (_year p)
 
+codeLink :: String -> Html
+codeLink = span "pub-code-link" . (E.a "Source Code" !) . A.href . toValue
+
 pdfLink :: String -> Html
 pdfLink = span "pub-pdf-link" . (E.a "PDF" !) . A.href . toValue
 
@@ -114,14 +119,11 @@ absLink key = span (toValue ("pub-abstract-link " ++ key))
 abstract :: String -> String -> Html
 abstract key txt = div (toValue ("pub-abstract " ++ key)) (preEscapedToMarkup txt)
 
-links :: Html -> Html
-links = span "pub-links" . bracks
-
-absPdf :: String -> Maybe String -> Maybe String -> Html
-absPdf _ Nothing Nothing = ""
-absPdf _ Nothing (Just pdf) = links (pdfLink pdf)
-absPdf k (Just abs) Nothing = links (absLink k)
-absPdf k (Just abs) (Just pdf) = links (comma (absLink k) >> pdfLink pdf)
+links :: String -> Maybe String -> Maybe String -> Maybe String -> Html
+links k a p c = box $ catMaybes
+    [fmap (const (absLink k)) a, fmap pdfLink p, fmap codeLink c]
+  where box [] = ""
+        box hs = span "pub-links" ((bracks . mconcat . intersperse ", ") hs)
 
 paper :: Paper -> Html
 paper p = do
@@ -129,7 +131,7 @@ paper p = do
   div "pub-authors" $ authors (_authors p)
   div "pub-details" $ details p
   maybe "" note (_note p)
-  absPdf (_key p) (_abstract p) (_pdfLink p)
+  links (_key p) (_abstract p) (_pdfLink p) (_codeLink p)
   maybe "" (abstract (_key p)) (_abstract p)
 
 pubItem :: Paper -> Html

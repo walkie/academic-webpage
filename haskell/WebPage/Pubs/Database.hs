@@ -150,6 +150,7 @@ msthesis = thesis
   "Domain-Specific Language Support for Experimental Game Theory"
   2011
   `atURL` "http://hdl.handle.net/1957/26757"
+  `setCodeLink` "https://github.com/walkie/Hagl"
   @@ venue osu `setVenueKind` "MS thesis"
 
 gttse11 = appeared Chapter
@@ -158,6 +159,7 @@ gttse11 = appeared Chapter
   "Variation Programming with the Choice Calculus"
   2012
   `onPages` Pages 55 99
+  `setCodeLink` "https://github.com/walkie/CC-GTTSE"
   @@ gttse
 
 vlhcc11 = conference
@@ -174,6 +176,7 @@ dsl11 = conference
   "A DSEL for Studying and Explaining Causation"
   2011
   `onPages` Pages 143 167
+  `setCodeLink` "https://github.com/walkie/NeuronDiagram"
   @@ dsl
 
 sle11 = conference
@@ -252,6 +255,7 @@ jfp09 = journal
   "A Domain-Specific Language for Experimental Game Theory"
   2009
   `onPages` Pages 645 661
+  `setCodeLink` "https://github.com/walkie/Hagl-JFP"
   @@ jfp `setVolume` 19
   
 dsl09a = conference
@@ -269,6 +273,7 @@ dsl09b = conference
   "Varying Domain Representations in Hagl – Extending the Expressiveness of a DSL for Experimental Game Theory"
   2009
   `onPages` Pages 310 334
+  `setCodeLink` "https://github.com/walkie/Hagl-WCDSL"
   @@ dsl `setSeries` lncs 5658
 
 
