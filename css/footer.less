@@ -1,19 +1,43 @@
 @footBG: @navBG;
 @footFontSize: 12px;
 @footTextColor: @navText;
-@footPad: 9px;
+@footPad: 20px;
 
 #footer {
   background-color: @footBG;
-}
-
-.footer-text {
   color: @footTextColor;
   font-size: @footFontSize;
+}
+
+.foot-block {
+  float: left;
   padding-top: @footPad;
   padding-bottom: @footPad;
 }
-  
-.footer-contact {
-  float: right;
+
+.foot-about {
+  width: 260px;
+  padding-right: 50px;
+}
+
+.foot-map {
+  width: 140px;
+}
+
+.foot-head {
+  font-weight: 600;
+  margin-bottom: .25em;
+}
+
+.foot-list {
+  padding: 0;
+  margin-top: 0;
+}
+
+.foot-item {
+  display: block;
+}
+
+.foot-contact {
+  margin-top: 1em;
 }
