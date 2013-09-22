@@ -23,6 +23,18 @@ and experimentation.  Games can be executed and strategies can be pitted
 against each other for repeated play and in various kinds of tournaments.
 
 
+## Publications
+
+\$msthesis-game-theory-dsls\$
+
+\$jfp09-hagl\$
+  
+\$dsl09-hagl-expressiveness\$
+
+Related:
+
+\$vlhcc08-explaining-strategies\$
+
 ## Examples ##
 
 To play with the examples, load them into GHCi by running `ghci Hagl.Examples`
