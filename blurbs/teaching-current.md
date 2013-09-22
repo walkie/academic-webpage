@@ -9,4 +9,4 @@ harder problems and make computing more accessible?
 
 This winter semester at Marburg I will be leading the discussion seminar
 **CS609: Human Factors in Programming Languages**. Please read the course
-description on my [Teaching page](teaching.html) and sign up!
+description on my [Teaching page](/teaching.html) and sign up!

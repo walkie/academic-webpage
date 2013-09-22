@@ -8,4 +8,4 @@ title: Research
 
 ## Projects
 
- *  [Hagl](projects/hagl.html)
+ *  [Hagl](/projects/hagl.html)

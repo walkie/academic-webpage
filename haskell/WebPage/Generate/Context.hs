@@ -58,7 +58,7 @@ getBlurbContext = do
 -- | Adds the PDF link if the file is present.
 linkPdf :: [Item CopyFile] -> Paper -> Paper
 linkPdf fs p
-    | Just _ <- lookupItem pdf fs = p `setPdfLink` pdf
+    | Just _ <- lookupItem pdf fs = p `setPdfLink` ("/" ++ pdf)
     | otherwise = p
   where
     pdf = "papers/" ++ _key p ++ ".pdf"

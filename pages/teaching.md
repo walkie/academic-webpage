@@ -36,4 +36,4 @@ English.
 
   * Spring 2013 -- CS 261: Data Structures
   
-  * Winter 2013 -- [CS 271: Computer Architecture and Assembly Languages](cs271-wi13/)
+  * Winter 2013 -- [CS 271: Computer Architecture and Assembly Languages](/cs271-wi13/)
