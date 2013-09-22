@@ -75,14 +75,20 @@ addAbstract fs p
 pubListField :: String -> [Paper] -> Context String
 pubListField id = listField id baseContext . mapM (makeItem . pubStr)
 
+-- | Create a field for a publications.
+pubFields :: Paper -> Context a
+pubFields p = constField (_key p) (pubStr p)
+
 -- | Build a context containing many fields related to publications.
 getPubContext :: Compiler (Context String)
 getPubContext = do
     pdfs <- loadAll "papers/*.pdf"
     txts <- loadAll "papers/*.abstract.md"
     let pubs = map (addAbstract txts . linkPdf pdfs) allPubs
-    return $ pubListField "pubs"     pubs
+    let pubListContext =
+             pubListField "pubs"     pubs
           <> pubListField "journals" (ofKind Journal pubs)
           <> pubListField "chapters" (ofKind Chapter pubs)
           <> pubListField "theses"   (ofKind Thesis pubs)
           <> pubListField "conferences" (ofKinds [Conference,Workshop] pubs)
+    return $ foldr (<>) pubListContext (map pubFields pubs)
