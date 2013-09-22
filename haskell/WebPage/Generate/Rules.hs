@@ -15,7 +15,7 @@ import WebPage.Pubs
 
 rules = do
   compileTemplates
-  compileBlurbs
+  compileMarkdown
   compileCSS
   copyFiles
   loadAbstracts
@@ -29,9 +29,9 @@ compileTemplates =
   match "templates/*" $
     compile templateCompiler
 
-compileBlurbs :: Rules ()
-compileBlurbs =
-  match "blurbs/*.md" $
+compileMarkdown :: Rules ()
+compileMarkdown =
+  match ("blurbs/*.md" .||. "news/*.md") $
     compile pandocCompiler
 
 compileCSS :: Rules ()
