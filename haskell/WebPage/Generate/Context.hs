@@ -5,7 +5,6 @@ module WebPage.Generate.Context (
   mainTemplate
 ) where
 
-import Data.List (intercalate)
 import Data.Monoid ((<>))
 import System.FilePath
 
@@ -21,7 +20,7 @@ import Hakyll
 getContext :: Compiler (Context String)
 getContext = do
   pubContext  <- getPubContext
-  fileContext <- getFileContext
+  fileContext <- getBlurbContext
   return (fileContext <> pubContext <> newsContext <> baseContext)
 
 
@@ -45,14 +44,12 @@ newsContext = listField "news" baseContext (loadAll "news/*" >>= recentFirst)
 
 -- ** File context
 
--- | Makes the contents of several directories available as template fields.
---   The content of a file dir/file.ext will be available as $dir-file$.
-getFileContext :: Compiler (Context String)
-getFileContext = do
-    loadAll ("misc/*" .||. "research/*" .||. "teaching/*")
+-- | Makes the contents of the blurbs directory available as template fields.
+getBlurbContext :: Compiler (Context String)
+getBlurbContext = do
+    loadAll "blurbs/*"
       >>= return . foldr (<>) baseContext . map item
-  where item (Item id body) = constField (name id) body
-        name = intercalate "-" . splitDirectories . dropExtension . toFilePath
+  where item (Item id body) = constField (takeBaseName (toFilePath id)) body
 
 
 -- ** Publication context
