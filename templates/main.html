@@ -13,52 +13,19 @@
 
 <div id="header">
   <div class="container">
-    <ul class="nav-list">
-      <li class="nav-elem nav-left nav-head">
-        <!-- $if(onHome)$ style="visibility: hidden"$endif$> -->
-        <a href="/">Eric Walkingshaw</a>
-      </li>
-      <li class="nav-elem nav-left $if(on-news)$ nav-active $endif$">
-        <a href="/news.html">News</a>
-      </li>
-      <li class="nav-elem nav-left $if(on-teaching)$ nav-active $endif$">
-        <a href="/teaching.html">Teaching</a>
-      </li>
-      <li class="nav-elem nav-left $if(on-research)$ nav-active $endif$">
-        <a href="/research.html">Research</a>
-      </li>
-      <li class="nav-elem nav-left $if(on-publications)$ nav-active $endif$">
-        <a href="/publications.html">Publications</a>
-      </li>
-      <!--
-      <li class="nav-elem nav-left $if(on-blog)$ nav-active $endif$">
-        <a href="/blog.html">Blog</a>
-      </li>
-      -->
-      <li class="nav-elem nav-right">
-        <a href="https://github.com/walkie">GitHub</a>
-      </li>
-      <li class="nav-elem nav-right">
-        <a href="/CV.pdf">CV</a>
-      </li>
-    </ul>
+$partial("templates/navbar.html")$
   </div>
 </div>
 
 <div id="content">
   <div class="container">
-
 $body$
-  
   </div>
 </div>
 
 <div id="footer">
   <div class="container">
-    <div class="footer-text">
-      © Eric Walkingshaw, all rights reserved
-      <span class="marburg-email footer-contact"></span>
-    </div>
+$partial("templates/footer.html")$
   </div>
 </div>
       
