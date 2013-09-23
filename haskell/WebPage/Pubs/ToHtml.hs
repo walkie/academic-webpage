@@ -106,7 +106,7 @@ details p = div "pub-details" $ do
   span "pub-year" $ toMarkup (_year p)
 
 codeLink :: String -> Html
-codeLink = span "pub-code-link" . (E.a "Source Code" !) . A.href . toValue
+codeLink = span "pub-code-link" . (E.a "Code" !) . A.href . toValue
 
 pdfLink :: String -> Html
 pdfLink = span "pub-pdf-link" . (E.a "PDF" !) . A.href . toValue
