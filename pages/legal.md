@@ -20,7 +20,7 @@ written by cool hackers.
  *  [Hakyll](http://jaspervdj.be/hakyll) -- a static website compiler DSL
     in Haskell
  *  [Blaze](http://jaspervdj.be/blaze) -- an HTML combinator library in Haskell
- *  [LESS](http://lesscss.org) -- a macro system for CSS
+ *  [LESS](http://lesscss.org) -- a metalanguage for generating CSS
 
 The source code for this website is available on
 [GitHub](https://github.com/walkie/WebPage). All non-content resources are
