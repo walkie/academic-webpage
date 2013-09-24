@@ -23,18 +23,6 @@ and experimentation.  Games can be executed and strategies can be pitted
 against each other for repeated play and in various kinds of tournaments.
 
 
-## Publications
-
-\$msthesis-game-theory-dsls\$
-
-\$jfp09-hagl\$
-  
-\$dsl09-hagl-expressiveness\$
-
-Related:
-
-\$vlhcc08-explaining-strategies\$
-
 ## Examples ##
 
 To play with the examples, load them into GHCi by running `ghci Hagl.Examples`
@@ -113,3 +101,13 @@ with scores.  This can be printed in a nice way by passing this result to the
 For each pair of players from the list, this will run the iterated prisoner's
 dilemma 100 times, and print the score for those players.  At the end, the
 total scores of all players involved will be printed in sorted order.
+
+
+## References
+
+<div class="ref-list">
+(@msthesis) \$msthesis-game-theory-dsls\$
+(@jfp09) \$jfp09-hagl\$
+(@dsl11) \$dsl09-hagl-expressiveness\$
+(@vlhcc08) \$vlhcc08-explaining-strategies\$
+</div>

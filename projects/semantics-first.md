@@ -6,6 +6,7 @@ title: Semantics First
 
 ## Publications
   
-\$semantics-driven-dsl-design\$
-  
-\$sle11-semantics-first\$
+<div class="ref-list">
+(@chapter) \$semantics-driven-dsl-design\$
+(@sle11) \$sle11-semantics-first\$
+</div>

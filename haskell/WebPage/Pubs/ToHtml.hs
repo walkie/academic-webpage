@@ -126,7 +126,7 @@ links k a p c = box $ catMaybes
         box hs = span "pub-links" ((bracks . mconcat . intersperse ", ") hs)
 
 paper :: Paper -> Html
-paper p = do
+paper p = div "pub-block" $ do
   div "pub-title"   $ toMarkup (_title p)
   div "pub-authors" $ authors (_authors p)
   div "pub-details" $ details p

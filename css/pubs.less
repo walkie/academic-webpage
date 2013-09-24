@@ -8,11 +8,16 @@
 
 li.pub-item {
   display: block;
+  margin-top: 1em;
 }
 
+.pub-block {
+  display: inline-block;
+  vertical-align: text-top;
+}
+  
 .pub-title {
   font-weight: bold;
-  margin-top: 1em;
 }
 
 .pub-best {
@@ -31,4 +36,22 @@ li.pub-item {
 .pub-abstract {
   font-size: 90%;
   display: none;
+}
+
+.ref-list:not(.resume) {
+  counter-reset: refCounter;
+}
+
+.ref-list ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.ref-list li {
+  margin-top: 1em;
+}
+
+.ref-list li:before {
+  counter-increment: refCounter;
+  content: "[" counter(refCounter) "]  "; // <-- unicode non-breaking spaces
 }
