@@ -79,7 +79,7 @@ fosd13 = accepted Workshop
   [erwig,walkingshaw,cheng]
   "An Abstract Representation of Variational Graphs"
   2013
-  @@ gpce
+  @@ fosd
 
 phdthesis = thesis
   "thesis-choice-calculus"
