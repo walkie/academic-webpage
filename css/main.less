@@ -5,7 +5,8 @@
 @bgColor:   #FFF;
 
 @bodyFont: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
-@headFont: "Ubuntu", @bodyFont;
+@headFont: Ubuntu, @bodyFont;
+@codeFont: Menlo, "Lucida Console", Courier, monospace;
 @headWeight: 600;
 
 @hMargin: 100px;
@@ -86,4 +87,13 @@ h4 { font-size: 100%; }
 a {
   text-decoration: none;
   color: @linkColor;
+}
+
+pre, code {
+  font-family: @codeFont;
+  font-size: 90%;
+}
+
+pre {
+  margin-left: 2em;
 }
