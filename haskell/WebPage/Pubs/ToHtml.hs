@@ -127,12 +127,14 @@ links k a p c = box $ catMaybes
 
 paper :: Paper -> Html
 paper p = div "pub-block" $ do
-  div "pub-title"   $ toMarkup (_title p)
-  div "pub-authors" $ authors (_authors p)
-  div "pub-details" $ details p
-  maybe "" note (_note p)
-  links (_key p) (_abstract p) (_pdfLink p) (_codeLink p)
-  maybe "" (abstract (_key p)) (_abstract p)
+    E.a ! A.id (toValue key) $ ""
+    div "pub-title"   $ toMarkup (_title p)
+    div "pub-authors" $ authors (_authors p)
+    div "pub-details" $ details p
+    maybe "" note (_note p)
+    links key (_abstract p) (_pdfLink p) (_codeLink p)
+    maybe "" (abstract key) (_abstract p)
+  where key = _key p
 
 pubItem :: Paper -> Html
 pubItem = (E.li ! A.class_ "pub-item") . paper
