@@ -15,7 +15,7 @@ massively configurable software, such as [software product lines][SPL] and the
 Linux kernel. I am the co-creator of the [*choice calculus*][CC], a simple
 calculus of variation that can be easily extended with new features and
 instantiated by new object languages.
-  
-[CC]: http://choicecalculus.org
+
+[CC]: /projects/choice-calculus.html
 [Haskell]: http://www.haskell.org/
 [SPL]: http://en.wikipedia.org/wiki/Software_product_line
