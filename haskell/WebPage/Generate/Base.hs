@@ -11,7 +11,10 @@ import Hakyll
 -- * Basic configuration
 
 config :: Configuration
-config = defaultConfiguration { destinationDirectory = "_site" }
+config = defaultConfiguration {
+  destinationDirectory = "_site",
+  deployCommand = "rsync -av _site/ $ACCESS:public_html"
+}
 
 baseContext :: Context String
 baseContext =
