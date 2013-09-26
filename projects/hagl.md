@@ -31,10 +31,12 @@ versions corresponding to specific papers are linked to below.
 (@msthesis) \$msthesis-game-theory-dsls\$
 (@jfp09) \$jfp09-hagl\$
 (@dsl11) \$dsl09-hagl-expressiveness\$
+
 </div>
 
 ## Related
 
 <div class="ref-list resume">
 (@vlhcc08) \$vlhcc08-explaining-strategies\$
+
 </div>

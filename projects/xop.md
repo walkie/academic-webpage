@@ -44,4 +44,5 @@ non-expert *explanation consumers*.
 (@vlhcc09) \$vlhcc09-visual-explanations-probability\$
 (@dsl09) \$dsl09-explaining-probability\$
 (@vlhcc08) \$vlhcc08-explaining-strategies\$
+
 </div>

@@ -23,4 +23,5 @@ Haskell, such as [Parsec](http://www.haskell.org/haskellwiki/Parsec).
 <div class="ref-list">
 (@chapter) \$semantics-driven-dsl-design\$
 (@sle11) \$sle11-semantics-first\$
+
 </div>

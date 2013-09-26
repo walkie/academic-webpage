@@ -43,6 +43,7 @@ The choice calculus also has its own web page:
 (@thesis) \$thesis-choice-calculus\$
 (@gttse11) \$gttse11-variation-programming\$
 (@tosem11) \$tosem11-choice-calculus\$
+
 </div>
 
 
@@ -53,6 +54,7 @@ The choice calculus also has its own web page:
 (@icfp12) \$icfp12-variational-type-errors\$
 (@vlhcc11) \$vlhcc11-ifdef-confirmed-harmful\$
 (@foser10) \$foser10-program-fields\$
+
 </div>
 
 
@@ -61,6 +63,7 @@ The choice calculus also has its own web page:
 <div class="ref-list resume">
 (@vamos13) \$vamos13-cc-select\$
 (@gpce12) \$gpce12-compositional-cc\$
+
 </div>
 
 
@@ -68,4 +71,5 @@ The choice calculus also has its own web page:
 
 <div class="ref-list resume">
 (@fosd13) \$fosd13-variational-graphs\$
+
 </div>
