@@ -23,10 +23,12 @@ written by cool hackers.
  *  [LESS](http://lesscss.org) -- a metalanguage for generating CSS
 
 The source code for this website is available on
-[GitHub](https://github.com/walkie/WebPage). All non-content resources are
+[GitHub](https://github.com/walkie/WebPage). All *non-content* resources are
 placed in the public domain. Non-content resources include Haskell, LESS, and
 JavaScript source code, as well as HTML templates, but exclude Markdown, PDF,
-PNG, and plain text files.
+PNG, and plain text files. Basically, don't use text, papers, or images from
+my web page without permission, but feel free to use the code used to generate
+it.
 
 
 ## Software License
