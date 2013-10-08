@@ -33,7 +33,7 @@ tosem  = short "TOSEM" "ACM Trans. on Software Engineering and Methodology"
 lncs = ("LNCS",)
 
 dsl   = short "DSL" "IFIP Working Conf. on Domain-Specific Languages"
-detc  = short "DETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
+idetc = short "IDETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
 gpce  = short "GPCE" "Int. Conf. on Generative Programming and Component Engineering"
 gttse = short "GTTSE" "Generative and Transformational Techniques in Software Engineering"
 icfp  = short "ICFP" "ACM SIGPLAN Int. Conf. on Functional Programming"
@@ -58,7 +58,7 @@ y13 = [fosd13,phdthesis,toplas13,jvlc13,vamos13]
 y12 = [gpce12,icfp12,chapter12]
 y11 = [msthesis,gttse11,vlhcc11,dsl11,sle11,tosem11]
 y10 = [foser10,vlhcc10,vlhcc10dc,qual]
-y09 = [vlhcc09,detc09,jfp09,dsl09a,dsl09b]
+y09 = [vlhcc09,idetc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
 
 allPubs = concat [drafts,y13,y12,y11,y10,y09,y08]
@@ -241,13 +241,13 @@ vlhcc09 = conference
   `onPages` Pages 23 27
   @@ vlhcc
 
-detc09 = conference
-  "detc09-software-hardware-design"
+idetc09 = conference
+  "idetc09-software-hardware-design"
   [walkingshaw, Author "Paul" "Strauss", erwig, Author "John" "Mueller", Author "Irem" "Tumer"]
   "A Formal Representation of Software-Hardware System Design"
   2009
   `onPages` Pages 1387 1398
-  @@ detc
+  @@ idetc
 
 jfp09 = journal
   "jfp09-hagl"
