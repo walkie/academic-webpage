@@ -62,7 +62,7 @@ buildPages = do
     match "pages/*" $ do
       route (customRoute (flip addExtension "html" . takeBaseName . toFilePath))
       compilePage
-    match "projects/*" $ do
+    match ("projects/*" .||. "teaching/**") $ do
       route (customRoute (flip addExtension "html" . dropExtension . toFilePath))
       compilePage
   where
