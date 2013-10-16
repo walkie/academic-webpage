@@ -11,6 +11,7 @@ td {
 
 # CS 609 Diskussionsseminar: Human Factors in Programming Languages
 
+<div class="no-print">
 
 ## Quick Links
 
@@ -19,6 +20,7 @@ td {
  *  [Structure of Course]
  *  [Schedule and Reading Assignments]
 
+</div>
 
 ## Logistics
 

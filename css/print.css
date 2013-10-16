@@ -1,0 +1,33 @@
+/* Tighter format for printing. */
+
+#header { display: none; }
+#footer { display: none; }
+
+#content {
+  padding-bottom: 10px;
+}
+
+.container {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.no-print {
+  display: none;
+}
+
+body {
+  font-size: 85%;
+  line-height: 1.25;
+}
+
+h1, h2, h3, h4 { 
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h1 { font-size: 150%; }
+h2 { font-size: 120%; }
+h3 { font-size: 100%; }
+h4 { font-size: 85%; }
