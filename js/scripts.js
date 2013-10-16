@@ -13,7 +13,3 @@ function setEmail() {
 function toggleAbstract(key) {
   $('.pub-abstract.'+key).slideToggle();
 }
-
-function printerFriendly() {
-  document.getElementById('style-print').disabled = false;
-}

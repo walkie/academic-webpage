@@ -30,10 +30,6 @@ PNG, and plain text files. Basically, don't use text, papers, or images from
 my web page without permission, but feel free to use the code used to generate
 it.
 
-The printer icon used in the footer is from
-[VisualPharm](http://www.visualpharm.com/), who provide many free icons for use
-with attribution.
-
 
 ## Software License
 
