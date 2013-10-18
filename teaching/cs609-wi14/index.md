@@ -27,14 +27,11 @@ td {
 ----------------  -------------------------------------------------------------
 Instructor:       Eric Walkingshaw
                   <span class="marburg-email"></span>
-First meeting:    Tues, 15 Oct 2013, 4:15pm
+Weekly meeting:   Mondays, 16:00 -- 17:30
                   Seminarraum V (05-D09)
 Course web page:  <http://web.engr.oregonstate.edu/~walkiner/teaching/cs609-wi14/>
                   (This document, which will be updated throughout the course.)
 ----------------  -------------------------------------------------------------
-
-Future meetings will be once weekly at a time and place to be decided at our
-first meeting.
 
 
 ## Motivation
@@ -139,10 +136,10 @@ semester.
 <table class="schedule">
 <tr class="schedule-row">
   <td class="schedule-date">**15 Oct**</td>
-  <td class="schedule-info">Course introduction.</td>
+  <td class="schedule-info">Course introduction, schedule a weekly meeting time.</td>
 </tr>
 <tr class="schedule-row">
-  <td class="schedule-date">**22 Oct?**</td>
+  <td class="schedule-date">**21 Oct**</td>
   <td class="schedule-info">
   Alan Blackwell, *First Steps in Programming: A Rationale for Attention Investment
   Models*, 2002.
