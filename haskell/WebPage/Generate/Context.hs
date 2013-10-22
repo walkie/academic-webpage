@@ -2,19 +2,21 @@
 
 module WebPage.Generate.Context (
   getContext,
-  mainTemplate
+  TemplateApplication,
+  mainTemplate,
+  simpleTemplate
 ) where
 
 import Data.Monoid ((<>))
 import System.FilePath
 
+import Hakyll
+
 import WebPage.Generate.Base
 import WebPage.Pubs
 
-import Hakyll
 
-
--- * Exported functions
+-- * Extended Context
 
 -- | The complete context.
 getContext :: Compiler (Context String)
@@ -24,14 +26,26 @@ getContext = do
   return (fileContext <> pubContext <> newsContext <> baseContext)
 
 
--- | Apply the main template to a page of a given name.
-mainTemplate :: String -> Item String -> Compiler (Item String)
-mainTemplate page item = do
+-- * Applying Templates
+
+type TemplateApplication = String -> Item String -> Compiler (Item String)
+
+-- | Apply a template to a page of a given name.
+applyTemplateTo :: Identifier -> TemplateApplication
+applyTemplateTo template page item = do
     context <- fmap (onPage <>) getContext
     applyAsTemplate context item
-      >>= loadAndApplyTemplate "templates/main.html" context
+      >>= loadAndApplyTemplate template context
       >>= relativizeUrls
   where onPage = constField ("on-" ++ page) ""
+
+-- | Apply the main template to a page of a given name.
+mainTemplate :: TemplateApplication
+mainTemplate = applyTemplateTo "templates/main.html"
+
+-- | Apply the simple template to a page of a given name.
+simpleTemplate :: TemplateApplication
+simpleTemplate = applyTemplateTo "templates/simple.html"
 
 
 -- * Internal functions

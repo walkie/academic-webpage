@@ -10,6 +10,10 @@ function setEmail() {
   $('.marburg-email').html(mailTo(user + marburg));
 }
 
+function linkName() {
+  $('.my-name').html('<a href="http://web.engr.oregonstate.edu/~walkiner/">Eric Walkingshaw</a>');
+}
+
 function toggleAbstract(key) {
   $('.pub-abstract.'+key).slideToggle();
 }

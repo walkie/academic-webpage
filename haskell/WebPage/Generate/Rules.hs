@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module WebPage.Generate.Rules (rules) where
+module WebPage.Generate.Rules where
 
 import System.FilePath
 
@@ -11,18 +11,15 @@ import WebPage.Generate.Context
 import WebPage.Pubs
 
 
--- * Exported functions
-
+rules :: Rules ()
 rules = do
   compileTemplates
   compileMarkdown
   compileCSS
   copyFiles
+  copyPapers
   loadAbstracts
   buildPages
-
-
--- * Internal functions
 
 compileTemplates :: Rules ()
 compileTemplates =
@@ -48,7 +45,13 @@ compileCSS = do
 
 copyFiles :: Rules ()
 copyFiles =
-  match ("images/*" .||. "js/*" .||. "papers/*.pdf" .||. "css/*.css") $ do
+  match ("images/*" .||. "js/*" .||. "css/*.css") $ do
+    route   idRoute
+    compile copyFileCompiler
+
+copyPapers :: Rules ()
+copyPapers =
+  match "papers/*.pdf" $ do
     route   idRoute
     compile copyFileCompiler
 
@@ -57,19 +60,20 @@ loadAbstracts =
   match "papers/*.abstract.md" $
     compile pandocCompiler
 
-buildPages :: Rules()
+buildPages :: Rules ()
 buildPages = do
     match "pages/*" $ do
       route (customRoute (flip addExtension "html" . takeBaseName . toFilePath))
-      compilePage
+      compilePage mainTemplate
     match ("projects/*" .||. "teaching/**") $ do
       route (customRoute (flip addExtension "html" . dropExtension . toFilePath))
-      compilePage
-  where
-    compilePage = compile $ do 
-      path <- fmap toFilePath getUnderlying
-      let content = case takeExtension path of
-            ".html" -> getResourceBody
-            ".md"   -> pandocCompiler
-            _       -> error ("Unexpected file type: " ++ path)
-      content >>= mainTemplate (takeBaseName path)
+      compilePage mainTemplate
+
+compilePage :: TemplateApplication -> Rules ()
+compilePage apply = compile $ do 
+  path <- fmap toFilePath getUnderlying
+  let content = case takeExtension path of
+        ".html" -> getResourceBody
+        ".md"   -> pandocCompiler
+        _       -> error ("Unexpected file type: " ++ path)
+  content >>= apply (takeBaseName path)

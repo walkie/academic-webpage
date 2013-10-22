@@ -1,0 +1,5 @@
+/* Fix formatting for pages without header and footer. */
+
+#content {
+  padding-bottom: 30px;
+}

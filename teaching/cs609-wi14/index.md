@@ -25,11 +25,11 @@ td {
 ## Logistics
 
 ----------------  -------------------------------------------------------------
-Instructor:       Eric Walkingshaw
+Instructor:       <span class="my-name">Eric Walkingshaw</span>
                   <span class="marburg-email"></span>
 Weekly meeting:   Mondays, 16:00 -- 17:30
                   Seminarraum XII C3
-Course web page:  <http://web.engr.oregonstate.edu/~walkiner/teaching/cs609-wi14/>
+Course web page:  <http://www.staff.uni-marburg.de/~walkings/teaching/cs609-wi14/>
                   (This document, which will be updated throughout the course.)
 ----------------  -------------------------------------------------------------
 

@@ -1,4 +1,3 @@
-_cache
-_site
+build
 dist
 Session.vim
