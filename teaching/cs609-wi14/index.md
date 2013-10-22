@@ -28,7 +28,7 @@ td {
 Instructor:       Eric Walkingshaw
                   <span class="marburg-email"></span>
 Weekly meeting:   Mondays, 16:00 -- 17:30
-                  Seminarraum V (05-D09)
+                  Seminarraum XII C3
 Course web page:  <http://web.engr.oregonstate.edu/~walkiner/teaching/cs609-wi14/>
                   (This document, which will be updated throughout the course.)
 ----------------  -------------------------------------------------------------
@@ -152,6 +152,20 @@ semester.
   *attention investment* model, which can help to understand when a user will
   invest effort in learning a new language or feature, and suggests strategies
   for encouraging this investment.
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">**28 Oct**</td>
+  <td class="schedule-info">
+  Green and Petre, *Usability Analysis of Visual Programming Environments: A 
+  ‘Cognitive Dimensions’ Framework*, 1996.
+
+  The *cognitive dimensions* are the most well-known and widely used analytical
+  framework for the usability of languages and interfaces. Perhaps their most
+  valuable contribution to the field is providing a shared vocabulary for
+  notational qualities that impact usability, something that will also be
+  useful for us in this seminar. Besides this vocabulary, the framework
+  emphasizes the trade-offs between dimensions.
   </td>
 </tr>
 </table>
