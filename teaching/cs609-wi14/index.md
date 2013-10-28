@@ -168,5 +168,17 @@ semester.
   emphasizes the trade-offs between dimensions.
   </td>
 </tr>
-</table>
+<tr class="schedule-row">
+  <td class="schedule-date">**4 Nov**</td>
+  <td class="schedule-info">
+  Peyton Jones, Blackwell, and Burnett, *A User-Centered Approach to Functions
+  in Excel*, 2003.
 
+  This paper applies the two intellectual tools we have seen so far--the
+  Attention Investment model and the Cognitive Dimensions--to the design of
+  language extensions to Excel spreadsheets. It provides a nice illustration of
+  how these tools can support a systematic, analytical approach to user-focused
+  design.
+</td>
+</tr>
+</table>
