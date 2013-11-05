@@ -135,14 +135,14 @@ semester.
 
 <table class="schedule">
 <tr class="schedule-row">
-  <td class="schedule-date">**15 Oct**</td>
+  <td class="schedule-date">15 Oct</td>
   <td class="schedule-info">Course introduction, schedule a weekly meeting time.</td>
 </tr>
 <tr class="schedule-row">
-  <td class="schedule-date">**21 Oct**</td>
+  <td class="schedule-date">21 Oct</td>
   <td class="schedule-info">
-  Alan Blackwell, *First Steps in Programming: A Rationale for Attention Investment
-  Models*, 2002.
+  Blackwell, *First Steps in Programming: A Rationale for Attention Investment
+  Models*, HCC 2002.
   
   This paper serves two roles. First, it provides definitions of "programmer"
   and "programming" that are somewhat broader than you might expect. This will
@@ -155,10 +155,10 @@ semester.
   </td>
 </tr>
 <tr class="schedule-row">
-  <td class="schedule-date">**28 Oct**</td>
+  <td class="schedule-date">28 Oct</td>
   <td class="schedule-info">
   Green and Petre, *Usability Analysis of Visual Programming Environments: A 
-  ‘Cognitive Dimensions’ Framework*, 1996.
+  ‘Cognitive Dimensions’ Framework*, JVLC 1996.
 
   The *cognitive dimensions* are the most well-known and widely used analytical
   framework for the usability of languages and interfaces. Perhaps their most
@@ -169,10 +169,10 @@ semester.
   </td>
 </tr>
 <tr class="schedule-row">
-  <td class="schedule-date">**4 Nov**</td>
+  <td class="schedule-date">4 Nov</td>
   <td class="schedule-info">
   Peyton Jones, Blackwell, and Burnett, *A User-Centered Approach to Functions
-  in Excel*, 2003.
+  in Excel*, ICFP 2003.
 
   This paper applies the two intellectual tools we have seen so far--the
   Attention Investment model and the Cognitive Dimensions--to the design of
@@ -181,4 +181,24 @@ semester.
   design.
 </td>
 </tr>
+<tr class="schedule-row">
+  <td class="schedule-date">11 Nov</td>
+  <td class="schedule-info">
+  Wilson et al., *Harnessing Curiosity to Increase Correctness in End-User
+  Programming*, CHI 2003.
+
+  This paper introduces the surprise-explain-reward strategy in the context of
+  encouraging end-user programmers to test their programs. Attention investment
+  provides a theory about how users decide where to spend their attention based
+  on cost, risk, and reward. Surprise-explain-reward provides a strategy for
+  altering this equation. Specifically, it attempts to lower the (perceived and
+  actual) costs associated with learning a new feature, while making the reward
+  more immediate and clear.
+</td>
+</tr>
+<tr class="schedule-row schedule-important">
+  <td class="schedule-date">18 Nov</td>
+  <td class="schedule-info">No meeting this week.</td>
+</tr>
 </table>
+
