@@ -179,7 +179,7 @@ semester.
   language extensions to Excel spreadsheets. It provides a nice illustration of
   how these tools can support a systematic, analytical approach to user-focused
   design.
-</td>
+  </td>
 </tr>
 <tr class="schedule-row">
   <td class="schedule-date">11 Nov</td>
@@ -194,11 +194,23 @@ semester.
   altering this equation. Specifically, it attempts to lower the (perceived and
   actual) costs associated with learning a new feature, while making the reward
   more immediate and clear.
-</td>
+  </td>
 </tr>
 <tr class="schedule-row schedule-important">
   <td class="schedule-date">18 Nov</td>
   <td class="schedule-info">No meeting this week.</td>
 </tr>
-</table>
+<tr class="schedule-row">
+  <td class="schedule-date">25 Nov</td>
+  <td class="schedule-info">
+  Moody, *The "Physics" of Notations: Towards a Scientific Basis for
+  Constructing Visual Notations in Software Engineering*, TSE 2009.
 
+  The *physics of notations* is a theory for designing usable visual languages.
+  It is founded on a synthesis and organization of a large amount of existing
+  research on human perception and cognition. Compared to the cognitive
+  dimensions, it is intended to be prescriptive, more objective, and
+  falsifiable.
+  </td>
+</tr>
+</table>
