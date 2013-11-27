@@ -223,4 +223,29 @@ semester.
   (Discussion leader: Jonathan)
   </td>
 </tr>
+<tr class="schedule-row">
+  <td class="schedule-date">2 Dec</td>
+  <td class="schedule-info">
+  Continue discussion of the *Physics of Notation*.
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">9 Dec</td>
+  <td class="schedule-info">
+  Burnett et al., *Gender Differences and Programming Environments: Across
+  Programming Populations*, ESEM 2010.
+
+  The field of [Gender HCI](http://en.wikipedia.org/wiki/Gender_HCI) is
+  concerned with how males and females interact differently with computers (on
+  average), and how to create software that takes these differences into
+  account, thereby supporting a broader range of users and problem-solving
+  strategies. I think this is an especially important issue for programming
+  languages and tools since these are the keys to computing empowerment. This
+  paper looks specifically at the intersection of Gender HCI and programming
+  environments. The paper is also highly empirical, complementing the mostly
+  theoretical papers we have read so far in this seminar.
+
+  (Discussion leader: Björn)
+  </td>
+</tr>
 </table>
