@@ -218,7 +218,9 @@ semester.
   It is founded on a synthesis and organization of a large amount of existing
   research on human perception and cognition. Compared to the cognitive
   dimensions, it is intended to be prescriptive, more objective, and
-  falsifiable.
+  falsifiable. However, it focuses mostly on picking effective graphical
+  symbols, and so is less generally applicable than the cognitive dimensions
+  and the other theories we have discussed.
 
   (Discussion leader: Jonathan)
   </td>
