@@ -152,6 +152,8 @@ semester.
   *attention investment* model, which can help to understand when a user will
   invest effort in learning a new language or feature, and suggests strategies
   for encouraging this investment.
+
+  (Discussion leader: Jan)
   </td>
 </tr>
 <tr class="schedule-row">
@@ -166,6 +168,8 @@ semester.
   notational qualities that impact usability, something that will also be
   useful for us in this seminar. Besides this vocabulary, the framework
   emphasizes the trade-offs between dimensions.
+  
+  (Discussion leader: Tobias)
   </td>
 </tr>
 <tr class="schedule-row">
@@ -179,6 +183,8 @@ semester.
   language extensions to Excel spreadsheets. It provides a nice illustration of
   how these tools can support a systematic, analytical approach to user-focused
   design.
+
+  (Discussion leader: Daniel)
   </td>
 </tr>
 <tr class="schedule-row">
@@ -194,6 +200,8 @@ semester.
   altering this equation. Specifically, it attempts to lower the (perceived and
   actual) costs associated with learning a new feature, while making the reward
   more immediate and clear.
+
+  (Discussion leader: Michael)
   </td>
 </tr>
 <tr class="schedule-row schedule-important">
@@ -211,6 +219,8 @@ semester.
   research on human perception and cognition. Compared to the cognitive
   dimensions, it is intended to be prescriptive, more objective, and
   falsifiable.
+
+  (Discussion leader: Jonathan)
   </td>
 </tr>
 </table>
