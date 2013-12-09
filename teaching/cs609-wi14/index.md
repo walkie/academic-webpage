@@ -250,4 +250,26 @@ semester.
   (Discussion leader: Björn)
   </td>
 </tr>
+<tr class="schedule-row">
+  <td class="schedule-date">16 Dec</td>
+  <td class="schedule-info">
+  Pane and Myers, *More Natural Programming Languages and Environments*, in
+  *End User Development*, Springer, 2006.
+
+  A language can be called "natural" if it has a high closeness of mapping with
+  the (possibly informal) way that (some group of) people think about and
+  express solutions to programming-like problems. The term can be a red flag in
+  human-centric research, since it is usually applied post hoc and without
+  evidence. The [Natural Programming Project](http://www.cs.cmu.edu/~NatProg/),
+  however, proposes a design methodology where designers first identify what is
+  "natural" for users in a particular domain, then iteratively design and
+  evaluate a language tailored to the way these potential users already think.
+  While their focus is on non-programmers, the methodology can also be applied
+  in other contexts. In contrast to the other design tools we have discussed
+  this semester, the natural programming methodology is fundamentally
+  user-centric and bottom-up.
+  
+  (Discussion leader: Steffan)
+  </td>
+</tr>
 </table>
