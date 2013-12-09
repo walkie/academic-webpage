@@ -269,7 +269,7 @@ semester.
   this semester, the natural programming methodology is fundamentally
   user-centric and bottom-up.
   
-  (Discussion leader: Steffan)
+  (Discussion leader: Stefan)
   </td>
 </tr>
 </table>
