@@ -1,5 +1,5 @@
 ---
-title: CS 609: Human Factors in Programming Languages
+title: Human Factors in Programming Languages
 ---
 <style>
 td {
@@ -67,14 +67,14 @@ seminar are to:
 ## Structure of Course
 
 The seminar will be divided into two phases. During the first and longer phase,
-we will function as a reading group. During the second and shorter phase, you
-will apply your new knowledge to a language or interface design problem, and
-share your design with the group.
+we will function as a reading group. During the second and much shorter phase,
+you will apply your new knowledge to a language or interface design problem,
+and share your design with the group.
 
 
 ### Phase 1: Reading Group
 
-This phase will last for the first ten weeks or so of the semester.
+This phase will last for the first 14 weeks of the semester.
 
 Each week I will assign a paper, book chapter, or other reading for our next
 meeting. I will also provide a brief motivation for why I selected the reading
@@ -110,25 +110,18 @@ To summarize, your responsibilities during this phase of the seminar are to:
 
 ### Phase 2: Application to a Design Problem
 
-This phase will last for the final 2-3 weeks of the semester, although you will
-probably start working on it earlier.
+This phase will last for the final two weeks of the semester, although you should
+start working on it earlier.
 
-In this phase, you will apply your knowledge from the previous phase to a small
-design project. You will pick a single, specific user and a domain of
-programming tasks that the user would like to accomplish for their work or in
-their every day life. The user may be anyone that you have access to except for
-another computer science student. A family member or colleague in another field
-may be a good choice; they may be either programmer or non-programmer. The
-motivation for picking a single user is to focus the design in the spirit of
-[situated software](http://www.shirky.com/writings/situated_software.html). 
+In this phase of the seminar you will apply the knowledge you have gained
+throughout the semester to a small design project. You will design a language
+or tool that enables a specific user to perform some specific programming tasks
+that would be difficult or impossible for them to accomplish otherwise. You
+will use at least two of the intellectual tools we have discussed this semester
+during the design process.
 
-In your design, you should employ at least two of the design strategies and
-intellectual tools that we discussed earlier in the semester. You will submit a
-short (2-3 page) writeup describing your design and its rationale, and present
-a storyboard illustrating the design at one of the final seminar meetings.
+**[Link to Project Specification](project.html)**
 
-More details on the final design project will be provided later in the
-semester.
 
 
 ## Schedule and Reading Assignments
