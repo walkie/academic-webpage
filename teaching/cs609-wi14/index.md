@@ -272,4 +272,56 @@ semester.
   (Discussion leader: Stefan)
   </td>
 </tr>
+<tr class="schedule-row">
+  <td class="schedule-date">13 Jan</td>
+  <td class="schedule-info">
+  Ko and Meyers, *Designing the Whyline: A Debugging Interface for Asking
+  Questions about Program Behavior*, CHI 2004.
+  
+  As part of the Natural Programming Project, Ko and Meyers found that, when
+  faced with unexpected results, both programmers and non-programmers formulate
+  "why did ..." and "why didn't ..." questions about the program's behavior. With
+  traditional debuggers, attempting to answer these questions is difficult and
+  time-consuming, perhaps because the interaction with the system is in quite
+  different terms (e.g. breakpoints, log files, code-stepping). The Whyline
+  allows users to ask these kinds of questions directly through a process called
+  *interrogative debugging*, which uses control- and data-flow analyses to show
+  users the code that answers the question.
+
+  (Discussion leader: ???)
+  </td>
+</tr>
+<!--
+<tr class="schedule-row">
+  <td class="schedule-date">13 Jan</td>
+  <td class="schedule-info">
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">20 Jan</td>
+  <td class="schedule-info">
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">27 Jan</td>
+  <td class="schedule-info">
+  Meyerovich and Rabkin, *Empirical Analysis of Programming Language Adoption*,
+  OOPSLA 2013.
+  
+  (Discussion leader: ...)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">3 Feb</td>
+  <td class="schedule-info">
+  Design project presentations.
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">10 Feb</td>
+  <td class="schedule-info">
+  Design project presentations.
+  </td>
+</tr>
+-->
 </table>
