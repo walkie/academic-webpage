@@ -268,10 +268,10 @@ during the design process.
 <tr class="schedule-row">
   <td class="schedule-date">13 Jan</td>
   <td class="schedule-info">
-  Ko and Meyers, *Designing the Whyline: A Debugging Interface for Asking
+  Ko and Myers, *Designing the Whyline: A Debugging Interface for Asking
   Questions about Program Behavior*, CHI 2004.
   
-  As part of the Natural Programming Project, Ko and Meyers found that, when
+  As part of the Natural Programming Project, Ko and Myers found that, when
   faced with unexpected results, both programmers and non-programmers formulate
   "why did ..." and "why didn't ..." questions about the program's behavior. With
   traditional debuggers, attempting to answer these questions is difficult and
