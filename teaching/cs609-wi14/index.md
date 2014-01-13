@@ -278,21 +278,20 @@ during the design process.
   time-consuming, perhaps because the interaction with the system is in quite
   different terms (e.g. breakpoints, log files, code-stepping). The Whyline
   allows users to ask these kinds of questions directly through a process called
-  *interrogative debugging*, which uses control- and data-flow analyses to show
-  users the code that answers the question.
+  *interrogative debugging*. This paper also illustrates how the cognitive
+  dimensions can be used in *interaction design*, in addition to interface and
+  language design.
 
-  (Discussion leader: ???)
-  </td>
-</tr>
-<!--
-<tr class="schedule-row">
-  <td class="schedule-date">13 Jan</td>
-  <td class="schedule-info">
+  (Discussion leader: Eric)
   </td>
 </tr>
 <tr class="schedule-row">
   <td class="schedule-date">20 Jan</td>
   <td class="schedule-info">
+  Coughlan and Johnson, *Interaction in Creative Tasks: Ideation,
+  Representation and Evaluation in Composition*, CHI 2006.
+
+  (Discussion leader: ???)
   </td>
 </tr>
 <tr class="schedule-row">
@@ -301,7 +300,7 @@ during the design process.
   Meyerovich and Rabkin, *Empirical Analysis of Programming Language Adoption*,
   OOPSLA 2013.
   
-  (Discussion leader: ...)
+  (Discussion leader: ???)
   </td>
 </tr>
 <tr class="schedule-row">
@@ -316,5 +315,5 @@ during the design process.
   Design project presentations.
   </td>
 </tr>
--->
 </table>
+
