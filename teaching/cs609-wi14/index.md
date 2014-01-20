@@ -321,13 +321,13 @@ during the design process.
 <tr class="schedule-row">
   <td class="schedule-date">3 Feb</td>
   <td class="schedule-info">
-  Design project presentations: Tobias and ???
+  Design project presentations: Michael and Tobias
   </td>
 </tr>
 <tr class="schedule-row">
   <td class="schedule-date">10 Feb</td>
   <td class="schedule-info">
-  Design project presentations: ??? and ???
+  Design project presentations: Björn and Jan
   </td>
 </tr>
 </table>
