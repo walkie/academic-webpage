@@ -291,7 +291,13 @@ during the design process.
   Coughlan and Johnson, *Interaction in Creative Tasks: Ideation,
   Representation and Evaluation in Composition*, CHI 2006.
 
-  (Discussion leader: ???)
+  Programming is largely about creative problem solving, but promoting
+  creativity is usually not an explicit design goal of programming languages
+  and tools. In the context of music composition, this paper presents a model
+  of human creativity and describes how tools can be designed to support this
+  process. It focuses especially on supporting collaborative creativity.
+
+  (Discussion leader: Eric)
   </td>
 </tr>
 <tr class="schedule-row">
@@ -299,20 +305,29 @@ during the design process.
   <td class="schedule-info">
   Meyerovich and Rabkin, *Empirical Analysis of Programming Language Adoption*,
   OOPSLA 2013.
+
+  What makes a programming language popular? I think programming language
+  academics are painfully aware that the most popular languages lack many of
+  the properties and qualities we care about. This paper presents a ton of data
+  about how and why languages become popular. It focuses especially on the role
+  of social factors and existing infrastructure in language success, but also
+  looks at the public perception of various language features. Understanding
+  the programming language market is an important part of getting our ideas
+  used by wider world.
   
-  (Discussion leader: ???)
+  (Discussion leader: Jan)
   </td>
 </tr>
 <tr class="schedule-row">
   <td class="schedule-date">3 Feb</td>
   <td class="schedule-info">
-  Design project presentations.
+  Design project presentations: Tobias and ???
   </td>
 </tr>
 <tr class="schedule-row">
   <td class="schedule-date">10 Feb</td>
   <td class="schedule-info">
-  Design project presentations.
+  Design project presentations: ??? and ???
   </td>
 </tr>
 </table>
