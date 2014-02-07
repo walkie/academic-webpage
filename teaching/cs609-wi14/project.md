@@ -25,7 +25,7 @@ during the design process.
    minutes of discussion, where you will need to respond to questions and
    possibly defend your design.
 
- * **Feb 10** --- Submit a short written document providing the rationale for
+ * **Feb 17** --- Submit a short written document providing the rationale for
    your design decisions in terms of the chosen intellectual tools, and your
    experience applying the tools.
 
