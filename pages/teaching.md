@@ -9,8 +9,10 @@ title: Teaching
   * \$teaching-current\$
 
 
-## Past Courses (at Oregon State)
+## Past Courses
 
-  * Spring 2013 -- CS 261: Data Structures
+  * Winter 2014 (Marburg) -- [CS 609 Discussion Seminar: Human Factors in Programming Languages](/teaching/cs609-wi14/)
   
-  * Winter 2013 -- [CS 271: Computer Architecture and Assembly Languages](/cs271-wi13/)
+  * Spring 2013 (Oregon State) -- CS 261: Data Structures
+  
+  * Winter 2013 (Oregon State) -- [CS 271: Computer Architecture and Assembly Languages](/cs271-wi13/)

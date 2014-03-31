@@ -2,9 +2,17 @@
 title: Current Teaching
 ---
 
-**[CS 609 Discussion Seminar: Human Factors in Programming Languages](/teaching/cs609-wi14/)**
+**[CS 609 Discussion Seminar: Modular Extensibility](/teaching/cs609-su14/)**
+ -- *please sign up!*
     
-Most programming language research focuses on formal and machine-centric
-qualities of languages, but programming languages are ultimately for *people*.
-How can we design good languages that help us solve harder problems and make
-computing more accessible?
+A property of good software is the ability to add new features in a modular
+way. Many programming languages provide good support for some kinds of modular
+extensions but not others. For example, in most object-oriented programs it is
+trivial to add new kinds of objects, but adding new operations on existing
+objects is not modular since we must edit existing class definitions.
+Conversely, in most functional programs it is easy to add new functions, but
+adding new kinds of objects is hard since we must edit the data type
+definitions. The challenge of supporting all kinds of modular extensions has
+been called the "expression problem". In this seminar we will study modular
+extensibility, focusing especially on the design patterns and language features
+that address the expression problem.
