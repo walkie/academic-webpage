@@ -26,6 +26,6 @@ marburgRules = do
   buildMarburgTeaching
 
 buildMarburgTeaching =
-  match "teaching/cs609-wi14/**" $ do
+  match ("teaching/cs609-wi14/**" .||. "teaching/cs609-su14/**") $ do
     route (customRoute (flip addExtension "html" . dropExtension . toFilePath))
     compilePage simpleTemplate
