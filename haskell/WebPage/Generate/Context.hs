@@ -16,6 +16,11 @@ import WebPage.Generate.Base
 import WebPage.Pubs
 
 
+-- * Settings
+
+currentNewsLength = 3
+
+
 -- * Extended Context
 
 -- | The complete context.
@@ -23,6 +28,7 @@ getContext :: Compiler (Context String)
 getContext = do
   pubContext  <- getPubContext
   fileContext <- getBlurbContext
+  newsContext <- getNewsContext
   return (fileContext <> pubContext <> newsContext <> baseContext)
 
 
@@ -53,8 +59,15 @@ simpleTemplate = applyTemplateTo "templates/simple.html"
 -- ** News context
 
 -- | Add news items to context as a list.
-newsContext :: Context String
-newsContext = listField "news" baseContext (loadAll "news/*" >>= recentFirst)
+getNewsContext :: Compiler (Context String)
+getNewsContext = do
+    page <- getUnderlying
+    let news = if page == "pages/index.html"
+               then fmap (take currentNewsLength) allNews
+               else allNews
+    return (listField "news" baseContext news)
+  where
+    allNews = loadAll "news/*" >>= recentFirst
 
 
 -- ** File context
