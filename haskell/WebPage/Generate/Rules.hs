@@ -2,9 +2,11 @@
 
 module WebPage.Generate.Rules where
 
+import Data.Set (delete)
 import System.FilePath
 
 import Hakyll
+import Text.Pandoc.Options
 
 import WebPage.Generate.Base
 import WebPage.Generate.Context
@@ -74,6 +76,13 @@ compilePage apply = compile $ do
   path <- fmap toFilePath getUnderlying
   let content = case takeExtension path of
         ".html" -> getResourceBody
-        ".md"   -> pandocCompiler
+        ".md"   -> myPandocCompiler
         _       -> error ("Unexpected file type: " ++ path)
   content >>= apply (takeBaseName path)
+
+myPandocCompiler = pandocCompilerWith
+  defaultHakyllReaderOptions {
+    -- the citations extension clashes with example lists, which I use for references
+    readerExtensions = delete Ext_citations (readerExtensions defaultHakyllReaderOptions)
+  }
+  defaultHakyllWriterOptions
