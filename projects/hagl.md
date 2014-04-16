@@ -20,9 +20,8 @@ While Hagl provides some basic game analyses, its primary focus is simulation
 and experimentation. Games can be executed and strategies can be pitted against
 each other for repeated play and in various kinds of tournaments.
 
-The most recent version of
-**[Hagl is available on GitHub](https://github.com/walkie/Hagl)**. Older
-versions corresponding to specific papers are linked to below.
+**[Hagl is available on GitHub!](https://github.com/walkie/Hagl)**
+Older versions of Hagl corresponding to specific papers are linked to below.
 
 
 ## Publications
