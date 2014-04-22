@@ -27,7 +27,8 @@ td {
 ----------------  -------------------------------------------------------------
 Instructor:       <span class="my-name">Eric Walkingshaw</span>
                   <span class="marburg-email"></span>
-Weekly meeting:   TBD
+Weekly meeting:   Mondays, 16:15 -- 17:45
+                  Seminarraum V D5
 Course web page:  <http://www.staff.uni-marburg.de/~walkings/teaching/cs609-su14/>
                   (This document, which will be updated throughout the course.)
 ----------------  -------------------------------------------------------------
