@@ -136,7 +136,7 @@ to discuss a particular paper not on this list, please send it my way!
  * Wadler, *The Expression Problem*, email 1998.
  
 
-### Solutions: Design Patterns
+### Expression Problem Solutions: Design Patterns
 
  * Krishnamurthi, Felleisen, Friedman, *Synthesizing Object-Oriented and
    Functional Design to Promote Re-Use*, ECOOP 1998. (Extensible Visitor
@@ -157,9 +157,18 @@ to discuss a particular paper not on this list, please send it my way!
    with Object Algebras*, ECOOP 2012.
 
 
-### Solutions: Language Extensions
+### Expression Problem Solutions: Language Extensions
  
  * Clifton et al., *MultiJava: Modular Open Classes and Symmetric Multiple
    Dispatch for Java*, OOPSLA 2000.
  
  * Löh and Hinze, *Open Data Types and Open Functions*, PPDP 2006.
+
+ * Apel, Kästner, Lengauer, *Feature Featherweight Java: A Calculus for
+   Feature-Oriented Programming and Stepwise Refinement*, GPCE 2008.
+
+
+### Rethinking Modularity
+
+ * Ostermann et al., *Revisiting Information Hiding: Reflections on Classical
+   and Nonclassical Modularity*, ECOOP 2011.
