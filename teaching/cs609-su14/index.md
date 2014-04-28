@@ -123,9 +123,23 @@ presentation will be given partway through the seminar.
 
 ## Schedule and Reading Assignments
 
-The schedule for the seminar is still being developed and subject to change.
-For now, a list of papers we may discuss is provided below. If you would like
-to discuss a particular paper not on this list, please send it my way!
+<table class="schedule">
+<tr class="schedule-row">
+  <td class="schedule-date">28 Apr</td>
+  <td class="schedule-info">
+  Parnas, *On the Criteria to be Used in Decomposing Systems into Modules*,
+  CACM 1972.
+  
+  (Discussion leader: Eric)
+  </td>
+</tr>
+</table>
+
+
+## Potential Future Papers
+
+A list of papers we may discuss is provided below. If you would like to discuss
+a particular paper not on this list, please send it my way!
 
 
 ### Foundation
