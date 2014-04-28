@@ -1,0 +1,40 @@
+/* Styling for code blocks */
+
+pre, code {
+  font-family: @codeFont;
+  font-size: 90%;
+}
+
+pre {
+  margin-left: 2em;
+}
+
+
+/* Syntax highlighting for Pandoc generated code
+ *
+ *   Class  Syntactic Category
+ *   -----  ------------------
+ *   .kw    Keyword
+ *   .dt	  Data Type
+ *   .dv	  Decimal Value
+ *   .bn	  Base N
+ *   .fl	  Float
+ *   .ch	  Char
+ *   .st	  String
+ *   .co	  Comment
+ *   .ot	  Other Token
+ *   .at	  Alert Token
+ *   .fu	  Function
+ *   .re	  Region Marker
+ *   .er	  Error Token
+ */
+.sourceCode span.kw { color: #082; }
+.sourceCode span.dt { color: #90A; }
+.sourceCode span.dv, span.bn, span.fl, span.ch, span.st { color: #C00; }
+.sourceCode span.co { color: #6AA; font-style: italic; }
+.sourceCode span.al { color: #F00; font-weight: bold; }
+.sourceCode span.er { color: #F00; font-weight: bold; }
+
+/* Haskell specific */
+.sourceCode .haskell span.dt { color: @textColor }
+.sourceCode .haskell span.fu { color: #A62 }
