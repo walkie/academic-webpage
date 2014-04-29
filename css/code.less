@@ -28,13 +28,17 @@ pre {
  *   .re	  Region Marker
  *   .er	  Error Token
  */
-.sourceCode span.kw { color: #082; }
-.sourceCode span.dt { color: #709; }
-.sourceCode span.dv, span.bn, span.fl, span.ch, span.st { color: #C00; }
-.sourceCode span.co { color: #6AA; font-style: italic; }
-.sourceCode span.al { color: #F00; font-weight: bold; }
-.sourceCode span.er { color: #F00; font-weight: bold; }
+.sourceCode {
+  span.kw { color: #082; }
+  span.dt { color: #709; }
+  span.dv, span.bn, span.fl, span.ch, span.st { color: #C00; }
+  span.co { color: #6AA; font-style: italic; }
+  span.al { color: #F00; font-weight: bold; }
+  span.er { color: #F00; font-weight: bold; }
+}
 
 /* Haskell specific */
-.sourceCode .haskell span.dt { color: @textColor }
-.sourceCode .haskell span.fu { color: #A62 }
+.sourceCode.haskell {
+  span.dt { color: @textColor }
+  span.fu { color: #A62 }
+}
