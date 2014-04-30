@@ -75,7 +75,7 @@ downloaded `shapes.jar` and it looks pretty useful. You want to use it in your
 program. Unfortunately, it's missing a few features that you really need.
 
 The first thing you need is support for an exotic basic shape that I didn't
-think of. No problem. You just add a new subclass of `Shape` and implement all
+think of. No problem, you just add a new subclass of `Shape` and implement all
 of its operations.
 
 ```java
@@ -129,24 +129,32 @@ public class Square extends Shape {
 
 But you can't edit the source code since you don't have it!
 
-This is one half of the expression problem: Unfortunately, there is no good way
-for you to modularly extend by Java shape library with a new operation.
+Unfortunately, there is no good way for you to modularly extend my Java shape
+library with new operations... But Java is stodgy language, maybe the situation
+looks better in Haskell?
 
 
 
 ## A shape library in Haskell
 
-In Haskell:
+Let's play the same game but faster this time.
+
+I want to provide a library for working with shapes. In Haskell, I might start
+by defining a data type that enumerates the different kinds of shapes that my
+library supports.
 
 ```haskell
-module Shapes where
-
 type Radius = Float
 type Side   = Float
 
 data Shape = Circle Radius
            | Square Side
+```
 
+Then I add several functions that implement all of the operations on shapes
+that my library provides.
+
+```haskell
 area :: Shape -> Float
 area (Circle r) = pi * r * r
 area (Square s) = s * s
@@ -156,23 +164,57 @@ perimeter (Circle r) = 2 * pi * r
 perimeter (Square s) = 4 * s
 ```
 
+Once again, pretend my library is much bigger. When it's done, I package it up
+and put it somewhere on the internet for everyone to use.
+
 
 ### Modular extension: adding a new operation
 
-In Haskell, adding a new operation is easy:
+Now you come along. You found my library, but you don't know me and don't have
+access to my source code. You want to use my library, but it's missing a few
+features that you really need.
+
+The first thing you need is support for a new operation on shapes: a `diameter`
+function that returns the length of the longest line segment contained by the
+shape. No problem, you just add a new function.
 
 ```haskell
-module NewOps where
-
 diameter :: Shape -> Float
 diameter (Circle r) = 2 * r
 diameter (Square s) = sqrt (2 * s * s)
 ```
 
+Nice! This extension is modular since it didn't require changing the existing
+source code of my library and all of the new code is grouped together.
+
+Remember how you couldn't modularly add new operations to my shape library in
+Java? Haskell for the win?
+
 
 ### Non-modular extension: adding a new shape
 
-But adding a new shape is hard.
+The next thing you need is support for an exotic basic shape that I didn't
+think of. If you had access to the source code, you could add the new shape by
+extending the data type definition with a new constructor, then extending each
+function with a new case for the new shape.
+
+```haskell
+data Shape = -- ... original constructors ...
+           | Triangle Side
+
+area :: Shape -> Float
+-- ... original cases ...
+area (Triangle s) = s * s * sqrt 3 / 4
+
+perimeter :: Shape -> Float
+-- ... original cases ...
+perimeter (Triangle s) = 3 * s
+```
+
+But you can't edit the source code since you don't have it!
+
+Unfortunately, there is no good way for you to modularly extend my Haskell shape
+library with new shapes... Remember how easy that was in Java?
 
 
 ## Expression problem
