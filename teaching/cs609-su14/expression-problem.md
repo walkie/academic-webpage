@@ -294,6 +294,9 @@ newPerimeter (Triangle s) = 3 * s
 Aside from requiring a lot of boilerplate, these workarounds will not work in
 all cases. Can you think of when they will fail?
 
+<br>
+
+**[Back to course web page](index.html)**
 
 [Adapter]: https://en.wikipedia.org/wiki/Adapter_pattern
 [AOP]: https://en.wikipedia.org/wiki/Aspect-oriented
