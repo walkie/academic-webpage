@@ -245,7 +245,7 @@ I also think the expression problem is just one view of something more
 fundamental than extensibility in object-oriented vs. functional programming.
 The [aspect-oriented programming][AOP] folks talk more generally about the
 "tyranny of [dominant decomposition][DD]", and many [feature-oriented
-programming][FOP] approaches are also focused on different kinds of modularly
+programming][FOP] approaches are also focused on different kinds of modular
 extensibility.
 
 
