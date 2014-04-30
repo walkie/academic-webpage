@@ -219,6 +219,35 @@ library with new shapes... Remember how easy that was in Java?
 
 ## Expression problem
 
+The expression problem is about the ability to modularly extend a program with
+*new things* and with *new operations* on both old and new things. In the case of
+a shape library, we want to be able to modularly add new kinds of shapes and
+new operations on all kinds of shapes.
+
+In object-oriented languages like Java, it tends to be easy to add new kinds of
+things and hard to add new operations. We add new things by adding new
+subclasses. But adding new operations requires adding new methods to all of our
+existing class definitions.
+
+In functional languages like Haskell, it tends to be easy to add new operations
+and hard to add new things. We add new operations by adding new functions. But
+adding new things requires extending an existing data type definition and
+extending all functions that pattern match on that data type.
+
+During this seminar, we'll look at many different kinds of solutions to the
+expression problem. Some are [design patterns][DP] that can be applied in
+languages like Java and Haskell, in order to make your library extensible with
+both new things and new operations. Some are new languages or language features
+that make it easier to do both kinds of extensions without the foresight that
+the design pattern approaches require.
+
+I also think the expression problem is just one view of something more
+fundamental than extensibility in object-oriented vs. functional programming.
+The [aspect-oriented programming][AOP] folks talk more generally about the
+"tyranny of [dominant decomposition][DD]", and many [feature-oriented
+programming][FOP] approaches are also focused on different kinds of modularly
+extensibility.
+
 
 ## Workarounds and non-solutions
 
@@ -259,3 +288,7 @@ newPerimeter :: Shape -> Float
 newPerimeter (OldShape o) = perimeter o
 newPerimeter (Triangle s) = 3 * s
 ```
+[AOP]: https://en.wikipedia.org/wiki/Aspect-oriented
+[DD]: http://www.aosd.net/wiki/index.php?title=Glossary#Dominant_Decomposition
+[DP]: https://en.wikipedia.org/wiki/Software_design_pattern
+[FOP]: https://en.wikipedia.org/wiki/Feature-oriented_programming
