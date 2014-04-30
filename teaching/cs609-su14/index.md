@@ -49,7 +49,8 @@ Many programming languages provide good support for some kinds of modular
 extensions but not others. Most significantly, object-oriented languages and
 functional languages support modular extensibility in orthogonal dimensions.
 The challenge of supporting all kinds of modular extensions has been called the
-"expression problem" or the "tyranny of the dominant decomposition". 
+"[expression problem](expression-problem.html)" or the "tyranny of the dominant
+decomposition". 
 
 In this seminar we will study modular extensibility, focusing especially on the
 design patterns and language features that address the expression problem. Each
@@ -131,6 +132,16 @@ presentation will be given partway through the seminar.
   CACM 1972.
   
   (Discussion leader: Eric)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">5 May</td>
+  <td class="schedule-info">
+  [Introduction to the Expression Problem](expression-problem.html).
+  
+  Wadler, *The Expression Problem*, email 1998.
+  
+  (Discussion leader: ???)
   </td>
 </tr>
 </table>
