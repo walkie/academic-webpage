@@ -251,9 +251,10 @@ extensibility.
 
 ## Workarounds and non-solutions
 
-Sometimes there are workarounds. For example, you might create an interface
-with the new operations you want, then extend each existing shape class,
-implementing the new operations.
+You may be able to come up with some workarounds for the problem cases we
+identified above. For example, you might modularly extend the Java library with
+a new operation by first creating an interface with the new operations you
+want, then extending each existing shape class.
 
 ```java
 public interface HasDiameter {
@@ -269,14 +270,15 @@ public class NewSquare extends Square implements HasDiameter {
 }
 ```
 
-Now whenever you want a circle, you can just instantiate `NewCircle`. This will
-work as long as my library never creates circles on its own. If it does, it
-will create old circles that don't 
+Now whenever you want a circle, you can just instantiate `NewCircle`.
 
+For the Haskell library, you can modularly extend the library with a new shape
+by defining a new data type that is either an old shape from the library, or
+one of the new shapes that you want to add. Then you wrap each operation in a
+new function, calling the original function for an old shape and adding cases
+for the new shapes. This is essentially the [adapter pattern][Adapter].
 
 ```haskell
-module NewShapes where
-
 data NewShape = OldShape Shape
               | Triangle Side
 
@@ -288,6 +290,12 @@ newPerimeter :: Shape -> Float
 newPerimeter (OldShape o) = perimeter o
 newPerimeter (Triangle s) = 3 * s
 ```
+
+Aside from requiring a lot of boilerplate, these workarounds will not work in
+all cases. Can you think of when they will fail?
+
+
+[Adapter]: https://en.wikipedia.org/wiki/Adapter_pattern
 [AOP]: https://en.wikipedia.org/wiki/Aspect-oriented
 [DD]: http://www.aosd.net/wiki/index.php?title=Glossary#Dominant_Decomposition
 [DP]: https://en.wikipedia.org/wiki/Software_design_pattern
