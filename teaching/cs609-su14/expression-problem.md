@@ -282,11 +282,11 @@ for the new shapes. This is essentially the [adapter pattern][Adapter].
 data NewShape = OldShape Shape
               | Triangle Side
 
-newArea :: Shape -> Float
+newArea :: NewShape -> Float
 newArea (OldShape o) = area o
 newArea (Triangle s) = s * s * sqrt 3 / 4
 
-newPerimeter :: Shape -> Float
+newPerimeter :: NewShape -> Float
 newPerimeter (OldShape o) = perimeter o
 newPerimeter (Triangle s) = 3 * s
 ```
