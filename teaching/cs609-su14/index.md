@@ -124,12 +124,20 @@ presentation will be given partway through the seminar.
 
 ## Schedule and Reading Assignments
 
+### Foundation
+
 <table class="schedule">
 <tr class="schedule-row">
   <td class="schedule-date">28 Apr</td>
   <td class="schedule-info">
+  <span class="schedule-topic">
   Parnas, *On the Criteria to be Used in Decomposing Systems into Modules*,
-  CACM 1972.
+  CACM 1972
+  </span>
+  
+  Argues for "information hiding" as the most important role of modules.
+  Expresses motivations for what would eventually become object-oriented
+  programming.
   
   (Discussion leader: Eric)
   </td>
@@ -137,10 +145,60 @@ presentation will be given partway through the seminar.
 <tr class="schedule-row">
   <td class="schedule-date">5 May</td>
   <td class="schedule-info">
-  [Introduction to the Expression Problem](expression-problem.html).
+  <span class="schedule-topic">
+  [Introduction to the Expression Problem](expression-problem.html)
+  </span>
   
-  Wadler, *The Expression Problem*, email 1998.
+  Motivates the expression problem from a programmer's perspective.
+</tr>
+<tr>
+  <td> </td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Wadler, *The Expression Problem*, email 1998
+  </span>
   
+  Coins the name of the expression problem and establishes some criteria
+  for solutions.
+  
+  (Discussion leader: Eric)
+  </td>
+</tr>
+</table>
+
+### Expression Problem Solutions: Libraries and Design Patterns
+
+<table class="schedule">
+<tr class="schedule-row">
+  <td class="schedule-date">12 May</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Palsberg and Jay, *The Essence of the Visitor Pattern*, COMPSAC 1998
+  </span>
+
+  Discusses the "visitor pattern", which inverts the expression problem for
+  object-oriented programs, making it easy to add new operations, but
+  difficult to add new cases. Introduces the "Walkabout" class as a reusable
+  solution that is extensible in both dimensions but relies on reflection and
+  is not type safe.
+  
+  (Discussion leader: ???)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">19 May</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Zenger and Odersky, *Extensible Algebraic Datatypes with Defaults*, ICFP
+  2001
+  </span>
+
+  Adds default cases to the "extensible visitor pattern" to make it easier to
+  use and more type safe. For background, you may be interested in the
+  original extensible visitor pattern paper by Krishnamurthi, Felleisen, and
+  Friedman: *Synthesizing Object-Oriented and Functional Design to Promote
+  Re-Use*, ECOOP 1998.
+
   (Discussion leader: ???)
   </td>
 </tr>
@@ -152,20 +210,7 @@ presentation will be given partway through the seminar.
 A list of papers we may discuss is provided below. If you would like to discuss
 a particular paper not on this list, please send it my way!
 
-
-### Foundation
-
- * Parnas, *On the Criteria to be Used in Decomposing Systems into Modules*,
-   CACM 1972.
- 
- * Wadler, *The Expression Problem*, email 1998.
- 
-
-### Expression Problem Solutions: Design Patterns
-
- * Krishnamurthi, Felleisen, Friedman, *Synthesizing Object-Oriented and
-   Functional Design to Promote Re-Use*, ECOOP 1998. (Extensible Visitor
-   Pattern)
+### Expression Problem Solutions: Libraries and Design Patterns
 
  * Zenger and Odersky, *Independently Extensible Solutions to the Expression
    Problem*, FOOL 2005.
