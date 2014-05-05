@@ -296,7 +296,9 @@ all cases. Can you think of when they will fail?
 
 <br>
 
+<div class="no-print">
 **[Back to course web page](index.html)**
+</div>
 
 [Adapter]: https://en.wikipedia.org/wiki/Adapter_pattern
 [AOP]: https://en.wikipedia.org/wiki/Aspect-oriented
