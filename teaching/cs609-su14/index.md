@@ -240,5 +240,7 @@ a particular paper not on this list, please send it my way!
 
 ### Rethinking Modularity
 
+ * Cook, *On Understanding Data Abstraction, Revisited*, OOPSLA 2009.
+
  * Ostermann et al., *Revisiting Information Hiding: Reflections on Classical
    and Nonclassical Modularity*, ECOOP 2011.
