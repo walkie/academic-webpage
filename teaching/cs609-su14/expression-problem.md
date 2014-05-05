@@ -45,7 +45,7 @@ public class Circle extends Shape {
   private float r;
   public Circle(float radius) { r = radius; }
   public float area()         { return Math.PI * r * r; }
-  public float perimeter()    { return 2 * MATH.PI * r; }
+  public float perimeter()    { return 2 * Math.PI * r; }
 }
 
 public class Square extends Shape {
