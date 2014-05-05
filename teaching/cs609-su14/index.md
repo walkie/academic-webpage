@@ -177,12 +177,12 @@ presentation will be given partway through the seminar.
   </span>
 
   Discusses the "visitor pattern", which inverts the expression problem for
-  object-oriented programs, making it easy to add new operations, but
+  object-oriented programs, making it easy to add new operations but
   difficult to add new cases. Introduces the "Walkabout" class as a reusable
   solution that is extensible in both dimensions but relies on reflection and
   is not type safe.
   
-  (Discussion leader: ???)
+  (Discussion leader: Bastian)
   </td>
 </tr>
 <tr class="schedule-row">
@@ -199,7 +199,7 @@ presentation will be given partway through the seminar.
   Friedman: *Synthesizing Object-Oriented and Functional Design to Promote
   Re-Use*, ECOOP 1998.
 
-  (Discussion leader: ???)
+  (Discussion leader: Felix)
   </td>
 </tr>
 </table>
