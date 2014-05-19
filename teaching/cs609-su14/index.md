@@ -166,7 +166,7 @@ presentation will be given partway through the seminar.
 </tr>
 </table>
 
-### Expression Problem Solutions: Libraries and Design Patterns
+### Solutions to the Expression Problem: Object-Oriented View
 
 <table class="schedule">
 <tr class="schedule-row">
@@ -193,54 +193,135 @@ presentation will be given partway through the seminar.
   2001
   </span>
 
-  Adds default cases to the "extensible visitor pattern" to make it easier to
-  use and more type safe. For background, you may be interested in the
-  original extensible visitor pattern paper by Krishnamurthi, Felleisen, and
-  Friedman: *Synthesizing Object-Oriented and Functional Design to Promote
-  Re-Use*, ECOOP 1998.
+  Describes the "extensible visitor pattern" as a solution to the expression
+  problem. For background, you may be interested in the original extensible
+  visitor pattern paper by Krishnamurthi, Felleisen, and Friedman:
+  *Synthesizing Object-Oriented and Functional Design to Promote Re-Use*, ECOOP
+  1998.
 
   (Discussion leader: Felix)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">26 May</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Janzen and De Volder, *Programming with Crosscutting Effective Views*, ECOOP
+  2004
+  </span>
+
+  Describes a tool that presents two different, editable views of the same
+  program, to support extending with new cases or new operations. Shows how
+  good tool support can provide a partial solution to the expression problem.
+
+  (Discussion leader: Elena or Iratxe?)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">2 Jun</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Clifton et al., *MultiJava: Modular Open Classes and Symmetric Multiple
+  Dispatch for Java*, OOPSLA 2000
+  </span>
+
+  Extends Java with open classes and
+  [multi-methods](https://en.wikipedia.org/wiki/Multi-methods).
+
+  (Discussion leader: ??)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">9 Jun</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Oliveira and Cook, *Extensibility for the Masses: Practical Extensibility
+  with Object Algebras*, ECOOP 2012
+  </span>
+
+  (Discussion leader: Jona?)
   </td>
 </tr>
 </table>
 
 
-## Potential Future Papers
+### Solutions to the Expression Problem: Functional View
 
-A list of papers we may discuss is provided below. If you would like to discuss
-a particular paper not on this list, please send it my way!
+<table class="schedule">
+<tr class="schedule-row">
+  <td class="schedule-date">16 Jun</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Lämmel and Ostermann, *Software Extension and Integration with Type
+  Classes*, GPCE 2006.
+  </span>
 
-### Expression Problem Solutions: Libraries and Design Patterns
+  (Discussion leader: ??)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">23 Jun</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Swiestra, *Data Types à la Carte*, JFP 2008.
+  </span>
+
+  (Discussion leader: Eric?)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">30 Jun</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Löh and Hinze, *Open Data Types and Open Functions*, PPDP 2006.
+  </span>
+
+  (Discussion leader: Yi)
+  </td>
+</tr>
+</table>
+
+
+### Seminar Wrap-Up
+
+<table class="schedule">
+<tr class="schedule-row">
+  <td class="schedule-date">7 Jul</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Final project/report presentations (or one last paper)
+  </span>
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">14 Jul</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Final project/report presentations
+  </span>
+  </td>
+</tr>
+</table>
+
+
+## Further Reading
+
+A list of other interesting and relevant papers is provided below.
+
+### More Solutions to the Expression Problem
 
  * Zenger and Odersky, *Independently Extensible Solutions to the Expression
-   Problem*, FOOL 2005.
-
- * Swiestra, *Data Types à la Carte*, JFP 2008.
- 
- * Lämmel and Ostermann, *Software Extension and Integration with Type
-   Classes*, GPCE 2006.
+   Problem*, FOOL 2005
  
  * Carette, Kiselyov, and Shan, *Finally Tagless, Partially Evaluated: Tagless
-   Staged Interpreters for Simpler Typed Languages*, JFP 2009.
-
- * Oliveira and Cook, *Extensibility for the Masses: Practical Extensibility
-   with Object Algebras*, ECOOP 2012.
-
-
-### Expression Problem Solutions: Language Extensions
+   Staged Interpreters for Simpler Typed Languages*, JFP 2009
  
- * Clifton et al., *MultiJava: Modular Open Classes and Symmetric Multiple
-   Dispatch for Java*, OOPSLA 2000.
- 
- * Löh and Hinze, *Open Data Types and Open Functions*, PPDP 2006.
-
  * Apel, Kästner, Lengauer, *Feature Featherweight Java: A Calculus for
-   Feature-Oriented Programming and Stepwise Refinement*, GPCE 2008.
-
+   Feature-Oriented Programming and Stepwise Refinement*, GPCE 2008
 
 ### Rethinking Modularity
 
- * Cook, *On Understanding Data Abstraction, Revisited*, OOPSLA 2009.
+ * Cook, *On Understanding Data Abstraction, Revisited*, OOPSLA 2009
 
  * Ostermann et al., *Revisiting Information Hiding: Reflections on Classical
-   and Nonclassical Modularity*, ECOOP 2011.
+   and Nonclassical Modularity*, ECOOP 2011
