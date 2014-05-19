@@ -214,7 +214,7 @@ presentation will be given partway through the seminar.
   program, to support extending with new cases or new operations. Shows how
   good tool support can provide a partial solution to the expression problem.
 
-  (Discussion leader: Elena or Iratxe?)
+  (Discussion leader: Elena)
   </td>
 </tr>
 <tr class="schedule-row">
@@ -239,7 +239,7 @@ presentation will be given partway through the seminar.
   with Object Algebras*, ECOOP 2012
   </span>
 
-  (Discussion leader: Jona?)
+  (Discussion leader: Jona)
   </td>
 </tr>
 </table>
@@ -266,7 +266,7 @@ presentation will be given partway through the seminar.
   Swiestra, *Data Types à la Carte*, JFP 2008.
   </span>
 
-  (Discussion leader: Eric?)
+  (Discussion leader: Eric)
   </td>
 </tr>
 <tr class="schedule-row">
