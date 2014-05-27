@@ -32,13 +32,14 @@ tosem  = short "TOSEM" "ACM Trans. on Software Engineering and Methodology"
 -- ** Conferences
 lncs = ("LNCS",)
 
-dsl   = short "DSL" "IFIP Working Conf. on Domain-Specific Languages"
-idetc = short "IDETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
-gpce  = short "GPCE" "Int. Conf. on Generative Programming and Component Engineering"
-gttse = short "GTTSE" "Generative and Transformational Techniques in Software Engineering"
-icfp  = short "ICFP" "ACM SIGPLAN Int. Conf. on Functional Programming"
-sle   = short "SLE" "Int. Conf. on Software Language Engineering"
-vlhcc = short "VL/HCC" "IEEE Int. Symp. on Visual Languages and Human-Centric Computing"
+dsl    = short "DSL" "IFIP Working Conf. on Domain-Specific Languages"
+idetc  = short "IDETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
+gpce   = short "GPCE" "Int. Conf. on Generative Programming and Component Engineering"
+gttse  = short "GTTSE" "Generative and Transformational Techniques in Software Engineering"
+icfp   = short "ICFP" "ACM SIGPLAN Int. Conf. on Functional Programming"
+onward = short "Onward!" "ACM SIGPLAN Symp. on New Ideas in Programming and Reflections on Software"
+sle    = short "SLE" "Int. Conf. on Software Language Engineering"
+vlhcc  = short "VL/HCC" "IEEE Int. Symp. on Visual Languages and Human-Centric Computing"
 vlhccdc | Just s <- _shortName vlhcc = short s ("Doctoral Consortium at " ++ _longName vlhcc)
 
 -- ** Workshops
@@ -72,6 +73,7 @@ onward14 = accepted Conference
   [walkingshaw,kaestner,erwig,apel,bodden]
   "Variational Data Structures: Exploring Trade-Offs in Computing With Variability"
   2014
+  @@ onward
 
 toplas14 = journal
   "toplas14-variational-typing"
