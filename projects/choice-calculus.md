@@ -31,7 +31,7 @@ Using the choice calculus we have developed safe transformations, quality
 criteria, and new abstraction techniques for variational programs. We have also
 developed a notion of variational types and extended the Damas-Milner algorithm
 to perform efficient type inference on a variational lambda calculus
-[[@toplas13](#toplas13-variational-typing),[@icfp12](#icfp12-variational-type-errors)].
+[[@toplas14](#toplas14-variational-typing),[@icfp12](#icfp12-variational-type-errors)].
 
 The choice calculus also has its own web page:
 [choicecalculus.org](http://choicecalculus.org).
@@ -50,7 +50,7 @@ The choice calculus also has its own web page:
 ## Applications of the Choice Calculus
 
 <div class="ref-list resume">
-(@toplas13) \$toplas13-variational-typing\$
+(@toplas14) \$toplas14-variational-typing\$
 (@icfp12) \$icfp12-variational-type-errors\$
 (@vlhcc11) \$vlhcc11-ifdef-confirmed-harmful\$
 (@foser10) \$foser10-program-fields\$

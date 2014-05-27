@@ -53,28 +53,38 @@ vamos = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Intens
 
 -- ** Lists of papers in chronological order.
 
-drafts = [v]
-y13 = [fosd13,phdthesis,toplas13,jvlc13,vamos13]
+drafts = []
+y14 = [onward14,toplas14]
+y13 = [fosd13,phdthesis,jvlc13,vamos13]
 y12 = [gpce12,icfp12,chapter12]
 y11 = [msthesis,gttse11,vlhcc11,dsl11,sle11,tosem11]
 y10 = [foser10,vlhcc10,vlhcc10dc,qual]
 y09 = [vlhcc09,idetc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
 
-allPubs = concat [drafts,y13,y12,y11,y10,y09,y08]
+allPubs = concat [drafts,y14,y13,y12,y11,y10,y09,y08]
 
 
--- ** Under Review
+-- ** 2014
 
-v = draft
-  "XX-variational-data"
+onward14 = accepted Conference
+  "onward14-variational-data"
   [walkingshaw,kaestner,erwig,apel,bodden]
   "Variational Data Structures: Exploring Trade-Offs in Computing With Variability"
   2014
 
+toplas14 = journal
+  "toplas14-variational-typing"
+  [cheng,erwig,walkingshaw]
+  "Extending Type Inference to Variational Programs"
+  2014
+  `onPages` PagesIn 1 1 54
+  @@ toplas `setVolume` 36 `setNumber` 1
+
+
 -- ** 2013
 
-fosd13 = accepted Workshop
+fosd13 = workshop
   "fosd13-variational-graphs"
   [erwig,walkingshaw,cheng]
   "An Abstract Representation of Variational Graphs"
@@ -88,13 +98,6 @@ phdthesis = thesis
   2013
   `atURL` "http://hdl.handle.net/1957/40652"
   @@ venue osu `setVenueKind` "PhD thesis"
-
-toplas13 = accepted Journal
-  "toplas13-variational-typing"
-  [cheng,erwig,walkingshaw]
-  "Extending Type Inference to Variational Programs"
-  2013
-  @@ toplas
 
 jvlc13 = journal
   "jvlc13-probula"
