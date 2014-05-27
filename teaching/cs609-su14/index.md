@@ -228,7 +228,7 @@ presentation will be given partway through the seminar.
   Extends Java with open classes and
   [multi-methods](https://en.wikipedia.org/wiki/Multi-methods).
 
-  (Discussion leader: ??)
+  (Discussion leader: Eric)
   </td>
 </tr>
 <tr class="schedule-row">
