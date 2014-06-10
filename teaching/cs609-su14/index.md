@@ -110,21 +110,20 @@ To summarize, your responsibilities during this phase of the seminar are to:
  4. Prepare for the discussions that you will lead.
 
 
-### Phase 2: Programming Project
+### Phase 2: Final Project
 
-The programming project is an opportunity to explore in more depth (and
-practice using) a language or technique from the seminar that you found
-interesting. You will submit a short paper describing your project and give a
-15 minute presentation to the rest of the group, in order to share your project
-and your insights on your chosen language/technique.
+The final project is an opportunity to either (1) explore in more depth (and
+practice using) a language or design pattern from the seminar that you found
+interesting, or (2) learn independently about some techniques that we didn't
+have time to discuss. You will submit a short paper and give a short
+presentation to share your insights with the rest of the group.
 
-More details on the requirements of the programming project, paper, and
-presentation will be given partway through the seminar.
+**[Final Project Details](project.html)**
 
 
 ## Schedule and Reading Assignments
 
-### Foundation
+<!-- ### Foundation -->
 
 <table class="schedule">
 <tr class="schedule-row">
@@ -166,7 +165,7 @@ presentation will be given partway through the seminar.
 </tr>
 </table>
 
-### Solutions to the Expression Problem: Object-Oriented View
+<!-- ### Solutions to the Expression Problem: Object-Oriented View -->
 
 <table class="schedule">
 <tr class="schedule-row">
@@ -234,6 +233,12 @@ presentation will be given partway through the seminar.
 <tr class="schedule-row">
   <td class="schedule-date">9 Jun</td>
   <td class="schedule-info">
+  <span class="schedule-topic">(Holiday)</span>
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">16 Jun</td>
+  <td class="schedule-info">
   <span class="schedule-topic">
   Oliveira and Cook, *Extensibility for the Masses: Practical Extensibility
   with Object Algebras*, ECOOP 2012
@@ -245,11 +250,21 @@ presentation will be given partway through the seminar.
 </table>
 
 
-### Solutions to the Expression Problem: Functional View
+<!-- ### Solutions to the Expression Problem: Functional View -->
 
 <table class="schedule">
 <tr class="schedule-row">
-  <td class="schedule-date">16 Jun</td>
+  <td class="schedule-date">23 Jun</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
+  Kästner, Apel, and Ostermann, *The Road to Feature Modularity?*, SPLC 2011.
+  </span>
+
+  (Discussion leader: Iratxe)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">30 Jun</td>
   <td class="schedule-info">
   <span class="schedule-topic">
   Lämmel and Ostermann, *Software Extension and Integration with Type
@@ -260,17 +275,7 @@ presentation will be given partway through the seminar.
   </td>
 </tr>
 <tr class="schedule-row">
-  <td class="schedule-date">23 Jun</td>
-  <td class="schedule-info">
-  <span class="schedule-topic">
-  Swiestra, *Data Types à la Carte*, JFP 2008.
-  </span>
-
-  (Discussion leader: Eric)
-  </td>
-</tr>
-<tr class="schedule-row">
-  <td class="schedule-date">30 Jun</td>
+  <td class="schedule-date">7 Jul</td>
   <td class="schedule-info">
   <span class="schedule-topic">
   Löh and Hinze, *Open Data Types and Open Functions*, PPDP 2006.
@@ -286,18 +291,10 @@ presentation will be given partway through the seminar.
 
 <table class="schedule">
 <tr class="schedule-row">
-  <td class="schedule-date">7 Jul</td>
-  <td class="schedule-info">
-  <span class="schedule-topic">
-  Final project/report presentations (or one last paper)
-  </span>
-  </td>
-</tr>
-<tr class="schedule-row">
   <td class="schedule-date">14 Jul</td>
   <td class="schedule-info">
   <span class="schedule-topic">
-  Final project/report presentations
+  Final project presentations
   </span>
   </td>
 </tr>
@@ -310,15 +307,17 @@ A list of other interesting and relevant papers is provided below.
 
 ### More Solutions to the Expression Problem
 
- * Zenger and Odersky, *Independently Extensible Solutions to the Expression
-   Problem*, FOOL 2005
- 
- * Carette, Kiselyov, and Shan, *Finally Tagless, Partially Evaluated: Tagless
-   Staged Interpreters for Simpler Typed Languages*, JFP 2009
- 
  * Apel, Kästner, Lengauer, *Feature Featherweight Java: A Calculus for
    Feature-Oriented Programming and Stepwise Refinement*, GPCE 2008
 
+ * Carette, Kiselyov, and Shan, *Finally Tagless, Partially Evaluated: Tagless
+   Staged Interpreters for Simpler Typed Languages*, JFP 2009
+ 
+ * Swiestra, *Data Types à la Carte*, JFP 2008.
+ 
+ * Zenger and Odersky, *Independently Extensible Solutions to the Expression
+   Problem*, FOOL 2005
+ 
 ### Rethinking Modularity
 
  * Cook, *On Understanding Data Abstraction, Revisited*, OOPSLA 2009
