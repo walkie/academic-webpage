@@ -123,8 +123,6 @@ presentation to share your insights with the rest of the group.
 
 ## Schedule and Reading Assignments
 
-<!-- ### Foundation -->
-
 <table class="schedule">
 <tr class="schedule-row">
   <td class="schedule-date">28 Apr</td>
@@ -163,11 +161,6 @@ presentation to share your insights with the rest of the group.
   (Discussion leader: Eric)
   </td>
 </tr>
-</table>
-
-<!-- ### Solutions to the Expression Problem: Object-Oriented View -->
-
-<table class="schedule">
 <tr class="schedule-row">
   <td class="schedule-date">12 May</td>
   <td class="schedule-info">
@@ -240,27 +233,21 @@ presentation to share your insights with the rest of the group.
   <td class="schedule-date">16 Jun</td>
   <td class="schedule-info">
   <span class="schedule-topic">
+  Kästner, Apel, and Ostermann, *The Road to Feature Modularity?*, SPLC 2011.
+  </span>
+
+  (Discussion leader: Iratxe)
+  </td>
+</tr>
+<tr class="schedule-row">
+  <td class="schedule-date">23 Jun</td>
+  <td class="schedule-info">
+  <span class="schedule-topic">
   Oliveira and Cook, *Extensibility for the Masses: Practical Extensibility
   with Object Algebras*, ECOOP 2012
   </span>
 
   (Discussion leader: Jona)
-  </td>
-</tr>
-</table>
-
-
-<!-- ### Solutions to the Expression Problem: Functional View -->
-
-<table class="schedule">
-<tr class="schedule-row">
-  <td class="schedule-date">23 Jun</td>
-  <td class="schedule-info">
-  <span class="schedule-topic">
-  Kästner, Apel, and Ostermann, *The Road to Feature Modularity?*, SPLC 2011.
-  </span>
-
-  (Discussion leader: Iratxe)
   </td>
 </tr>
 <tr class="schedule-row">
