@@ -12,10 +12,10 @@ import WebPage.Pubs.Paper
 -- ** Authors
 walkingshaw = Author "Eric" "Walkingshaw"
 erwig       = Author "Martin" "Erwig"
-cheng       = Author "Sheng" "Chen"
+chen        = Author "Sheng" "Chen"
 le          = Author "Duc" "Le"
 ostermann   = Author "Klaus" "Ostermann"
-tillmann    = Author "Tillmann" "Rendel"
+rendel      = Author "Tillmann" "Rendel"
 kaestner    = Author "Christian" "Kästner"
 apel        = Author "Sven" "Apel"
 bodden      = Author "Eric" "Bodden"
@@ -84,7 +84,7 @@ onward14 = accepted Conference
 
 toplas14 = journal
   "toplas14-variational-typing"
-  [cheng,erwig,walkingshaw]
+  [chen,erwig,walkingshaw]
   "Extending Type Inference to Variational Programs"
   2014
   `onPages` PagesIn 1 1 54
@@ -95,7 +95,7 @@ toplas14 = journal
 
 fosd13 = workshop
   "fosd13-variational-graphs"
-  [erwig,walkingshaw,cheng]
+  [erwig,walkingshaw,chen]
   "An Abstract Representation of Variational Graphs"
   2013
   @@ fosd
@@ -118,7 +118,7 @@ jvlc13 = journal
 
 vamos13 = workshop
   "vamos13-cc-select"
-  [erwig,ostermann,tillmann,walkingshaw]
+  [erwig,ostermann,rendel,walkingshaw]
   "Adding Configuration to the Choice Calculus"
   2013
   `onPages` PagesIn 13 1 8
@@ -137,7 +137,7 @@ gpce12 = conference
 
 icfp12 = conference
   "icfp12-variational-type-errors"
-  [cheng,erwig,walkingshaw]
+  [chen,erwig,walkingshaw]
   "An Error-Tolerant Type System for Variational Lambda Calculus"
   2012
   `onPages` Pages 29 40
