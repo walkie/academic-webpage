@@ -34,7 +34,7 @@ lncs = ("LNCS",)
 
 dsl    = short "DSL" "IFIP Working Conf. on Domain-Specific Languages"
 idetc  = short "IDETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
-gpce   = short "GPCE" "Int. Conf. on Generative Programming and Component Engineering"
+gpce   = short "GPCE" "ACM SIGPLAN Int. Conf. on Generative Programming and Component Engineering"
 gttse  = short "GTTSE" "Generative and Transformational Techniques in Software Engineering"
 icfp   = short "ICFP" "ACM SIGPLAN Int. Conf. on Functional Programming"
 onward = short "Onward!" "ACM SIGPLAN Symp. on New Ideas in Programming and Reflections on Software"
@@ -55,7 +55,7 @@ vamos = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Intens
 -- ** Lists of papers in chronological order.
 
 drafts = []
-y14 = [onward14,toplas14]
+y14 = [onward14,gpce14,toplas14]
 y13 = [fosd13,phdthesis,jvlc13,vamos13]
 y12 = [gpce12,icfp12,chapter12]
 y11 = [msthesis,gttse11,vlhcc11,dsl11,sle11,tosem11]
@@ -67,6 +67,13 @@ allPubs = concat [drafts,y14,y13,y12,y11,y10,y09,y08]
 
 
 -- ** 2014
+
+gpce14 = accepted Conference
+  "gpce14-projectional-editing"
+  [walkingshaw,ostermann]
+  "Projectional Editing of Variational Software"
+  2014
+  @@ gpce
 
 onward14 = accepted Conference
   "onward14-variational-data"

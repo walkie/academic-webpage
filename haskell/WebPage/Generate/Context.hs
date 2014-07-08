@@ -102,7 +102,7 @@ addAbstract fs p
 pubListField :: String -> [Paper] -> Context String
 pubListField id = listField id baseContext . mapM (makeItem . pubStr)
 
--- | Create a field for a publications.
+-- | Create a field for a publication.
 pubFields :: Paper -> Context a
 pubFields p = constField (_key p) (pubStr p)
 
