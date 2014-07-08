@@ -50,6 +50,7 @@ The choice calculus also has its own web page:
 ## Applications of the Choice Calculus
 
 <div class="ref-list resume">
+(@gpce14) \$gpce14-projectional-editing\$
 (@toplas14) \$toplas14-variational-typing\$
 (@icfp12) \$icfp12-variational-type-errors\$
 (@vlhcc11) \$vlhcc11-ifdef-confirmed-harmful\$
@@ -70,6 +71,7 @@ The choice calculus also has its own web page:
 ## Variational Data Structures
 
 <div class="ref-list resume">
+(@onward14) \$onward14-variational-data\$
 (@fosd13) \$fosd13-variational-graphs\$
 
 </div>
