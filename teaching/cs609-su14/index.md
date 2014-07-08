@@ -216,9 +216,11 @@ presentation to share your insights with the rest of the group.
   Clifton et al., *MultiJava: Modular Open Classes and Symmetric Multiple
   Dispatch for Java*, OOPSLA 2000
   </span>
-
+  
   Extends Java with open classes and
-  [multi-methods](https://en.wikipedia.org/wiki/Multi-methods).
+  [multi-methods](https://en.wikipedia.org/wiki/Multi-methods). Open classes
+  support extending existing classes with new methods, while multi-methods
+  provide a solution to the "binary method problem".
 
   (Discussion leader: Eric)
   </td>
@@ -235,6 +237,12 @@ presentation to share your insights with the rest of the group.
   <span class="schedule-topic">
   Kästner, Apel, and Ostermann, *The Road to Feature Modularity?*, SPLC 2011.
   </span>
+  
+  Discusses modularity and extensibility from the perspective of
+  [feature-oriented software development](http://www.jot.fm/issues/issue_2009_07/column5/index). 
+  A unique challenge in this context is that it must be possible not only to
+  *add* new features to a program, but to selectively *enable and disable*
+  them.
 
   (Discussion leader: Iratxe)
   </td>
@@ -246,6 +254,9 @@ presentation to share your insights with the rest of the group.
   Oliveira and Cook, *Extensibility for the Masses: Practical Extensibility
   with Object Algebras*, ECOOP 2012
   </span>
+  
+  Describes an elegant design pattern for solving the expression problem in OO
+  languages with generics.
 
   (Discussion leader: Jona)
   </td>
@@ -257,8 +268,12 @@ presentation to share your insights with the rest of the group.
   Lämmel and Ostermann, *Software Extension and Integration with Type
   Classes*, GPCE 2006.
   </span>
+  
+  Shows how Haskell's type classes can be used to (partially) solve many of the
+  modularity challenges we have discussed during this seminar, including the
+  expression problem and the binary method problem.
 
-  (Discussion leader: ??)
+  (Discussion leader: Eric)
   </td>
 </tr>
 <tr class="schedule-row">
@@ -267,22 +282,28 @@ presentation to share your insights with the rest of the group.
   <span class="schedule-topic">
   Löh and Hinze, *Open Data Types and Open Functions*, PPDP 2006.
   </span>
+  
+  Discusses an extension to Haskell that allows data types and functions to be
+  declared *open*, allowing them to be modularly extended with new cases later.
+  This is analogous in many ways to the work on MultiJava, but starting from
+  the functional perspective.
 
   (Discussion leader: Yi)
   </td>
 </tr>
-</table>
-
-
-### Seminar Wrap-Up
-
-<table class="schedule">
 <tr class="schedule-row">
   <td class="schedule-date">14 Jul</td>
   <td class="schedule-info">
   <span class="schedule-topic">
   Final project presentations
   </span>
+  
+  --------  -----------------------------------------------------
+   Iratxe:  The meaning of "independently extensible"
+    Felix:  Modular extensibility in Java with [AspectJ](https://eclipse.org/aspectj/)
+    Elena:  Comparing solutions to the expression problem in Scala and Ruby
+  Bastian:  Comparing different solutions to the expression problem in Haskell
+  --------  -----------------------------------------------------
   </td>
 </tr>
 </table>
