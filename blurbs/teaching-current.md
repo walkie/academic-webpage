@@ -3,7 +3,6 @@ title: Current Teaching
 ---
 
 **[CS 609 Discussion Seminar: Modular Extensibility](/teaching/cs609-su14/)**
- -- *please sign up!*
     
 A property of good software is the ability to add new features in a modular
 way. Many programming languages provide good support for some kinds of modular
