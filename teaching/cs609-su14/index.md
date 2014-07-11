@@ -292,7 +292,7 @@ presentation to share your insights with the rest of the group.
   </td>
 </tr>
 <tr class="schedule-row">
-  <td class="schedule-date">14 Jul</td>
+  <td class="schedule-date">21 Jul</td>
   <td class="schedule-info">
   <span class="schedule-topic">
   Final project presentations

@@ -17,12 +17,12 @@ the group.
    written proposal for your project. The details of your proposal will be
    described below.
  
- * **14 July: Presentation** --- Give a 12 minute presentation on your project
+ * **21 July: Presentation** --- Give a 12 minute presentation on your project
    in our seminar meeting. After each presentation we will have 8 minutes of
    discussion, where you will answer questions about your project from the rest
    of the group.
 
- * **21 July: Document** --- Submit a short written document (~1000 words)
+ * **28 July: Document** --- Submit a short written document (~1000 words)
    summarizing your project and the insights you shared with the group. You are
    encouraged to incorporate feedback from your presentation.
  
