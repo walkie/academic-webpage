@@ -1,7 +1,6 @@
 {-# LANGUAGE OverloadedStrings, PatternGuards #-}
 
 module WebPage.Generate.Context (
-  getContext,
   TemplateApplication,
   mainTemplate,
   simpleTemplate
@@ -19,17 +18,6 @@ import WebPage.Pubs
 -- * Settings
 
 currentNewsLength = 3
-
-
--- * Extended Context
-
--- | The complete context.
-getContext :: Compiler (Context String)
-getContext = do
-  pubContext  <- getPubContext
-  fileContext <- getBlurbContext
-  newsContext <- getNewsContext
-  return (fileContext <> pubContext <> newsContext <> baseContext)
 
 
 -- * Applying Templates
@@ -54,7 +42,26 @@ simpleTemplate :: TemplateApplication
 simpleTemplate = applyTemplateTo "templates/simple.html"
 
 
--- * Internal functions
+-- * Extended Context
+
+-- | The complete context.
+getContext :: Compiler (Context String)
+getContext = do
+  pubContext  <- getPubContext
+  fileContext <- getBlurbContext
+  newsContext <- getNewsContext
+  return (fileContext <> pubContext <> newsContext <> baseContext)
+
+
+-- ** Blurb context
+
+-- | Makes the contents of the blurbs directory available as template fields.
+getBlurbContext :: Compiler (Context String)
+getBlurbContext = do
+    loadAll "blurbs/*"
+      >>= return . foldr (<>) baseContext . map item
+  where item (Item id body) = constField (takeBaseName (toFilePath id)) body
+
 
 -- ** News context
 
@@ -68,16 +75,6 @@ getNewsContext = do
     return (listField "news" baseContext news)
   where
     allNews = loadAll "news/*" >>= recentFirst
-
-
--- ** File context
-
--- | Makes the contents of the blurbs directory available as template fields.
-getBlurbContext :: Compiler (Context String)
-getBlurbContext = do
-    loadAll "blurbs/*"
-      >>= return . foldr (<>) baseContext . map item
-  where item (Item id body) = constField (takeBaseName (toFilePath id)) body
 
 
 -- ** Publication context

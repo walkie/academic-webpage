@@ -64,12 +64,12 @@ loadAbstracts =
 
 buildPages :: Rules ()
 buildPages = do
-    match "pages/*" $ do
-      route (customRoute (flip addExtension "html" . takeBaseName . toFilePath))
-      compilePage mainTemplate
-    match ("projects/*" .||. "teaching/**") $ do
-      route (customRoute (flip addExtension "html" . dropExtension . toFilePath))
-      compilePage mainTemplate
+  match "pages/*" $ do
+    route (customRoute (flip addExtension "html" . takeBaseName . toFilePath))
+    compilePage mainTemplate
+  match ("projects/*" .||. "teaching/**") $ do
+    route (customRoute (flip addExtension "html" . dropExtension . toFilePath))
+    compilePage mainTemplate
 
 compilePage :: TemplateApplication -> Rules ()
 compilePage apply = compile $ do 
