@@ -10,6 +10,7 @@ import Text.Pandoc.Options
 
 import WebPage.Generate.Base
 import WebPage.Generate.Context
+import WebPage.Generate.Sitemap
 import WebPage.Pubs
 
 
@@ -22,6 +23,7 @@ rules = do
   copyPapers
   loadAbstracts
   buildPages
+  buildSitemap
 
 compileTemplates :: Rules ()
 compileTemplates =
@@ -61,6 +63,12 @@ loadAbstracts :: Rules ()
 loadAbstracts =
   match "papers/*.abstract.md" $
     compile pandocCompiler
+
+buildSitemap :: Rules ()
+buildSitemap =
+  create ["sitemap.xml"] $ do
+    route idRoute
+    compileSitemap
 
 buildPages :: Rules ()
 buildPages = do
