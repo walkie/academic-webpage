@@ -1,8 +1,8 @@
 Editing the source code of variational software is complicated by the presence
 of variation annotations, such as #ifdef statements, and by code that is only
-included in some configurations. When we want to edit some configurations and
-not others, it would be easier to edit a simplified version of the source code
-that contains only the variability we currently care about. In this paper, we
+included in some configurations. When editing some configurations and not
+others, it would be easier to edit a simplified version of the source code that
+includes only the configurations we currently care about. In this paper, we
 present a projectional editing model for variational software. Using our
 approach, a programmer can partially configure a variational program, edit this
 simplified view of the code, and then automatically update the original, fully
