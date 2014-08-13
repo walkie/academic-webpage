@@ -1,3 +1,5 @@
 build
+.cabal-sandbox
+cabal.sandbox.config
 dist
 Session.vim
