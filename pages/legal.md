@@ -2,20 +2,19 @@
 title: Legal
 ---
 
-# Legal Stuff
-
-## Copyright Notice and Disclaimer
+## Copyright Notice
 
 All content on this website is © Eric Walkingshaw, all rights reserved, except
-where otherwise noted. Any views described here are my own and do not
-necessarily reflect the views of my employers, my colleagues, or any funding
-adjacencies.
+where otherwise noted.
+
+The papers provided for download on this website are provided by me, as an
+author, in order to ensure the timely dissemination of scholarly work. However,
+they are still protected by the copyright notices of the respective publishers.
 
 
 ## Acknowledgments
 
-This website was statically generated with the help of the following tools
-written by cool hackers.
+This website was statically generated with the help of the following tools.
 
  *  [Hakyll](http://jaspervdj.be/hakyll) -- a static website compiler DSL
     in Haskell
@@ -27,8 +26,8 @@ The source code for this website is available on
 placed in the public domain. Non-content resources include Haskell, LESS, and
 JavaScript source code, as well as HTML templates, but exclude Markdown, PDF,
 PNG, and plain text files. Basically, don't use text, papers, or images from
-my web page without permission, but feel free to use the code used to generate
-it.
+this site without permission, but feel free to reuse or adapt the code used to
+generate it.
 
 
 ## Software License
@@ -54,9 +53,9 @@ following BSD-like license, except where otherwise noted.
           provided with the distribution.
     
         * The names of Eric Walkingshaw, Oregon State University,
-          Philipps-Universität Marburg, and any other contributors may
-          not be used to endorse or promote products derived from this
-          software without specific prior written permission.
+          and any other contributors may not be used to endorse or
+          promote products derived from this software without specific
+          prior written permission.
     
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
     "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
