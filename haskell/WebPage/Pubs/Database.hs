@@ -68,19 +68,21 @@ allPubs = concat [drafts,y14,y13,y12,y11,y10,y09,y08]
 
 -- ** 2014
 
-gpce14 = accepted Conference
-  "gpce14-projectional-editing"
-  [walkingshaw,ostermann]
-  "Projectional Editing of Variational Software"
-  2014
-  @@ gpce
-
 onward14 = accepted Conference
   "onward14-variational-data"
   [walkingshaw,kaestner,erwig,apel,bodden]
   "Variational Data Structures: Exploring Trade-Offs in Computing With Variability"
   2014
   @@ onward
+
+gpce14 = conference
+  "gpce14-projectional-editing"
+  [walkingshaw,ostermann]
+  "Projectional Editing of Variational Software"
+  2014
+  `onPages` Pages 29 38
+  `withNote` "Best paper"
+  @@ gpce
 
 toplas14 = journal
   "toplas14-variational-typing"
