@@ -93,4 +93,6 @@ myPandocCompiler = pandocCompilerWith
     -- the citations extension clashes with example lists, which I use for references
     readerExtensions = delete Ext_citations (readerExtensions defaultHakyllReaderOptions)
   }
-  defaultHakyllWriterOptions
+  defaultHakyllWriterOptions {
+    writerHtml5 = True
+  }
