@@ -1,0 +1,3 @@
+[submodule "teaching/cs583-fa14"]
+	path = teaching/cs583-fa14
+	url = git@bitbucket.org:walkie/cs583-fa14.git
