@@ -29,3 +29,7 @@ function linkName() {
 function toggleAbstract(key) {
   $('.pub-abstract.'+key).slideToggle();
 }
+
+function toggleOutline(key) {
+  $('.slides-outline.'+key).slideToggle();
+}
