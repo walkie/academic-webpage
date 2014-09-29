@@ -84,6 +84,7 @@ compilePage apply = compile $ do
   path <- fmap toFilePath getUnderlying
   let content = case takeExtension path of
         ".html" -> getResourceBody
+        ".txt"  -> getResourceBody
         ".md"   -> myPandocCompiler
         _       -> error ("Unexpected file type: " ++ path)
   content >>= apply (takeBaseName path)
