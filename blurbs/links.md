@@ -6,6 +6,7 @@ I have accounts at all the usual places, though most of them are neglected.
 Here are my profiles at some sites I actively use.
 
  *  [GitHub][GitHub]
+ *  [Twitter][Twitter]
  *  [Google Scholar][GS]
  *  [BoardGameGeek][BGG]
  *  <a href="http://www.haskellers.com/user/EricWalkingshaw">
@@ -13,5 +14,6 @@ Here are my profiles at some sites I actively use.
     </a>
 
 [GitHub]: https://github.com/walkie
+[Twitter]: https://twitter.com/EricWalkingshaw
 [GS]: http://scholar.google.com/citations?user=19wocQkAAAAJ
 [BGG]: http://boardgamegeek.com/user/walkie
