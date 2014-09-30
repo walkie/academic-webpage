@@ -72,22 +72,24 @@ buildSitemap =
 
 buildPages :: Rules ()
 buildPages = do
-  match "pages/*" $ do
-    route (customRoute (flip addExtension "html" . takeBaseName . toFilePath))
-    compilePage mainTemplate
-  match ("projects/*" .||. "teaching/**") $ do
-    route (customRoute (flip addExtension "html" . dropExtension . toFilePath))
-    compilePage mainTemplate
+  match "pages/*.html" $ do
+    compileToHtml takeBaseName getResourceBody
+  match "pages/*.md" $ do
+    compileToHtml takeBaseName myPandocCompiler
+  match ("projects/**.html" .||. "teaching/**.html") $ do
+    compileToHtml dropExtension getResourceBody
+  match ("projects/**.md" .||. "teaching/**.md") $ do
+    compileToHtml dropExtension myPandocCompiler
+  match ("projects/**.pdf" .||. "teaching/**.pdf") $ do
+    route   idRoute
+    compile copyFileCompiler
 
-compilePage :: TemplateApplication -> Rules ()
-compilePage apply = compile $ do 
-  path <- fmap toFilePath getUnderlying
-  let content = case takeExtension path of
-        ".html" -> getResourceBody
-        ".txt"  -> getResourceBody
-        ".md"   -> myPandocCompiler
-        _       -> error ("Unexpected file type: " ++ path)
-  content >>= apply (takeBaseName path)
+compileToHtml :: (FilePath -> FilePath) -> Compiler (Item String) -> Rules ()
+compileToHtml base body = do
+  route (customRoute (flip addExtension "html" . base . toFilePath))
+  compile $ do
+    path <- fmap toFilePath getUnderlying
+    body >>= mainTemplate (takeBaseName path)
 
 myPandocCompiler = pandocCompilerWith
   defaultHakyllReaderOptions {

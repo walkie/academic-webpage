@@ -26,6 +26,8 @@ marburgRules = do
   buildMarburgTeaching
 
 buildMarburgTeaching =
-  match ("teaching/cs609-wi14/**" .||. "teaching/cs609-su14/**") $ do
+  match ("teaching/cs609-wi14/*.md" .||. "teaching/cs609-su14/*.md") $ do
     route (customRoute (flip addExtension "html" . dropExtension . toFilePath))
-    compilePage simpleTemplate
+    compile $ do
+      path <- fmap toFilePath getUnderlying
+      myPandocCompiler >>= simpleTemplate (takeBaseName path)
