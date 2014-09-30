@@ -23,7 +23,7 @@ rules = do
   copyPapers
   loadAbstracts
   buildPages
-  buildSitemap
+  -- buildSitemap
 
 compileTemplates :: Rules ()
 compileTemplates =
