@@ -2,7 +2,7 @@
 title: Current Teaching
 ---
 
-**[CS 583 Functional Programming](teaching/cs583-fa14)** (Fall 2014) -- sign up now!
+**[CS 583 Functional Programming](teaching/cs583-fa14)** (Fall 2014)
 
 An introduction to advanced functional programming features and techniques,
 using [Haskell](http://haskell.org). The course will begin with an accelerated
