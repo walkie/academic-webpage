@@ -147,9 +147,10 @@ presentation to share your insights with the rest of the group.
   </span>
   
   Motivates the expression problem from a programmer's perspective.
+  </td>
 </tr>
-<tr>
-  <td> </td>
+<tr class="schedule-row">
+  <td class="schedule-date"> </td>
   <td class="schedule-info">
   <span class="schedule-topic">
   Wadler, *The Expression Problem*, email 1998

@@ -80,7 +80,7 @@ buildPages = do
     compileToHtml dropExtension getResourceBody
   match ("projects/**.md" .||. "teaching/**.md") $ do
     compileToHtml dropExtension myPandocCompiler
-  match ("projects/**.pdf" .||. "teaching/**.pdf" .||. "teaching/**.hs") $ do
+  match ("projects/**.pdf" .||. "teaching/**.pdf" .||. "teaching/**.png" .||. "teaching/**.hs" .||. "teaching/**.v") $ do
     route   idRoute
     compile copyFileCompiler
 
