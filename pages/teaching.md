@@ -11,6 +11,8 @@ title: Teaching
 
 ## Past Courses
 
+  * Winter 2015 -- [CS 581 Programming Languages](teaching/cs581-wi15)
+
   * Fall 2014 -- [CS 583 Functional Programming](/teaching/cs583-fa14/)
   
   * Summer 2014 (Marburg) -- [CS 609 Discussion Seminar: Modular Extensibility](/teaching/cs609-su14/)
