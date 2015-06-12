@@ -2,7 +2,7 @@
 
 module WebPage.Generate.Rules where
 
-import Data.Set (delete)
+import Data.Set (delete,insert)
 import System.FilePath
 
 import Hakyll
@@ -93,9 +93,17 @@ compileToHtml base body = do
 
 myPandocCompiler = pandocCompilerWith
   defaultHakyllReaderOptions {
-    -- the citations extension clashes with example lists, which I use for references
-    readerExtensions = delete Ext_citations (readerExtensions defaultHakyllReaderOptions)
+    -- citations extension clashes with example lists, which I use for references
+    readerExtensions = delete Ext_citations 
+                     $ delete Ext_raw_tex
+                     $ readerExtensions defaultHakyllReaderOptions
   }
   defaultHakyllWriterOptions {
-    writerHtml5 = True
+    writerHtml5 = True,
+    writerHTMLMathMethod = MathJax "", -- LaTeXMathML (Just "http://math.etsu.edu/LaTeXMathML/LaTeXMathML.js")
+    -- $..$ collides with Hakyll templates
+    -- use \\(..\\) and \\[..\\] instead
+    writerExtensions = delete Ext_tex_math_dollars
+                     $ insert Ext_tex_math_single_backslash
+                     $ writerExtensions defaultHakyllWriterOptions
   }
