@@ -14,8 +14,9 @@ description:
   Depends on the `lessc` tool for generating CSS: http://lesscss.org/
 
 executable hakyll
-  main-is:        Main.hs
-  hs-source-dirs: haskell
+  main-is:          Main.hs
+  hs-source-dirs:   haskell
+  default-language: Haskell2010
   build-depends: 
     base,
     containers,
