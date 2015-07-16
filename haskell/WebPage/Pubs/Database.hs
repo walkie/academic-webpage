@@ -19,6 +19,8 @@ rendel      = Author "Tillmann" "Rendel"
 kaestner    = Author "Christian" "Kästner"
 apel        = Author "Sven" "Apel"
 bodden      = Author "Eric" "Bodden"
+abbott      = Author "Keeley" "Abbott"
+bogart      = Author "Christopher" "Bogart"
 
 -- ** Institutions
 osu = "Oregon State University"
@@ -55,6 +57,7 @@ vamos = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Intens
 -- ** Lists of papers in chronological order.
 
 drafts = []
+y15 = [vlhcc15]
 y14 = [onward14,gpce14,toplas14]
 y13 = [fosd13,phdthesis,jvlc13,vamos13]
 y12 = [gpce12,icfp12,chapter12]
@@ -63,16 +66,28 @@ y10 = [foser10,vlhcc10,vlhcc10dc,qual]
 y09 = [vlhcc09,idetc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
 
-allPubs = concat [drafts,y14,y13,y12,y11,y10,y09,y08]
+allPubs = concat [drafts,y15,y14,y13,y12,y11,y10,y09,y08]
+
+
+-- ** 2015
+
+vlhcc15 = accepted Conference
+  "vlhcc15-programs-for-people"
+  [abbott,bogart,walkingshaw]
+  "Programs for People: What We Can Learn from Lab Protocols"
+  2015
+  `setDataLink` "https://github.com/lambda-land/ProtocolStudy-Data"
+  @@ vlhcc
 
 
 -- ** 2014
 
-onward14 = accepted Conference
+onward14 = conference
   "onward14-variational-data"
   [walkingshaw,kaestner,erwig,apel,bodden]
   "Variational Data Structures: Exploring Trade-Offs in Computing With Variability"
   2014
+  `onPages` Pages 213 226
   @@ onward
 
 gpce14 = conference
