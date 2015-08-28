@@ -17,7 +17,7 @@ set of equivalence rules for variational types and prove that the type
 unification problem modulo these equivalence rules is unitary and decidable; we
 also present a sound and complete unification algorithm. Based on the
 unification algorithm, the variational type inference algorithm is an extension
-of algorithm W . We show that it is sound and complete and computes principal
+of algorithm W. We show that it is sound and complete and computes principal
 types. We also consider the extension of VLC with sum types, a necessary
 feature for supporting variational data types, and demonstrate that the
 previous theoretical results also hold under this extension. Finally, we
