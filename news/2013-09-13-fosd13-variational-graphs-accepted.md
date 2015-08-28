@@ -1,5 +1,5 @@
 ---
-title: Variational Graphs paper accepted to FOSD'13
+title: Variational graphs paper accepted to FOSD'13
 ---
 
 With Martin Erwig and Sheng Chen, our paper on "An Abstract Representation of

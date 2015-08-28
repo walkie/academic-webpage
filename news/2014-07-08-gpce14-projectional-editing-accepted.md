@@ -1,5 +1,5 @@
 ---
-title: Projectional Editing paper accepted to GPCE'14
+title: Projectional editing paper accepted to GPCE'14
 ---
 
 With Klaus Ostermann, our paper "Projectional Editing of Variational Software"

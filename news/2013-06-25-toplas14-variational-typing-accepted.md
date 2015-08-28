@@ -1,5 +1,5 @@
 ---
-title: Variational Type Inference paper accepted to TOPLAS
+title: Variational type inference paper accepted to TOPLAS
 ---
 
 With Sheng Chen and Martin Erwig, our paper "Extending Type Inference to

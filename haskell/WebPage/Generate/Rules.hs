@@ -13,7 +13,6 @@ import WebPage.Generate.Context
 import WebPage.Generate.Sitemap
 import WebPage.Pubs
 
-
 rules :: Rules ()
 rules = do
   compileTemplates
