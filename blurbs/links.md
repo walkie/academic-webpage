@@ -15,5 +15,5 @@ Here are my profiles at some sites I actively use.
 
 [GitHub]: https://github.com/walkie
 [Twitter]: https://twitter.com/EricWalkingshaw
-[GS]: http://scholar.google.com/citations?user=19wocQkAAAAJ
+[GS]: https://scholar.google.com/citations?user=0kPwMDwAAAAJ
 [BGG]: http://boardgamegeek.com/user/walkie

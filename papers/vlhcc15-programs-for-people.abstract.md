@@ -1,5 +1,5 @@
 Humans play an active role in the execution of certain kinds of programs, such
-as spreadsheets, workflows and interactive notebooks. Interacting closely with
+as spreadsheets, workflows, and interactive notebooks. Interacting closely with
 execution is especially useful when end-users are learning from examples while
 doing their work. In order to better understand the language features needed to
 support this kind of use, we investigated a particularly rigid and formalized

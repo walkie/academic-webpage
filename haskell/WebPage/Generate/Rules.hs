@@ -48,7 +48,10 @@ compileCSS = do
 
 copyFiles :: Rules ()
 copyFiles =
-  match ("images/*" .||. "js/*" .||. "css/*.css") $ do
+  match (foldr1 (.||.) $ map fromGlob $
+         ["images/*","js/*","css/*.css"]
+      ++ ["projects/**.pdf"]
+      ++ ["teaching/**." ++ ext | ext <- ["pdf","png","jpg","zip","hs","v","pl"]]) $ do
     route   idRoute
     compile copyFileCompiler
 
@@ -79,9 +82,6 @@ buildPages = do
     compileToHtml dropExtension getResourceBody
   match ("projects/**.md" .||. "teaching/**.md") $ do
     compileToHtml dropExtension myPandocCompiler
-  match ("projects/**.pdf" .||. "teaching/**.pdf" .||. "teaching/**.png" .||. "teaching/**.hs" .||. "teaching/**.v" .||. "teaching/**.pl") $ do
-    route   idRoute
-    compile copyFileCompiler
 
 compileToHtml :: (FilePath -> FilePath) -> Compiler (Item String) -> Rules ()
 compileToHtml base body = do
