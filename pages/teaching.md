@@ -11,13 +11,15 @@ title: Teaching
 
 ## Past Courses
 
-  * Fall 2015 -- CS 589 Programming Languages I
-  
-  * Spring 2015 -- CS 381 Programming Language Fundamentals
-  
-  * Winter 2015 -- CS 581 Programming Languages
+  * Winter 2016 -- CS 381: Programming Language Fundamentals 
 
-  * Fall 2014 -- CS 583 Functional Programming
+  * Fall 2015 -- CS 589: Programming Languages I
+  
+  * Spring 2015 -- CS 381: Programming Language Fundamentals
+  
+  * Winter 2015 -- CS 581: Programming Languages
+
+  * Fall 2014 -- CS 583: Functional Programming
   
   * Summer 2014 (Marburg) -- [CS 609 Discussion Seminar: Modular Extensibility](/teaching/cs609-su14/)
 
