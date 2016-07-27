@@ -10,17 +10,20 @@ import WebPage.Pubs.Paper
 --
 
 -- ** Authors
-walkingshaw = Author "Eric" "Walkingshaw"
-erwig       = Author "Martin" "Erwig"
-chen        = Author "Sheng" "Chen"
-le          = Author "Duc" "Le"
-ostermann   = Author "Klaus" "Ostermann"
-rendel      = Author "Tillmann" "Rendel"
-kaestner    = Author "Christian" "Kästner"
-apel        = Author "Sven" "Apel"
-bodden      = Author "Eric" "Bodden"
-abbott      = Author "Keeley" "Abbott"
-bogart      = Author "Christopher" "Bogart"
+abbott       = Author "Keeley" "Abbott"
+apel         = Author "Sven" "Apel"
+berger       = Author "Thorsten" "Berger"
+bodden       = Author "Eric" "Bodden"
+bogart       = Author "Christopher" "Bogart"
+chen         = Author "Sheng" "Chen"
+erwig        = Author "Martin" "Erwig"
+kaestner     = Author "Christian" "Kästner"
+le           = Author "Duc" "Le"
+ostermann    = Author "Klaus" "Ostermann"
+rendel       = Author "Tillmann" "Rendel"
+stanciulescu = Author "Ștefan" "Stănciulescu"
+walkingshaw  = Author "Eric" "Walkingshaw"
+wasowski     = Author "Andrzej" "Wąsowski"
 
 -- ** Institutions
 osu = "Oregon State University"
@@ -35,10 +38,12 @@ tosem  = short "TOSEM" "ACM Trans. on Software Engineering and Methodology"
 lncs = ("LNCS",)
 
 dsl    = short "DSL" "IFIP Working Conf. on Domain-Specific Languages"
-idetc  = short "IDETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
+ecoop  = short "ECOOP" "European Conf. on Object-Oriented Programming"
 gpce   = short "GPCE" "ACM SIGPLAN Int. Conf. on Generative Programming and Component Engineering"
 gttse  = short "GTTSE" "Generative and Transformational Techniques in Software Engineering"
 icfp   = short "ICFP" "ACM SIGPLAN Int. Conf. on Functional Programming"
+icsme  = short "ICSME" "IEEE Int. Conf. on Software Maintenance and Evolution"
+idetc  = short "IDETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
 onward = short "Onward!" "ACM SIGPLAN Symp. on New Ideas in Programming and Reflections on Software"
 sle    = short "SLE" "Int. Conf. on Software Language Engineering"
 vlhcc  = short "VL/HCC" "IEEE Int. Symp. on Visual Languages and Human-Centric Computing"
@@ -57,6 +62,7 @@ vamos = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Intens
 -- ** Lists of papers in chronological order.
 
 drafts = []
+y16 = [icsme16,ecoop16]
 y15 = [vlhcc15]
 y14 = [onward14,gpce14,toplas14]
 y13 = [fosd13,phdthesis,jvlc13,vamos13]
@@ -69,14 +75,34 @@ y08 = [vlhcc08,vlhcc08dc]
 allPubs = concat [drafts,y15,y14,y13,y12,y11,y10,y09,y08]
 
 
+-- ** 2016
+
+icsme16 = accepted Conference
+  "icsme16-variation-control-system"
+  [stanciulescu,berger,walkingshaw,wasowski]
+  "Concepts, Operations, and Feasibility of a Projection-Based Variation Control System"
+  2016
+  @@ icsme
+
+ecoop16 = conference
+  "ecoop16-variational-programming-calculus"
+  [chen,erwig,walkingshaw]
+  "A Calculus for Variational Programming"
+  2016
+  `onPages` PagesIn 6 1 28
+  @@ ecoop
+
+
+
 -- ** 2015
 
-vlhcc15 = accepted Conference
+vlhcc15 = conference
   "vlhcc15-programs-for-people"
   [abbott,bogart,walkingshaw]
   "Programs for People: What We Can Learn from Lab Protocols"
   2015
   `setDataLink` "https://github.com/lambda-land/ProtocolStudy-Data"
+  `onPages` Pages 203 211
   @@ vlhcc
 
 
