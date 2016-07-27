@@ -72,7 +72,7 @@ y10 = [foser10,vlhcc10,vlhcc10dc,qual]
 y09 = [vlhcc09,idetc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
 
-allPubs = concat [drafts,y15,y14,y13,y12,y11,y10,y09,y08]
+allPubs = concat [drafts,y16,y15,y14,y13,y12,y11,y10,y09,y08]
 
 
 -- ** 2016
