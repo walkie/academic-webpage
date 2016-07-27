@@ -1,0 +1,7 @@
+# Stack configuration file:
+# http://docs.haskellstack.org/en/stable/yaml_configuration/
+
+# The resolver determines which packages are used to resolve the dependencies
+# in the Cabal build file.
+# https://www.stackage.org/lts-6.9
+resolver: lts-6.9

@@ -1,4 +1,4 @@
-name:           EricWalkingshaw-WebPage
+name:           WebPage
 version:        1.0
 synopsis:       My academic web page.
 homepage:       http://web.engr.oregonstate.edu/~walkiner/
@@ -24,3 +24,14 @@ executable hakyll
     blaze-html,
     hakyll,
     pandoc
+  other-modules:
+    WebPage.Generate
+    WebPage.Generate.Base
+    WebPage.Generate.Context
+    WebPage.Generate.Marburg
+    WebPage.Generate.Rules
+    WebPage.Generate.Sitemap
+    WebPage.Pubs
+    WebPage.Pubs.Database
+    WebPage.Pubs.Paper
+    WebPage.Pubs.ToHtml

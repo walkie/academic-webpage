@@ -1,5 +1,6 @@
-build
 .cabal-sandbox
+.stack-work
+build
 cabal.sandbox.config
 dist
 Session.vim
