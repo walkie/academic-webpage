@@ -84,6 +84,7 @@ fosd16 = accepted Workshop
   "Formula Choice Calculus"
   2016
   `setCodeLink` "https://github.com/lambda-land/FCC-Coq"
+  `onPages` Pages 49 57
   @@ fosd
 
 icsme16 = accepted Conference
