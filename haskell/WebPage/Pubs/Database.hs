@@ -17,6 +17,7 @@ bodden       = Author "Eric" "Bodden"
 bogart       = Author "Christopher" "Bogart"
 chen         = Author "Sheng" "Chen"
 erwig        = Author "Martin" "Erwig"
+hubbard      = Author "Spencer" "Hubbard"
 kaestner     = Author "Christian" "Kästner"
 le           = Author "Duc" "Le"
 ostermann    = Author "Klaus" "Ostermann"
@@ -62,7 +63,7 @@ vamos = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Intens
 -- ** Lists of papers in chronological order.
 
 drafts = []
-y16 = [icsme16,ecoop16]
+y16 = [fosd16,icsme16,ecoop16]
 y15 = [vlhcc15]
 y14 = [onward14,gpce14,toplas14]
 y13 = [fosd13,phdthesis,jvlc13,vamos13]
@@ -76,6 +77,14 @@ allPubs = concat [drafts,y16,y15,y14,y13,y12,y11,y10,y09,y08]
 
 
 -- ** 2016
+
+fosd16 = accepted Workshop
+  "fosd16-formula-choice-calculus"
+  [hubbard,walkingshaw]
+  "Formula Choice Calculus"
+  2016
+  `setCodeLink` "https://github.com/lambda-land/FCC-Coq"
+  @@ fosd
 
 icsme16 = accepted Conference
   "icsme16-variation-control-system"

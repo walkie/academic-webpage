@@ -2,4 +2,4 @@
 title: Current Teaching
 ---
 
-**[CS 583 (Advanced) Functional Programming](teaching/cs583-sp16)** (Spring 2016)
+**[CS 581 Programming Languages I](teaching/cs581-fa16)** (Fall 2016)

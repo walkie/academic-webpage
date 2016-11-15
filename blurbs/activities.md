@@ -15,6 +15,7 @@ I am also serving, or have recently served, on the program committees for:
  * [SLE 2016][SLE16]
  * [VL/HCC 2016][VLHCC16]
  * [PEPM 2016][PEPM16]
+ * [HuFaMo 2016][HuFaMo16]
  * [VL/HCC 2015][VLHCC15] (also showpieces co-chair, and on the grad consortium committee)
  * [VaMoS 2015][VaMoS15]
 
@@ -22,5 +23,6 @@ I am also serving, or have recently served, on the program committees for:
 [VLHCC15]: https://sites.google.com/site/vlhcc2015/home
 [VLHCC16]: https://sites.google.com/site/vlhcc2016/home
 [PEPM16]: http://conf.researchr.org/track/POPL-2016/pepm-2016-main#Call-for-Papers
+[HuFaMo16]: http://hufamo.compute.dtu.dk/
 [SLE16]: http://conf.researchr.org/home/sle-2016
 [DSLDI16]: http://2016.splashcon.org/track/dsldi2016
