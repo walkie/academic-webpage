@@ -12,19 +12,25 @@ import WebPage.Pubs.Paper
 -- ** Authors
 abbott       = Author "Keeley" "Abbott"
 apel         = Author "Sven" "Apel"
+atai         = Author "Parisa" "Ataei"
 berger       = Author "Thorsten" "Berger"
 bodden       = Author "Eric" "Bodden"
 bogart       = Author "Christopher" "Bogart"
 chen         = Author "Sheng" "Chen"
 erwig        = Author "Martin" "Erwig"
+gopinath     = Author "Rahul" "Gopinath"
 hubbard      = Author "Spencer" "Hubbard"
 kaestner     = Author "Christian" "Kästner"
 le           = Author "Duc" "Le"
+meinicke     = Author "Jens" "Meinicke"
+meng         = Author "Meng" "Meng"
 ostermann    = Author "Klaus" "Ostermann"
 rendel       = Author "Tillmann" "Rendel"
 stanciulescu = Author "Ștefan" "Stănciulescu"
+termehchy    = Author "Arash" "Termehchy"
 walkingshaw  = Author "Eric" "Walkingshaw"
 wasowski     = Author "Andrzej" "Wąsowski"
+wong         = Author "Chu-Pan" "Wong"
 
 -- ** Institutions
 osu = "Oregon State University"
@@ -51,9 +57,11 @@ vlhcc  = short "VL/HCC" "IEEE Int. Symp. on Visual Languages and Human-Centric C
 vlhccdc | Just s <- _shortName vlhcc = short s ("Doctoral Consortium at " ++ _longName vlhcc)
 
 -- ** Workshops
-fosd  = short "FOSD" "Int. Workshop on Feature-Oriented Software Development"
-foser = short "FoSER" "ACM SIGSOFT Workshop on the Future of Software Engineering Research"
-vamos = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Intensive Systems"
+dbpl     = short "DBPL" "Int. Symp. on Database Programming Languages"
+fosd     = short "FOSD" "Int. Workshop on Feature-Oriented Software Development"
+foser    = short "FoSER" "ACM SIGSOFT Workshop on the Future of Software Engineering Research"
+mutation = short "Mutation" "Int. Workshop on Mutation Analysis"
+vamos    = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Intensive Systems"
 
 
 --
@@ -63,6 +71,7 @@ vamos = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Intens
 -- ** Lists of papers in chronological order.
 
 drafts = []
+y17 = [dbpl17,mutation17,vamos17]
 y16 = [fosd16,icsme16,ecoop16]
 y15 = [vlhcc15]
 y14 = [onward14,gpce14,toplas14]
@@ -73,12 +82,39 @@ y10 = [foser10,vlhcc10,vlhcc10dc,qual]
 y09 = [vlhcc09,idetc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
 
-allPubs = concat [drafts,y16,y15,y14,y13,y12,y11,y10,y09,y08]
+allPubs = concat [drafts,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
+
+
+-- ** 2017
+
+dbpl17 = accepted Workshop
+  "dbpl17-variational-queries"
+  [atai,termehchy,walkingshaw]
+  "Variational Queries"
+  2017
+  @@ dbpl
+
+mutation17 = workshop
+  "mutation17-how-good-are-your-types"
+  [gopinath,walkingshaw]
+  "How Good are Your Types? Using Mutation Analysis to Evaluate the Effectiveness of Type Annotations"
+  2017
+  `onPages` Pages 122 127
+  `withNote` "Best presentation"
+  @@ mutation
+
+vamos17 = workshop
+  "vamos17-variational-stacks"
+  [meng,meinicke,wong,walkingshaw,kaestner]
+  "A Choice of Variational Stacks: Exploring Variational Data Structures"
+  2017
+  `onPages` Pages 28 35
+  @@ vamos
 
 
 -- ** 2016
 
-fosd16 = accepted Workshop
+fosd16 = workshop
   "fosd16-formula-choice-calculus"
   [hubbard,walkingshaw]
   "Formula Choice Calculus"
@@ -87,11 +123,12 @@ fosd16 = accepted Workshop
   `onPages` Pages 49 57
   @@ fosd
 
-icsme16 = accepted Conference
+icsme16 = conference
   "icsme16-variation-control-system"
   [stanciulescu,berger,walkingshaw,wasowski]
   "Concepts, Operations, and Feasibility of a Projection-Based Variation Control System"
   2016
+  `onPages` Pages 323 333
   @@ icsme
 
 ecoop16 = conference
@@ -151,6 +188,7 @@ fosd13 = workshop
   [erwig,walkingshaw,chen]
   "An Abstract Representation of Variational Graphs"
   2013
+  `onPages` Pages 25 32
   @@ fosd
 
 phdthesis = thesis

@@ -51,7 +51,7 @@ copyFiles =
   match (foldr1 (.||.) $ map fromGlob $
          ["images/*","js/*","css/*.css"]
       ++ ["projects/**.pdf"]
-      ++ ["teaching/**." ++ ext | ext <- ["pdf","png","jpg","zip","hs","v","pl"]]) $ do
+      ++ ["teaching/**." ++ ext | ext <- ["hs","java","jpg","ml","pdf","pl","png","sml","txt","v","zip"]]) $ do
     route   idRoute
     compile copyFileCompiler
 

@@ -9,11 +9,16 @@ Here are my profiles at some sites I actively use.
  *  [Twitter][Twitter]
  *  [Google Scholar][GS]
  *  [BoardGameGeek][BGG]
+<!--
  *  <a href="http://www.haskellers.com/user/EricWalkingshaw">
     <img alt="I'm a Haskeller" style="vertical-align: middle" src="http://www.haskellers.com/static/badge.png">
     </a>
+-->
+
+I also reluctantly have a [LinkedIn account][LinkedIn].
 
 [GitHub]: https://github.com/walkie
 [Twitter]: https://twitter.com/EricWalkingshaw
 [GS]: https://scholar.google.com/citations?user=0kPwMDwAAAAJ
 [BGG]: http://boardgamegeek.com/user/walkie
+[LinkedIn]: https://www.linkedin.com/in/eric-walkingshaw/

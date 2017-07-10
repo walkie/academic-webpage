@@ -5,7 +5,7 @@ module WebPage.Pubs.ToHtml (
   pubListStr
 ) where
 
-import Data.List (intersperse)
+import Data.List (intersperse,isPrefixOf)
 import Data.Maybe (catMaybes)
 import Data.Monoid (mconcat)
 
@@ -83,8 +83,9 @@ year :: Year -> Html
 year = span "pub-year" . toMarkup
 
 note :: String -> Html
-note "Best paper" = div "pub-note pub-best" "Best paper"
-note s = div "pub-note" (toMarkup s)
+note s = div c (toMarkup s)
+  where c | isPrefixOf "Best" s = "pub-note pub-best"
+          | otherwise           = "pub-note"
 
 venue :: Venue -> Html
 venue (Venue long short kind _ eds vol num ser) =

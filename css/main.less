@@ -30,7 +30,9 @@ html, body {
 }
 
 #content {
-  padding-bottom: @footHeight + @vMargin;
+  display: inline-block;
+  // padding-bottom: @footHeight + @vMargin;
+  padding-bottom: @vMargin;
 }
 
 #header {
@@ -39,9 +41,10 @@ html, body {
 
 #footer {
   // height: @footHeight;
-  width: 100%;
-  position: absolute;
+  // position: absolute;
+  display: inline-block; 
   bottom: 0;
+  width: 100%;
 }
 
 .break {

@@ -11,6 +11,8 @@ title: Teaching
 
 ## Past Courses
 
+  * Winter 2017 -- CS 381: Programming Language Fundamentals 
+  * Fall 2016 -- CS 581: Programming Languages I
   * Spring 2016 -- CS 583: Advanced Functional Programming
   * Winter 2016 -- CS 381: Programming Language Fundamentals 
   * Fall 2015 -- CS 589: Programming Languages I

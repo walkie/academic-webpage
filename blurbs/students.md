@@ -4,37 +4,32 @@ title: Student Mentoring
 
 **Lambda Reading Group:** We're a group of programming languages students and
 faculty that meets to discuss a different paper each week. If you're interested
-in programming languages, you're welcome to join. We coordinate by email, so
-drop me a line if you want to attend so you can read the paper ahead of time.
+in programming languages, you're welcome to join! Just send me an email.
 
 Current weekly meeting times:
 
- * Research talks: **Monday 1-2pm**
- * Reading group: **Wednesday 2-3pm**
+ * Research talks: (will resume in Fall 2017)
+ * Reading group: **Wednesday 1-2pm** (Summer 2017)
 
 **Current students:**
 
- * [Keeley Abbott][Keeley] (MS/PhD)
- * Alex Grasley (MS)
- * [Mike McGirr][Mike] (MS)
- * Meng Meng (MS)
- * Chao Peng (MS)
- * [Shujin Wu][Shujin] (MS)
- * Jeff Young (PhD)
+ * [Keeley Abbott](http://web.engr.oregonstate.edu/~abbottk/) (MS/PhD)
+ * Ghadeer Al Kubaish (MS)
+ * [Alex Grasley](https://github.com/agrasley) (MS)
+ * Qiaoran Li (MS)
+ * [Mike McGirr](https://www.mikemcgirr.com/) (MS)
+ * [Meng Meng](https://github.com/Meng1024) (MS)
+ * [Jeff Young](https://github.com/doyougnu) (PhD)
 
+<!--
 **Undergraduate researchers:**
 
- * [Rikki Gibson][Rikki]
- * [Miles Van de Wetering][Miles]
+ * [Rikki Gibson](https://rikkigibson.github.io/)
+ * [Victor Daniel Campa Martinez][Victor]
+-->
 
-**Former students:**
+**Graduated students:**
  
- * [Spencer Hubbard][Spencer] (MS) -- now at Tableau
-
-
-[Keeley]: http://web.engr.oregonstate.edu/~abbottk/
-[Mike]: https://www.mikemcgirr.com/
-[Miles]: http://milesvdw.github.io/
-[Rikki]: https://rikkigibson.github.io/
-[Shujin]: http://suzywu2014.github.io/
-[Spencer]: http://web.engr.oregonstate.edu/~hubbarsp/
+ * [Miles Van de Wetering](http://milesvdw.github.io/) (Honors BS, 2017) -- now at Pariveda
+ * [Shujin Wu](http://suzywu2014.github.io/) (MS, 2017) -- now at Google
+ * [Spencer Hubbard](https://www.linkedin.com/in/hubbardspencer/) (MS, 2016) -- now at Tableau
