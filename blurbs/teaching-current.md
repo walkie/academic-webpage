@@ -2,4 +2,4 @@
 title: Current Teaching
 ---
 
-**[CS 589 Special Topics in Programming Languages – Modularity](teaching/cs589-sp17)** (Spring 2017)
+**[CS 381 Programming Language Fundamentals](teaching/cs381-wi18)** (Winter 2018)

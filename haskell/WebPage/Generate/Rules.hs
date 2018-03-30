@@ -22,7 +22,7 @@ rules = do
   copyPapers
   loadAbstracts
   buildPages
-  -- buildSitemap
+  buildSitemap
 
 compileTemplates :: Rules ()
 compileTemplates =
@@ -47,7 +47,10 @@ compileCSS = do
         >>= return . fmap compressCss
 
 copyFiles :: Rules ()
-copyFiles =
+copyFiles = do
+  match "pages/robots.txt" $ do
+    route (constRoute "robots.txt")
+    compile copyFileCompiler
   match (foldr1 (.||.) $ map fromGlob $
          ["images/*","js/*","css/*.css"]
       ++ ["projects/**.pdf"]
@@ -56,8 +59,11 @@ copyFiles =
     compile copyFileCompiler
 
 copyPapers :: Rules ()
-copyPapers =
+copyPapers = do
   match "papers/*.pdf" $ do
+    route   idRoute
+    compile copyFileCompiler
+  match "preprints/*.pdf" $ do
     route   idRoute
     compile copyFileCompiler
 

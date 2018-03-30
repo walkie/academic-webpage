@@ -3,4 +3,5 @@
 build
 cabal.sandbox.config
 dist
+preprints
 Session.vim

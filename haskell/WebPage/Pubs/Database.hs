@@ -10,27 +10,29 @@ import WebPage.Pubs.Paper
 --
 
 -- ** Authors
-abbott       = Author "Keeley" "Abbott"
-apel         = Author "Sven" "Apel"
-atai         = Author "Parisa" "Ataei"
-berger       = Author "Thorsten" "Berger"
-bodden       = Author "Eric" "Bodden"
-bogart       = Author "Christopher" "Bogart"
-chen         = Author "Sheng" "Chen"
-erwig        = Author "Martin" "Erwig"
-gopinath     = Author "Rahul" "Gopinath"
-hubbard      = Author "Spencer" "Hubbard"
-kaestner     = Author "Christian" "Kästner"
-le           = Author "Duc" "Le"
-meinicke     = Author "Jens" "Meinicke"
-meng         = Author "Meng" "Meng"
-ostermann    = Author "Klaus" "Ostermann"
-rendel       = Author "Tillmann" "Rendel"
-stanciulescu = Author "Ștefan" "Stănciulescu"
-termehchy    = Author "Arash" "Termehchy"
-walkingshaw  = Author "Eric" "Walkingshaw"
-wasowski     = Author "Andrzej" "Wąsowski"
-wong         = Author "Chu-Pan" "Wong"
+abbott       = author "Keeley" "Abbott"
+apel         = author "Sven" "Apel"
+atai         = author "Parisa" "Ataei"
+berger       = author "Thorsten" "Berger"
+bodden       = author "Eric" "Bodden"
+bogart       = author "Christopher" "Bogart"
+campora      = Author "John" (Just "Peter") "Campora" (Just "III")
+chen         = author "Sheng" "Chen"
+erwig        = author "Martin" "Erwig"
+gopinath     = author "Rahul" "Gopinath"
+hubbard      = author "Spencer" "Hubbard"
+kaestner     = author "Christian" "Kästner"
+le           = author "Duc" "Le"
+meinicke     = author "Jens" "Meinicke"
+meng         = author "Meng" "Meng"
+ostermann    = author "Klaus" "Ostermann"
+rendel       = author "Tillmann" "Rendel"
+stanciulescu = author "Ștefan" "Stănciulescu"
+termehchy    = author "Arash" "Termehchy"
+walkingshaw  = author "Eric" "Walkingshaw"
+wasowski     = author "Andrzej" "Wąsowski"
+wong         = author "Chu-Pan" "Wong"
+young        = author "Jeffrey" "Young"
 
 -- ** Institutions
 osu = "Oregon State University"
@@ -40,19 +42,24 @@ jfp    = short "JFP" "Journal of Functional Programming"
 jvlc   = short "JVLC" "Journal of Visual Languages and Computing"
 toplas = short "TOPLAS" "ACM Trans. on Programming Languages and Systems"
 tosem  = short "TOSEM" "ACM Trans. on Software Engineering and Methodology"
+pacmpl = short "PACMPL" "Proc. of the ACM on Programming Languages"
+        
+-- ** Proceedings in Journals
+popl   = pacmpl `setIssue` "ACM SIGPLAN Symp. on Principles of Programming Languages (POPL)"
 
 -- ** Conferences
-lncs = ("LNCS",)
+lncs   = ("LNCS",)
+lipics = ("LIPIcs",)
 
 dsl    = short "DSL" "IFIP Working Conf. on Domain-Specific Languages"
 ecoop  = short "ECOOP" "European Conf. on Object-Oriented Programming"
 gpce   = short "GPCE" "ACM SIGPLAN Int. Conf. on Generative Programming and Component Engineering"
-gttse  = short "GTTSE" "Generative and Transformational Techniques in Software Engineering"
 icfp   = short "ICFP" "ACM SIGPLAN Int. Conf. on Functional Programming"
 icsme  = short "ICSME" "IEEE Int. Conf. on Software Maintenance and Evolution"
 idetc  = short "IDETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
 onward = short "Onward!" "ACM SIGPLAN Symp. on New Ideas in Programming and Reflections on Software"
-sle    = short "SLE" "Int. Conf. on Software Language Engineering"
+sigcse = short "SIGCSE" "ACM SIGCSE Technical Symp. on Computer Science Education"
+sle    = short "SLE" "ACM SIGPLAN Int. Conf. on Software Language Engineering"
 vlhcc  = short "VL/HCC" "IEEE Int. Symp. on Visual Languages and Human-Centric Computing"
 vlhccdc | Just s <- _shortName vlhcc = short s ("Doctoral Consortium at " ++ _longName vlhcc)
 
@@ -71,28 +78,51 @@ vamos    = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Int
 -- ** Lists of papers in chronological order.
 
 drafts = []
+y18 = [sigcse18,popl18]
 y17 = [dbpl17,mutation17,vamos17]
 y16 = [fosd16,icsme16,ecoop16]
 y15 = [vlhcc15]
 y14 = [onward14,gpce14,toplas14]
-y13 = [fosd13,phdthesis,jvlc13,vamos13]
+y13 = [fosd13,gttse11,phdthesis,jvlc13,vamos13]
 y12 = [gpce12,icfp12,chapter12]
-y11 = [msthesis,gttse11,vlhcc11,dsl11,sle11,tosem11]
+y11 = [msthesis,vlhcc11,dsl11,sle11,tosem11]
 y10 = [foser10,vlhcc10,vlhcc10dc,qual]
 y09 = [vlhcc09,idetc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
 
-allPubs = concat [drafts,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
+allPubs = concat [drafts,y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
+
+
+-- ** 2018
+
+sigcse18 = accepted Conference
+  "sigcse18-algorithm-explanations"
+  [young,walkingshaw]
+  "A Domain Analysis of Data Structure and Algorithm Explanations in the Wild"
+  2018
+  `setDataLink` "https://github.com/lambda-land/XOP-Algorithms-Data"
+  `onPages` Pages 870 875
+  @@ sigcse
+
+popl18 = journal
+  "popl18-migrating-gradual-types"
+  [campora,chen,erwig,walkingshaw]
+  "Migrating Gradual Types"
+  2018
+  `setCodeLink` "https://bitbucket.org/plcacs/popl18aec"
+  `onPages` PagesIn 15 1 29
+  @@ popl `setVolume` 2 `setNumber` 15
 
 
 -- ** 2017
 
-dbpl17 = accepted Workshop
-  "dbpl17-variational-queries"
+dbpl17 = workshop
+  "dbpl17-variational-databases"
   [atai,termehchy,walkingshaw]
-  "Variational Queries"
+  "Variational Databases"
   2017
-  @@ dbpl
+  `onPages` PagesIn 11 1 4
+  @@ dbpl `setPublisher` "ACM"
 
 mutation17 = workshop
   "mutation17-how-good-are-your-types"
@@ -101,7 +131,7 @@ mutation17 = workshop
   2017
   `onPages` Pages 122 127
   `withNote` "Best presentation"
-  @@ mutation
+  @@ mutation `setPublisher` "IEEE"
 
 vamos17 = workshop
   "vamos17-variational-stacks"
@@ -109,7 +139,7 @@ vamos17 = workshop
   "A Choice of Variational Stacks: Exploring Variational Data Structures"
   2017
   `onPages` Pages 28 35
-  @@ vamos
+  @@ vamos `setPublisher` "ACM"
 
 
 -- ** 2016
@@ -121,7 +151,7 @@ fosd16 = workshop
   2016
   `setCodeLink` "https://github.com/lambda-land/FCC-Coq"
   `onPages` Pages 49 57
-  @@ fosd
+  @@ fosd `setPublisher` "ACM"
 
 icsme16 = conference
   "icsme16-variation-control-system"
@@ -137,7 +167,7 @@ ecoop16 = conference
   "A Calculus for Variational Programming"
   2016
   `onPages` PagesIn 6 1 28
-  @@ ecoop
+  @@ ecoop `setSeries` lipics 56
 
 
 
@@ -189,7 +219,7 @@ fosd13 = workshop
   "An Abstract Representation of Variational Graphs"
   2013
   `onPages` Pages 25 32
-  @@ fosd
+  @@ fosd `setPublisher` "ACM"
 
 phdthesis = thesis
   "thesis-choice-calculus"
@@ -213,7 +243,7 @@ vamos13 = workshop
   "Adding Configuration to the Choice Calculus"
   2013
   `onPages` PagesIn 13 1 8
-  @@ vamos
+  @@ vamos `setPublisher` "ACM"
 
 
 -- ** 2012
@@ -241,7 +271,7 @@ chapter12 = appeared Chapter
   2012
   `onPages` Pages 56 80
   @@ venue "Formal and Practical Aspects of Domain-Specific Languages: Recent Developments"
-     `setEditor` [Author "Marjan" "Mernik"]
+     `setEditor` [author "Marjan" "Mernik"]
      `setPublisher` "IGI Global"
 
 
@@ -260,10 +290,11 @@ gttse11 = appeared Chapter
   "gttse11-variation-programming"
   [erwig,walkingshaw]
   "Variation Programming with the Choice Calculus"
-  2012
-  `onPages` Pages 55 99
+  2013
+  `onPages` Pages 55 100
   `setCodeLink` "https://github.com/walkie/CC-GTTSE"
-  @@ gttse
+  @@ venue "Generative and Transformational Techniques in Software Engineering IV (GTTSE 2011), Revised and Extended Papers"
+     `setSeries` lncs 7680
 
 vlhcc11 = conference
   "vlhcc11-ifdef-confirmed-harmful"
@@ -346,7 +377,7 @@ vlhcc09 = conference
 
 idetc09 = conference
   "idetc09-software-hardware-design"
-  [walkingshaw, Author "Paul" "Strauss", erwig, Author "John" "Mueller", Author "Irem" "Tumer"]
+  [walkingshaw, author "Paul" "Strauss", erwig, author "John" "Mueller", author "Irem" "Tumer"]
   "A Formal Representation of Software-Hardware System Design"
   2009
   `onPages` Pages 1387 1398

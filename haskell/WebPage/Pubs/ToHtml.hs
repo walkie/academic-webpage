@@ -65,14 +65,17 @@ asList [a,b]   = a >> " and " >> b
 asList [a,b,c] = comma a >> comma b >> "and " >> c
 asList (a:as)  = comma a >> asList as
 
-author :: Author -> Html
-author (Author f l) = toMarkup (f ++ " " ++ l)
-
 authors :: [Author] -> Html
 authors = asList . map author
+  where
+    author (Author f m l s) = do
+      toMarkup f
+      opt (pre " ") m
+      pre " " (toMarkup l)
+      opt (pre " ") s
 
 series :: (Name, Int) -> Html
-series (n,i) = toMarkup n >> " " >> toMarkup i
+series (n,i) = toMarkup n >> " vol. " >> toMarkup i
 
 pages :: Pages -> Html
 pages (Pages     a b) = fromTo a b
@@ -88,23 +91,25 @@ note s = div c (toMarkup s)
           | otherwise           = "pub-note"
 
 venue :: Venue -> Html
-venue (Venue long short kind _ eds vol num ser) =
+venue (Venue long short issue kind pub eds vol num ser) =
   span "pub-venue" $ do
     opt comma kind
     span "pub-venue-name" $ do
       toMarkup long
       opt (pre " " . parens) short
-      ", "
+    opt (pre " issue " . span "pub-issue" . toMarkup) issue
+    ", "
     opt' authors (comma . parens . pre "ed. ") eds
     opt' series comma ser
     opt (comma . pre "vol. ") vol
     opt (comma . pre "num. ") num
+    opt comma pub
 
 details :: Paper -> Html
 details p = div "pub-details" $ do
   maybe "Draft paper, " venue (_venue p)
-  opt' pages comma (_pages p)
   span "pub-year" $ toMarkup (_year p)
+  opt' pages (", " >>) (_pages p)
 
 codeLink :: String -> Html
 codeLink = span "pub-code-link" . (E.a "Code" !) . A.href . toValue

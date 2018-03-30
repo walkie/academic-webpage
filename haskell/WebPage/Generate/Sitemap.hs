@@ -20,15 +20,19 @@ siteRoot = "http://web.engr.oregonstate.edu/~walkiner"
 -- | Get the priority of a page.
 priority :: String -> Float
 priority "/index.html" = 1.0
+priority "/publications.html" = 1.0
 priority "/legal.html" = 0.1
 priority url
-  | isPrefixOf "/projects/" url = 0.7
+  | isPrefixOf "/papers/"   url = 0.8
+  | isPrefixOf "/projects/" url = 0.5
   | isPrefixOf "/teaching/" url = 0.3
   | otherwise                   = 0.5
 
 -- | Matches all pages to include.
 allPages :: Compiler [Item String]
-allPages = loadAll ("pages/*" .||. "projects/*" .||. "teaching/**")
+allPages = loadAll $ "pages/*.html" .||. "pages/*.md"
+                .||. "projects/**.html" .||. "projects/**.md"
+                .||. "teaching/**.html" .||. "teaching/**.md"
 
 -- | Matches all files to include.
 allFiles :: Compiler [Item CopyFile]

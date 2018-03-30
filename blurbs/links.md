@@ -2,8 +2,7 @@
 title: Links
 ---
 
-I have accounts at all the usual places, though most of them are neglected.
-Here are my profiles at some sites I actively use.
+Here are my profiles at some sites I actively use:
 
  *  [GitHub][GitHub]
  *  [Twitter][Twitter]
@@ -15,7 +14,9 @@ Here are my profiles at some sites I actively use.
     </a>
 -->
 
-I also reluctantly have a [LinkedIn account][LinkedIn].
+<!-- I also reluctantly have a [LinkedIn account][LinkedIn]. -->
+
+I purposely do not have accounts at ResearchGate or Academia.edu.
 
 [GitHub]: https://github.com/walkie
 [Twitter]: https://twitter.com/EricWalkingshaw

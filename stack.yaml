@@ -3,5 +3,5 @@
 
 # The resolver determines which packages are used to resolve the dependencies
 # in the Cabal build file.
-# https://www.stackage.org/lts-6.9
-resolver: lts-6.9
+# https://www.stackage.org/lts-9.12
+resolver: lts-9.12

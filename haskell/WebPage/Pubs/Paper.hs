@@ -17,9 +17,14 @@ data Status = Appeared | Accepted | Submitted | Draft
   deriving (Eq,Enum,Show)
 
 data Author = Author {
-  _firstName :: Name,
-  _lastName  :: Name
+  _firstName  :: Name,
+  _middleName :: Maybe Name,
+  _lastName   :: Name,
+  _suffix     :: Maybe Name
 } deriving (Eq,Show)
+
+author :: Name -> Name -> Author
+author first last = Author first Nothing last Nothing
 
 data Pages = Pages   Int Int
            | PagesIn Int Int Int
@@ -89,6 +94,7 @@ setAbstract p a = p { _abstract = Just a }
 data Venue = Venue {
   _longName  :: Name,
   _shortName :: Maybe Name,
+  _issue     :: Maybe Name,
   _venueKind :: Maybe Name,
   _publisher :: Maybe Name,
   _editors   :: Maybe [Author],
@@ -98,11 +104,12 @@ data Venue = Venue {
 } deriving (Eq,Show)
 
 -- Minimum definition.
-venue l = Venue l Nothing Nothing Nothing Nothing Nothing Nothing Nothing
+venue l = Venue l Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing
 short s l = venue l `setShortName` s
 
 -- Optional field setters.
 setShortName v a = v { _shortName = Just a }
+setIssue     v a = v { _issue     = Just a }
 setVenueKind v a = v { _venueKind = Just a }
 setPublisher v a = v { _publisher = Just a }
 setEditor    v a = v { _editors   = Just a }
