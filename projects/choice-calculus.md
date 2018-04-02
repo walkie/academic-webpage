@@ -12,12 +12,12 @@ in programming languages research, providing a minimal basis for communicating
 ideas and sharing results.
 
 The core choice calculus is very small---just two constructs, *choices* and
-*tree nodes*---but it can be easily extended with new language features that
-support different ways of developing, maintaining, and analyzing variability.
-The core choice calculus is also generic, emphasizing that variation can
-often be treated orthogonally to other concerns, but it can be instantiated
-by different object languages and data types when they interact fundamentally
-with variability.
+generic abstract syntax tree---but it can be easily extended with new language
+features that support different ways of developing, maintaining, and analyzing
+variability. The core choice calculus is also generic, emphasizing that
+variation can often be treated orthogonally to other concerns, but it can be
+instantiated by different object languages and data types when they interact
+fundamentally with variability.
 
 The primary reference for the choice calculus is the original TOSEM paper
 [[@tosem11](#tosem11-choice-calculus)], however, the most comprehensive and
@@ -50,6 +50,9 @@ The choice calculus also has its own web page:
 ## Applications of the Choice Calculus
 
 <div class="ref-list resume">
+(@popl18) \$popl18-migrating-gradual-types\$
+(@dbpl17) \$dbpl17-variational-databases\$
+(@icsme16) \$icsme16-variation-control-system\$
 (@gpce14) \$gpce14-projectional-editing\$
 (@toplas14) \$toplas14-variational-typing\$
 (@icfp12) \$icfp12-variational-type-errors\$
@@ -62,6 +65,8 @@ The choice calculus also has its own web page:
 ## Extensions to the Choice Calculus
 
 <div class="ref-list resume">
+(@ecoop16) \$ecoop16-variational-programming-calculus\$
+(@fosd16) \$fosd16-formula-choice-calculus\$
 (@vamos13) \$vamos13-cc-select\$
 (@gpce12) \$gpce12-compositional-cc\$
 
@@ -71,6 +76,7 @@ The choice calculus also has its own web page:
 ## Variational Data Structures
 
 <div class="ref-list resume">
+(@vamos17) \$vamos17-variational-stacks\$
 (@onward14) \$onward14-variational-data\$
 (@fosd13) \$fosd13-variational-graphs\$
 

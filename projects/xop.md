@@ -38,6 +38,7 @@ non-expert *explanation consumers*.
 ## Publications
  
 <div class="ref-list">
+(@sigcse18) \$sigcse18-algorithm-explanations\$
 (@jvlc13) \$jvlc13-probula\$
 (@dsl11) \$dsl11-causation-dsl\$
 (@vlhcc10) \$vlhcc10-neuron-diagrams\$

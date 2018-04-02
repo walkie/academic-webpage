@@ -6,7 +6,7 @@ title: Student Mentoring
 faculty that meets to discuss a different paper each week. If you're interested
 in programming languages, you're welcome to join! Just send me an email.
 
-Current weekly meeting time (Winter 2018): **Wednesday 2-3pm** (KEC 3057)
+Current weekly meeting time (Spring 2018): **Wednesday 11am** (KEC 3057)
 
 <!-- 
  * Research talks: **Tuesday 2-3pm** (KEC 3057)
@@ -20,11 +20,11 @@ Current weekly meeting time (Winter 2018): **Wednesday 2-3pm** (KEC 3057)
  * [Sebastian Benjamin](http://people.oregonstate.edu/~benjamse/), undergraduate research
  * [Alex Grasley](https://github.com/agrasley), MS student
  * [Qiaoran Li](https://github.com/QiaoranChelsea), MS student
- * [Mike McGirr](https://www.mikemcgirr.com/), MS student
  * [Jeff Young](https://github.com/doyougnu), PhD student
 
 **Graduated students:**
  
+ * [Mike McGirr](https://www.mikemcgirr.com/), MS (2018)
  * [Keeley Abbott](http://web.engr.oregonstate.edu/~abbottk/), MS (2017) -- now at OSU Admissions
  * [Meng Meng](https://github.com/Meng1024), MS (2017) -- now at VMware
  * [Miles Van de Wetering](http://milesvdw.github.io/), Honors BS (2017) -- now at Pariveda
