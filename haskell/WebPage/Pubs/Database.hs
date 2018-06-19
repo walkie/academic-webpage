@@ -11,6 +11,7 @@ import WebPage.Pubs.Paper
 
 -- ** Authors
 abbott       = author "Keeley" "Abbott"
+adelsberger  = author "Stephan" "Adelsberger"
 apel         = author "Sven" "Apel"
 atai         = author "Parisa" "Ataei"
 berger       = author "Thorsten" "Berger"
@@ -27,6 +28,7 @@ meinicke     = author "Jens" "Meinicke"
 meng         = author "Meng" "Meng"
 ostermann    = author "Klaus" "Ostermann"
 rendel       = author "Tillmann" "Rendel"
+setzer       = author "Anton" "Setzer"
 stanciulescu = author "Ștefan" "Stănciulescu"
 termehchy    = author "Arash" "Termehchy"
 walkingshaw  = author "Eric" "Walkingshaw"
@@ -46,6 +48,7 @@ pacmpl = short "PACMPL" "Proc. of the ACM on Programming Languages"
         
 -- ** Proceedings in Journals
 popl   = pacmpl `setIssue` "ACM SIGPLAN Symp. on Principles of Programming Languages (POPL)"
+icfp   = pacmpl `setIssue` "ACM SIGPLAN Int. Conf. on Functional Programming (ICFP)"
 
 -- ** Conferences
 lncs   = ("LNCS",)
@@ -54,10 +57,12 @@ lipics = ("LIPIcs",)
 dsl    = short "DSL" "IFIP Working Conf. on Domain-Specific Languages"
 ecoop  = short "ECOOP" "European Conf. on Object-Oriented Programming"
 gpce   = short "GPCE" "ACM SIGPLAN Int. Conf. on Generative Programming and Component Engineering"
-icfp   = short "ICFP" "ACM SIGPLAN Int. Conf. on Functional Programming"
+icfpc  = short "ICFP" "ACM SIGPLAN Int. Conf. on Functional Programming"
 icsme  = short "ICSME" "IEEE Int. Conf. on Software Maintenance and Evolution"
 idetc  = short "IDETC" "ASME Int. Design Engineering Technical Conf. & Computers and Information in Engineering Conf."
 onward = short "Onward!" "ACM SIGPLAN Symp. on New Ideas in Programming and Reflections on Software"
+ppdp   = short "PPDP" "ACM SIGPLAN Int. Symp. on Principles and Practice of Declarative Programming"
+setta  = short "SETTA" "Int. Symp. on Dependable Software Engineering: Theories, Tools, and Applications"
 sigcse = short "SIGCSE" "ACM SIGCSE Technical Symp. on Computer Science Education"
 sle    = short "SLE" "ACM SIGPLAN Int. Conf. on Software Language Engineering"
 vlhcc  = short "VL/HCC" "IEEE Int. Symp. on Visual Languages and Human-Centric Computing"
@@ -77,8 +82,8 @@ vamos    = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Int
 
 -- ** Lists of papers in chronological order.
 
-drafts = []
-y18 = [sigcse18,popl18]
+drafts = [ppdp18]
+y18 = [icfp18,setta18,sigcse18,popl18]
 y17 = [dbpl17,mutation17,vamos17]
 y16 = [fosd16,icsme16,ecoop16]
 y15 = [vlhcc15]
@@ -90,12 +95,37 @@ y10 = [foser10,vlhcc10,vlhcc10dc,qual]
 y09 = [vlhcc09,idetc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
 
-allPubs = concat [drafts,y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
+allPubs = concat [y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
 
 
 -- ** 2018
 
-sigcse18 = accepted Conference
+ppdp18 = submitted Conference
+  "ppdp18-declarative-guis"
+  [adelsberger,setzer,walkingshaw]
+  "Declarative GUIs: Simple, Consistent, and Verified"
+  2018
+  `withNote` "Under review"
+  @@ ppdp
+
+icfp18 = accepted Journal
+  "icfp18-casts-and-costs"
+  [campora,chen,walkingshaw]
+  "Casts and Costs: Harmonizing Safety and Performance in Gradual Typing"
+  2018
+  `setCodeLink` "https://bitbucket.org/PeterCampora/castsandcostsartifact"
+  `withNote` "To appear (preprint coming soon)"
+  @@ icfp 
+
+setta18 = accepted Conference
+  "setta18-verified-guis"
+  [adelsberger,setzer,walkingshaw]
+  "Developing GUI Applications in a Verified Setting"
+  2018
+  `withNote` "To appear (preprint coming soon)"
+  @@ setta `setPublisher` "Springer"
+
+sigcse18 = conference
   "sigcse18-algorithm-explanations"
   [young,walkingshaw]
   "A Domain Analysis of Data Structure and Algorithm Explanations in the Wild"
@@ -263,7 +293,7 @@ icfp12 = conference
   "An Error-Tolerant Type System for Variational Lambda Calculus"
   2012
   `onPages` Pages 29 40
-  @@ icfp
+  @@ icfpc
 
 chapter12 = appeared Chapter
   "semantics-driven-dsl-design"
@@ -296,6 +326,7 @@ gttse11 = appeared Chapter
   `setCodeLink` "https://github.com/walkie/CC-GTTSE"
   @@ venue "Generative and Transformational Techniques in Software Engineering IV (GTTSE 2011), Revised and Extended Papers"
      `setSeries` lncs 7680
+     `setPublisher` "Springer"
 
 vlhcc11 = conference
   "vlhcc11-ifdef-confirmed-harmful"
@@ -321,6 +352,7 @@ sle11 = conference
   2011
   `onPages` Pages 243 262
   @@ sle `setSeries` lncs 6940
+     `setPublisher` "Springer"
 
 tosem11 = journal
   "tosem11-choice-calculus"
@@ -401,6 +433,7 @@ dsl09a = conference
   `onPages` Pages 335 359
   `withNote` "Best paper"
   @@ dsl `setSeries` lncs 5658
+     `setPublisher` "Springer"
 
 dsl09b = conference
   "dsl09-hagl-expressiveness"
@@ -410,6 +443,7 @@ dsl09b = conference
   `onPages` Pages 310 334
   `setCodeLink` "https://github.com/walkie/Hagl-WCDSL"
   @@ dsl `setSeries` lncs 5658
+     `setPublisher` "Springer"
 
 
 -- ** 2008
