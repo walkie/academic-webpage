@@ -158,6 +158,7 @@ icsme16 = conference
   [stanciulescu,berger,walkingshaw,wasowski]
   "Concepts, Operations, and Feasibility of a Projection-Based Variation Control System"
   2016
+  `setBothLink` "https://bitbucket.org/modelsteam/2016-vcs-marlin"
   `onPages` Pages 323 333
   @@ icsme
 

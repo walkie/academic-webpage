@@ -46,12 +46,13 @@ data Paper = Paper {
   _note     :: Maybe String,
   _codeLink :: Maybe String,
   _dataLink :: Maybe String,
+  _bothLink :: Maybe String,
   _pdfLink  :: Maybe String,
   _abstract :: Maybe String
 } deriving (Eq,Show)
 
 -- Minimum definition.
-paper s k e a t y = Paper s k e a t y Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing
+paper s k e a t y = Paper s k e a t y Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing
 
 draft     = paper Draft DraftPaper 
 appeared  = paper Appeared
@@ -85,6 +86,7 @@ atURL       p a = p { _url      = Just a }
 withNote    p a = p { _note     = Just a }
 setCodeLink p a = p { _codeLink = Just a }
 setDataLink p a = p { _dataLink = Just a }
+setBothLink p a = p { _bothLink = Just a }
 setPdfLink  p a = p { _pdfLink  = Just a }
 setAbstract p a = p { _abstract = Just a }
 

@@ -117,6 +117,9 @@ codeLink = span "pub-code-link" . (E.a "Code" !) . A.href . toValue
 dataLink :: String -> Html
 dataLink = span "pub-data-link" . (E.a "Data" !) . A.href . toValue
 
+bothLink :: String -> Html
+bothLink = span "pub-code-link pub-data-link" . (E.a "Code/Data" !) . A.href . toValue
+
 pdfLink :: String -> Html
 pdfLink = span "pub-pdf-link" . (E.a "PDF" !) . A.href . toValue
 
@@ -128,9 +131,20 @@ absLink key = span (toValue ("pub-abstract-link " ++ key))
 abstract :: String -> String -> Html
 abstract key txt = div (toValue ("pub-abstract " ++ key)) (preEscapedToMarkup txt)
 
-links :: String -> Maybe String -> Maybe String -> Maybe String -> Maybe String -> Html
-links k a p c d = box $ catMaybes
-    [fmap (const (absLink k)) a, fmap pdfLink p, fmap codeLink c, fmap dataLink d]
+links :: String
+      -> Maybe String
+      -> Maybe String
+      -> Maybe String
+      -> Maybe String
+      -> Maybe String
+      -> Html
+links k a p c d b = box $ catMaybes
+    [ fmap (const (absLink k)) a
+    , fmap pdfLink p
+    , fmap codeLink c
+    , fmap dataLink d
+    , fmap bothLink b
+    ]
   where box [] = ""
         box hs = span "pub-links" ((bracks . mconcat . intersperse ", ") hs)
 
@@ -141,7 +155,7 @@ paper p = div "pub-block" $ do
     div "pub-authors" $ authors (_authors p)
     div "pub-details" $ details p
     maybe "" note (_note p)
-    links key (_abstract p) (_pdfLink p) (_codeLink p) (_dataLink p)
+    links key (_abstract p) (_pdfLink p) (_codeLink p) (_dataLink p) (_bothLink p)
     maybe "" (abstract key) (_abstract p)
   where key = _key p
 
