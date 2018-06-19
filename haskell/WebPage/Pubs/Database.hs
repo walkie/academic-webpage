@@ -13,7 +13,7 @@ import WebPage.Pubs.Paper
 abbott       = author "Keeley" "Abbott"
 adelsberger  = author "Stephan" "Adelsberger"
 apel         = author "Sven" "Apel"
-atai         = author "Parisa" "Ataei"
+ataei        = author "Parisa" "Ataei"
 berger       = author "Thorsten" "Berger"
 bodden       = author "Eric" "Bodden"
 bogart       = author "Christopher" "Bogart"
@@ -148,7 +148,7 @@ popl18 = journal
 
 dbpl17 = workshop
   "dbpl17-variational-databases"
-  [atai,termehchy,walkingshaw]
+  [ataei,termehchy,walkingshaw]
   "Variational Databases"
   2017
   `onPages` PagesIn 11 1 4
