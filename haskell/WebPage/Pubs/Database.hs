@@ -82,8 +82,8 @@ vamos    = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Int
 
 -- ** Lists of papers in chronological order.
 
-drafts = [ppdp18]
-y18 = [icfp18,setta18,sigcse18,popl18]
+drafts = []
+y18 = [icfp18,ppdp18,setta18,poly18,sigcse18,popl18]
 y17 = [dbpl17,mutation17,vamos17]
 y16 = [fosd16,icsme16,ecoop16]
 y15 = [vlhcc15]
@@ -100,14 +100,6 @@ allPubs = concat [y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
 
 -- ** 2018
 
-ppdp18 = submitted Conference
-  "ppdp18-declarative-guis"
-  [adelsberger,setzer,walkingshaw]
-  "Declarative GUIs: Simple, Consistent, and Verified"
-  2018
-  `withNote` "Under review"
-  @@ ppdp
-
 icfp18 = accepted Journal
   "icfp18-casts-and-costs"
   [campora,chen,walkingshaw]
@@ -117,13 +109,30 @@ icfp18 = accepted Journal
   `withNote` "To appear (preprint coming soon)"
   @@ icfp 
 
+ppdp18 = submitted Conference
+  "ppdp18-declarative-guis"
+  [adelsberger,setzer,walkingshaw]
+  "Declarative GUIs: Simple, Consistent, and Verified"
+  2018
+  `withNote` "To appear (preprint coming soon)"
+  @@ ppdp
+
 setta18 = accepted Conference
   "setta18-verified-guis"
   [adelsberger,setzer,walkingshaw]
   "Developing GUI Applications in a Verified Setting"
   2018
+  `setCodeLink` "https://github.com/stephanpaper/SETTA18"
   `withNote` "To appear (preprint coming soon)"
   @@ setta `setPublisher` "Springer"
+
+poly18 = submitted Workshop
+  "poly18-heterogeneous-dbs-spls"
+  [ataei,termehchy,walkingshaw]
+  "Managing Structurally Heterogeneous Databases in Software Product Lines"
+  2018
+  `withNote` "To appear (preprint coming soon)"
+  @@ short "Poly" "VLDB Workshop on Polystores and Other Systems for Heterogeneous Data"
 
 sigcse18 = conference
   "sigcse18-algorithm-explanations"
