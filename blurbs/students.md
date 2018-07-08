@@ -16,7 +16,7 @@ Current weekly meeting time (Summer 2018): **Monday 11am** (KEC 3057)
 **Current students:**
 
  * [Ghadeer Al Kubaish](https://github.com/alkubaig), MS student
- * [Parisa Ataei](https://github.com/pataei), PhD candidate, co-advised with [Arash Termehchy](http://web.engr.oregonstate.edu/~termehca/)
+ * [Parisa Ataei](https://github.com/pataei), PhD candidate
  * [Sebastian Benjamin](http://people.oregonstate.edu/~benjamse/), undergraduate research
  * [Alex Grasley](https://github.com/agrasley), MS student
  * [Qiaoran Li](https://github.com/QiaoranChelsea), MS student
