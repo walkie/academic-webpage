@@ -100,21 +100,22 @@ allPubs = concat [y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
 
 -- ** 2018
 
-icfp18 = accepted Journal
+icfp18 = journal
   "icfp18-casts-and-costs"
   [campora,chen,walkingshaw]
   "Casts and Costs: Harmonizing Safety and Performance in Gradual Typing"
   2018
   `setCodeLink` "https://bitbucket.org/PeterCampora/castsandcostsartifact"
-  `withNote` "To appear (preprint coming soon)"
-  @@ icfp 
+  `onPages` PagesIn 98 1 30
+  @@ icfp `setVolume` 2
 
-ppdp18 = submitted Conference
+ppdp18 = accepted Conference
   "ppdp18-declarative-guis"
   [adelsberger,setzer,walkingshaw]
   "Declarative GUIs: Simple, Consistent, and Verified"
   2018
-  `withNote` "To appear (preprint coming soon)"
+  `setCodeLink` "https://github.com/stephanadelsb/PPDP18"
+  `onPages` PagesIn 4 1 15
   @@ ppdp
 
 setta18 = accepted Conference
@@ -123,16 +124,15 @@ setta18 = accepted Conference
   "Developing GUI Applications in a Verified Setting"
   2018
   `setCodeLink` "https://github.com/stephanpaper/SETTA18"
-  `withNote` "To appear (preprint coming soon)"
   @@ setta `setPublisher` "Springer"
 
-poly18 = submitted Workshop
+poly18 = accepted Workshop
   "poly18-heterogeneous-dbs-spls"
   [ataei,termehchy,walkingshaw]
   "Managing Structurally Heterogeneous Databases in Software Product Lines"
   2018
-  `withNote` "To appear (preprint coming soon)"
-  @@ short "Poly" "VLDB Workshop on Polystores and Other Systems for Heterogeneous Data"
+  @@ short "Poly" "VLDB Workshop: Polystores and Other Systems for Heterogeneous Data"
+  `setPublisher` "Springer"
 
 sigcse18 = conference
   "sigcse18-algorithm-explanations"
@@ -150,7 +150,7 @@ popl18 = journal
   2018
   `setCodeLink` "https://bitbucket.org/plcacs/popl18aec"
   `onPages` PagesIn 15 1 29
-  @@ popl `setVolume` 2 `setNumber` 15
+  @@ popl `setVolume` 2 
 
 
 -- ** 2017

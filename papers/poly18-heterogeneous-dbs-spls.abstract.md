@@ -8,8 +8,8 @@ query and/or analyze all variants in a SPL simultaneously. For example, a
 software vendor wants to perform common tests or inquiries over all variants.
 Unfortunately, there is no systematic approach to managing and querying data
 variations and users have to use their intuition to perform such tasks, often
-resorting to repeating a task for each variant. We introduce *VDBMS
-(Variational Database Management System)*, a system that provides a compact,
+resorting to repeating a task for each variant. We introduce *VDBMS*
+(Variational Database Management System), a system that provides a compact,
 expressive, and structured representation of variation in relational databases.
 In contrast to data integration systems that provide a unified representation
 for all data sources, VDBMS makes variations explicit in both the schema and
