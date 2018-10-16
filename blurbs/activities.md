@@ -2,9 +2,9 @@
 title: Activities
 ---
 
-I am an activist for the [United Academics of Oregon State
-University](http://uaosu.org). If you have any questions about our efforts to build a
-faculty union here at OSU, please shoot me an email. I'd love to talk!
+I am an organizer and activist for the [United Academics of Oregon State
+University](http://uaosu.org). If you have any questions about our new faculty
+union here at OSU, please shoot me an email. I'd love to talk!
 
 Recently, I organized and chaired the graduate consortium at [VL/HCC
 2017][VLHCC17], and organized and co-chaired several workshops: [FOSD

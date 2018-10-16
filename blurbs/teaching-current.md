@@ -2,4 +2,4 @@
 title: Current Teaching
 ---
 
-I am not teaching in Spring 2018!
+**[CS 581: Programming Languages I](teaching/cs581-fa18/)** (Fall 2018)
