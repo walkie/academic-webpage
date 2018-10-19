@@ -63,13 +63,18 @@ copyPapers = do
   match "papers/*.pdf" $ do
     route   idRoute
     compile copyFileCompiler
+  match "student-theses/*.pdf" $ do
+    route   idRoute
+    compile copyFileCompiler
   match "preprints/*.pdf" $ do
     route   idRoute
     compile copyFileCompiler
 
 loadAbstracts :: Rules ()
-loadAbstracts =
+loadAbstracts = do
   match "papers/*.abstract.md" $
+    compile pandocCompiler
+  match "student-theses/*.abstract.md" $
     compile pandocCompiler
 
 buildSitemap :: Rules ()

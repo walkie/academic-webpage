@@ -10,31 +10,39 @@ import WebPage.Pubs.Paper
 --
 
 -- ** Authors
+
+-- *** Me and my students
+walkingshaw  = author "Eric" "Walkingshaw"
 abbott       = author "Keeley" "Abbott"
+ataei        = author "Parisa" "Ataei"
+hubbard      = author "Spencer" "Hubbard"
+mcgirr       = Author "Michael" (Just "G.") "McGirr" Nothing
+meng         = author "Meng" "Meng"
+vandewetering   = author "Miles" "Van de Wetering"
+wu           = author "Shujin" "Wu"
+young        = author "Jeffrey" "Young"
+
+-- *** Other collaborators
 adelsberger  = author "Stephan" "Adelsberger"
 apel         = author "Sven" "Apel"
-ataei        = author "Parisa" "Ataei"
 berger       = author "Thorsten" "Berger"
 bodden       = author "Eric" "Bodden"
 bogart       = author "Christopher" "Bogart"
+erwig        = author "Martin" "Erwig"
 campora      = Author "John" (Just "Peter") "Campora" (Just "III")
 chen         = author "Sheng" "Chen"
-erwig        = author "Martin" "Erwig"
 gopinath     = author "Rahul" "Gopinath"
-hubbard      = author "Spencer" "Hubbard"
+grasley      = author "Alexander" "Grasley"
 kaestner     = author "Christian" "Kästner"
 le           = author "Duc" "Le"
 meinicke     = author "Jens" "Meinicke"
-meng         = author "Meng" "Meng"
 ostermann    = author "Klaus" "Ostermann"
 rendel       = author "Tillmann" "Rendel"
 setzer       = author "Anton" "Setzer"
 stanciulescu = author "Ștefan" "Stănciulescu"
 termehchy    = author "Arash" "Termehchy"
-walkingshaw  = author "Eric" "Walkingshaw"
 wasowski     = author "Andrzej" "Wąsowski"
 wong         = author "Chu-Pan" "Wong"
-young        = author "Jeffrey" "Young"
 
 -- ** Institutions
 osu = "Oregon State University"
@@ -472,3 +480,72 @@ vlhcc08dc = appeared Consortium
   2008
   `onPages` Pages 274 275
   @@ vlhccdc
+
+
+-- ** Student theses and reports
+
+studentTheses = [grasley18,mcgirr18,abbott17,ataei17,meng17,vandewetering17,wu17,hubbard16]
+
+grasley18 = thesis
+  "grasley-18-ms-thesis"
+  [grasley]
+  "Imperative Programming with Variational Effects"
+  2018
+  -- `atURL` ""
+  @@ venue osu `setVenueKind` "MS thesis"
+
+mcgirr18 = thesis
+  "mcgirr-18-ms-project"
+  [mcgirr]
+  "The Ownership Monad"
+  2018
+  `atURL` "https://ir.library.oregonstate.edu/concern/graduate_projects/f1881r94f"
+  @@ venue osu `setVenueKind` "MS project"
+
+abbott17 = thesis
+  "abbott-17-ms-thesis"
+  [abbott]
+  "Formative Work Toward a Mixed-Initiative Programming Language"
+  2017
+  `atURL` "https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/vx021k96h"
+  @@ venue osu `setVenueKind` "MS thesis"
+
+ataei17 = thesis
+  "ataei-17-ms-thesis"
+  [ataei]
+  "Principles of Variational Databases"
+  2017
+  -- `atURL` ""
+  @@ venue osu `setVenueKind` "MS thesis"
+
+meng17 = thesis
+  "meng-17-ms-thesis"
+  [meng]
+  "Implementation Techniques for Variational Data Structures"
+  2017
+  `atURL` "https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/1831cq46w"
+  @@ venue osu `setVenueKind` "MS thesis"
+
+vandewetering17 = thesis
+  "vandewetering-17-honors-thesis"
+  [vandewetering]
+  "View-Based Editing of Variational Code"
+  2017
+  `atURL` "https://ir.library.oregonstate.edu/concern/honors_college_theses/rx913r941"
+  @@ venue osu `setVenueKind` "Honors BS thesis"
+
+wu17 = thesis
+  "wu-17-ms-project"
+  [wu]
+  "A Template CoprHD Storage Driver Based on the Southbound SDK"
+  2017
+  `atURL` "https://ir.library.oregonstate.edu/concern/graduate_projects/ns0647074"
+  @@ venue osu `setVenueKind` "MS project"
+
+hubbard16 = thesis
+  "hubbard-16-ms-thesis"
+  [hubbard]
+  "A Formal Foundation for Variational Programming Using the Choice Calculus"
+  2016
+  -- `atURL` ""
+  @@ venue osu `setVenueKind` "MS thesis"

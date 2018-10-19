@@ -1,4 +1,3 @@
-
 module WebPage.Pubs.Paper where
 
 -- * Representation

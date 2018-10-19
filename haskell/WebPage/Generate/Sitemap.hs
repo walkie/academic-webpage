@@ -36,7 +36,7 @@ allPages = loadAll $ "pages/*.html" .||. "pages/*.md"
 
 -- | Matches all files to include.
 allFiles :: Compiler [Item CopyFile]
-allFiles = loadAll "papers/*.pdf"
+allFiles = loadAll ("papers/*.pdf" .||. "student-theses/*.pdf")
 
 
 -- * Interface

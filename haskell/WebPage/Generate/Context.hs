@@ -80,20 +80,24 @@ getNewsContext = do
 -- ** Publication context
 
 -- | Adds the PDF link if the file is present.
-linkPdf :: [Item CopyFile] -> Paper -> Paper
-linkPdf fs p
+linkPdf :: String -> [Item CopyFile] -> Paper -> Paper
+linkPdf pre fs p
     | Just _ <- lookupItem pdf fs = p `setPdfLink` ("/" ++ pdf)
     | otherwise = p
   where
-    pdf = "papers/" ++ _key p ++ ".pdf"
+    pdf = pre ++ _key p ++ ".pdf"
 
 -- | Add the abstract if the corresponding file is present.
-addAbstract :: [Item String] -> Paper -> Paper
-addAbstract fs p
+addAbstract :: String -> [Item String] -> Paper -> Paper
+addAbstract pre fs p
     | Just i <- lookupItem abs fs = p `setAbstract` itemBody i
     | otherwise = p
   where
-    abs = "papers/" ++ _key p ++ ".abstract.md"
+    abs = pre ++ _key p ++ ".abstract.md"
+
+-- | Adds the PDF link and abstract if the corresponding files are present.
+addAbstractPdf :: String -> [Item String] -> [Item CopyFile] -> Paper -> Paper
+addAbstractPdf pre txts pdfs = addAbstract pre txts . linkPdf pre pdfs
 
 -- | Build a list field of publications.
 pubListField :: String -> [Paper] -> Context String
@@ -106,13 +110,17 @@ pubFields p = constField (_key p) (pubStr p)
 -- | Build a context containing many fields related to publications.
 getPubContext :: Compiler (Context String)
 getPubContext = do
-    pdfs <- loadAll "papers/*.pdf"
-    txts <- loadAll "papers/*.abstract.md"
-    let pubs = map (addAbstract txts . linkPdf pdfs) allPubs
+    pubPdfs <- loadAll "papers/*.pdf"
+    pubTxts <- loadAll "papers/*.abstract.md"
+    sPdfs <- loadAll "student-theses/*.pdf"
+    sTxts <- loadAll "student-theses/*.abstract.md"
+    let pubs = map (addAbstractPdf "papers/" pubTxts pubPdfs) allPubs
+    let students = map (addAbstractPdf "student-theses/" sTxts sPdfs) studentTheses
     let pubListContext =
              pubListField "pubs"     pubs
           <> pubListField "journals" (ofKind Journal pubs)
           <> pubListField "chapters" (ofKind Chapter pubs)
           <> pubListField "theses"   (ofKind Thesis pubs)
           <> pubListField "conferences" (ofKinds [Conference,Workshop] pubs)
+          <> pubListField "student-theses" students
     return $ foldr (<>) pubListContext (map pubFields pubs)
