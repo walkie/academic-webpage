@@ -14,6 +14,8 @@ import Hakyll
 import WebPage.Generate.Base
 import WebPage.Pubs
 
+import Data.List (find)
+
 
 -- * Settings
 
@@ -82,18 +84,19 @@ getNewsContext = do
 -- | Adds the PDF link if the file is present.
 linkPdf :: String -> [Item CopyFile] -> Paper -> Paper
 linkPdf pre fs p
-    | Just _ <- lookupItem pdf fs = p `setPdfLink` ("/" ++ pdf)
+    | Just _ <- lookupItem source fs = p `setPdfLink` target
     | otherwise = p
   where
-    pdf = pre ++ _key p ++ ".pdf"
+    source = pre ++ show (_year p) ++ "/" ++ _key p ++ ".pdf"
+    target = "/" ++ pre ++ _key p ++ ".pdf"
 
 -- | Add the abstract if the corresponding file is present.
 addAbstract :: String -> [Item String] -> Paper -> Paper
 addAbstract pre fs p
-    | Just i <- lookupItem abs fs = p `setAbstract` itemBody i
+    | Just i <- lookupItem source fs = p `setAbstract` itemBody i
     | otherwise = p
   where
-    abs = pre ++ _key p ++ ".abstract.md"
+    source = pre ++ show (_year p) ++ "/" ++ _key p ++ ".abstract.md"
 
 -- | Adds the PDF link and abstract if the corresponding files are present.
 addAbstractPdf :: String -> [Item String] -> [Item CopyFile] -> Paper -> Paper
@@ -110,8 +113,8 @@ pubFields p = constField (_key p) (pubStr p)
 -- | Build a context containing many fields related to publications.
 getPubContext :: Compiler (Context String)
 getPubContext = do
-    pubPdfs <- loadAll "papers/*.pdf"
-    pubTxts <- loadAll "papers/*.abstract.md"
+    pubPdfs <- loadAll "papers/**.pdf"
+    pubTxts <- loadAll "papers/**.abstract.md"
     sPdfs <- loadAll "student-theses/*.pdf"
     sTxts <- loadAll "student-theses/*.abstract.md"
     let pubs = map (addAbstractPdf "papers/" pubTxts pubPdfs) allPubs

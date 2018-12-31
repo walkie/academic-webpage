@@ -52,15 +52,14 @@ copyFiles = do
     compile copyFileCompiler
   match (foldr1 (.||.) $ map fromGlob $
          ["images/*","js/*","css/*.css"]
-      ++ ["projects/**.pdf"]
       ++ ["teaching/**." ++ ext | ext <- ["hs","java","jpg","ml","pdf","pl","png","sml","txt","v","zip"]]) $ do
     route   idRoute
     compile copyFileCompiler
 
 copyPapers :: Rules ()
 copyPapers = do
-  match "papers/**/*.pdf" $ do
-    route   idRoute
+  match "papers/**.pdf" $ do
+    route   (gsubRoute "papers/.*/" (const "papers/"))
     compile copyFileCompiler
   match "student-theses/*.pdf" $ do
     route   idRoute
@@ -71,7 +70,7 @@ copyPapers = do
 
 loadAbstracts :: Rules ()
 loadAbstracts = do
-  match "papers/*.abstract.md" $
+  match "papers/**.abstract.md" $
     compile pandocCompiler
   match "student-theses/*.abstract.md" $
     compile pandocCompiler
