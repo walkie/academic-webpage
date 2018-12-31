@@ -8,7 +8,7 @@ author:         Eric Walkingshaw
 maintainer:     eric@walkingshaw.net
 category:       Web
 build-type:     Simple
-cabal-version:  >= 1.18
+cabal-version:  >= 1.22
 description:
   Statically generates my academic web page.
   Depends on the `lessc` tool for generating CSS: http://lesscss.org/
