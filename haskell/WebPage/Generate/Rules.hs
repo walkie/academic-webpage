@@ -61,8 +61,8 @@ copyPapers = do
   match "papers/**.pdf" $ do
     route   (gsubRoute "papers/.*/" (const "papers/"))
     compile copyFileCompiler
-  match "student-theses/*.pdf" $ do
-    route   idRoute
+  match "student-theses/**.pdf" $ do
+    route   (gsubRoute "student-theses/.*/" (const "student-theses/"))
     compile copyFileCompiler
   match "preprints/*.pdf" $ do
     route   idRoute
@@ -72,7 +72,7 @@ loadAbstracts :: Rules ()
 loadAbstracts = do
   match "papers/**.abstract.md" $
     compile pandocCompiler
-  match "student-theses/*.abstract.md" $
+  match "student-theses/**.abstract.md" $
     compile pandocCompiler
 
 buildSitemap :: Rules ()

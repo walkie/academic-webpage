@@ -115,8 +115,8 @@ getPubContext :: Compiler (Context String)
 getPubContext = do
     pubPdfs <- loadAll "papers/**.pdf"
     pubTxts <- loadAll "papers/**.abstract.md"
-    sPdfs <- loadAll "student-theses/*.pdf"
-    sTxts <- loadAll "student-theses/*.abstract.md"
+    sPdfs <- loadAll "student-theses/**.pdf"
+    sTxts <- loadAll "student-theses/**.abstract.md"
     let mine = map (addAbstractPdf "papers/" pubTxts pubPdfs) myPubs
     let students = map (addAbstractPdf "student-theses/" sTxts sPdfs) studentTheses
     let pubListContext =
