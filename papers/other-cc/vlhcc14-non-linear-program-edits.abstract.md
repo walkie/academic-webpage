@@ -1,0 +1,1 @@
+We present a visual notation to support the understanding and reasoning about program edits. The graph-based representation directly supports a number of editing operations beyond those offered by a typical, linear program-edit model and makes obvious otherwise hidden states the code can reach through selectively undoing or redoing changes.

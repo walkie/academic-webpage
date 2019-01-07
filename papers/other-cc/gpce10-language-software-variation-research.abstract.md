@@ -1,0 +1,2 @@
+Managing variation is an important problem in software engineering that takes different forms, ranging from version control and configuration management to software product lines. In this paper, I present our recent work on the choice calculus, a fundamental representation for software variation that can serve as a common language of discourse for variation research, filling a role similar to lambda calculus in programming language research. After motivating the design of the choice calculus and sketching its semantics, I will discuss several potential application areas.
+
