@@ -117,13 +117,13 @@ getPubContext = do
     pubTxts <- loadAll "papers/**.abstract.md"
     sPdfs <- loadAll "student-theses/*.pdf"
     sTxts <- loadAll "student-theses/*.abstract.md"
-    let pubs = map (addAbstractPdf "papers/" pubTxts pubPdfs) allPubs
+    let mine = map (addAbstractPdf "papers/" pubTxts pubPdfs) myPubs
     let students = map (addAbstractPdf "student-theses/" sTxts sPdfs) studentTheses
     let pubListContext =
-             pubListField "pubs"     pubs
-          <> pubListField "journals" (ofKind Journal pubs)
-          <> pubListField "chapters" (ofKind Chapter pubs)
-          <> pubListField "theses"   (ofKind Thesis pubs)
-          <> pubListField "conferences" (ofKinds [Conference,Workshop] pubs)
+             pubListField "pubs"     mine
+          <> pubListField "journals" (ofKind Journal mine)
+          <> pubListField "chapters" (ofKind Chapter mine)
+          <> pubListField "theses"   (ofKind Thesis mine)
+          <> pubListField "conferences" (ofKinds [Conference,Workshop] mine)
           <> pubListField "student-theses" students
-    return $ foldr (<>) pubListContext (map pubFields pubs)
+    return $ foldr (<>) pubListContext (map pubFields mine)

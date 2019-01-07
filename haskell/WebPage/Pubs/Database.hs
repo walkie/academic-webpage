@@ -1,5 +1,7 @@
 {-# LANGUAGE PatternGuards, TupleSections #-}
 
+-- | Contains all of my publications + any other papers to appear on
+--   choicecalculus.org.
 module WebPage.Pubs.Database where
 
 import WebPage.Pubs.Paper
@@ -12,37 +14,43 @@ import WebPage.Pubs.Paper
 -- ** Authors
 
 -- *** Me and my students
-walkingshaw  = author "Eric" "Walkingshaw"
-abbott       = author "Keeley" "Abbott"
-ataei        = author "Parisa" "Ataei"
-hubbard      = author "Spencer" "Hubbard"
-mcgirr       = Author "Michael" (Just "G.") "McGirr" Nothing
-meng         = author "Meng" "Meng"
-vandewetering   = author "Miles" "Van de Wetering"
-wu           = author "Shujin" "Wu"
-young        = author "Jeffrey" "Young"
+walkingshaw   = author "Eric" "Walkingshaw"
+abbott        = author "Keeley" "Abbott"
+ataei         = author "Parisa" "Ataei"
+hubbard       = author "Spencer" "Hubbard"
+mcgirr        = Author "Michael" (Just "G.") "McGirr" Nothing
+meng          = author "Meng" "Meng"
+vandewetering = author "Miles" "Van de Wetering"
+wu            = author "Shujin" "Wu"
+young         = author "Jeffrey" "Young"
+
+-- *** Martin and his students
+erwig         = author "Martin" "Erwig"
+le            = author "Duc" "Le"
+smeltzer      = author "Karl" "Smeltzer"
+xu            = author "Keying" "Xu"
+
+-- *** Sheng and his students
+chen          = author "Sheng" "Chen"
+campora       = Author "John" (Just "Peter") "Campora" (Just "III")
 
 -- *** Other collaborators
-adelsberger  = author "Stephan" "Adelsberger"
-apel         = author "Sven" "Apel"
-berger       = author "Thorsten" "Berger"
-bodden       = author "Eric" "Bodden"
-bogart       = author "Christopher" "Bogart"
-erwig        = author "Martin" "Erwig"
-campora      = Author "John" (Just "Peter") "Campora" (Just "III")
-chen         = author "Sheng" "Chen"
-gopinath     = author "Rahul" "Gopinath"
-grasley      = author "Alexander" "Grasley"
-kaestner     = author "Christian" "Kästner"
-le           = author "Duc" "Le"
-meinicke     = author "Jens" "Meinicke"
-ostermann    = author "Klaus" "Ostermann"
-rendel       = author "Tillmann" "Rendel"
-setzer       = author "Anton" "Setzer"
-stanciulescu = author "Ștefan" "Stănciulescu"
-termehchy    = author "Arash" "Termehchy"
-wasowski     = author "Andrzej" "Wąsowski"
-wong         = author "Chu-Pan" "Wong"
+adelsberger   = author "Stephan" "Adelsberger"
+apel          = author "Sven" "Apel"
+berger        = author "Thorsten" "Berger"
+bodden        = author "Eric" "Bodden"
+bogart        = author "Christopher" "Bogart"
+gopinath      = author "Rahul" "Gopinath"
+grasley       = author "Alexander" "Grasley"
+kaestner      = author "Christian" "Kästner"
+meinicke      = author "Jens" "Meinicke"
+ostermann     = author "Klaus" "Ostermann"
+rendel        = author "Tillmann" "Rendel"
+setzer        = author "Anton" "Setzer"
+stanciulescu  = author "Ștefan" "Stănciulescu"
+termehchy     = author "Arash" "Termehchy"
+wasowski      = author "Andrzej" "Wąsowski"
+wong          = author "Chu-Pan" "Wong"
 
 -- ** Institutions
 osu = "Oregon State University"
@@ -88,7 +96,7 @@ vamos    = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Int
 -- * Papers
 --
 
--- ** Lists of papers in chronological order.
+-- ** List of my papers in chronological order.
 
 drafts = []
 y18 = [icfp18,ppdp18,setta18,poly18,sigcse18,popl18]
@@ -102,8 +110,14 @@ y11 = [msthesis,vlhcc11,dsl11,sle11,tosem11]
 y10 = [foser10,vlhcc10,vlhcc10dc,qual]
 y09 = [vlhcc09,idetc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
+myPubs = concat [y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
 
-allPubs = concat [y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
+
+-- ** Papers for choicecalculus.org
+
+ccCore = []
+ccApps = []
+ccData = []
 
 
 -- ** 2018
