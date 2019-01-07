@@ -11,6 +11,7 @@ title: Teaching
 
 ## Past Courses
 
+  * Fall 2018 -- CS 581: Programming Languages I
   * Winter 2018 -- CS 381 Programming Language Fundamentals
   * Fall 2017 -- CS 581: Programming Languages I
   * Spring 2017 -- [CS 589 Special Topics in Programming Languages – Modularity](teaching/cs589-sp17)
