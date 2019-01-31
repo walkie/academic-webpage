@@ -146,6 +146,7 @@ setta18 = accepted Conference
   "Developing GUI Applications in a Verified Setting"
   2018
   `setCodeLink` "https://github.com/stephanpaper/SETTA18"
+  `onPages` Pages 89 107
   @@ setta `setPublisher` "Springer"
 
 poly18 = accepted Workshop
