@@ -17,21 +17,24 @@ following facts:
 
  * Your classmates come from a variety of cultural, economic, and educational
    backgrounds. Something that is obvious to you may not be obvious to them.
+ 
  * Your classmates are human beings with intelligence and emotions. This
-   applies even when one or the other of you is posting anonymously on Piazza.
+   applies even when one or the other of you is posting anonymously on Canvas,
+   Piazza, or Campuswire.
+ 
  * Your classmates are here to learn. They have the right to pursue their
    education without being distracted by others' disruptive behavior, or made
    uncomfortable by inappropriate jokes or unwanted sexual interest.
 
-If each of us remembers these facts and act with corresponding decency,
+If each of us remembers these facts and acts with corresponding decency,
 respect, and professionalism, the course will certainly be better for everyone.
 
 Some students might be inclined to shrug this off and perhaps crack a joke
 about safe spaces or political correctness. If that's you, please also know
-that if you make a fellow student uncomfortable by mocking them, making
-inappropriate jokes, or making unwanted advances, that is *harassment* and will
-be taken seriously. (If you are a victim of harassment, please see the brief
-[list of resources](#resources) at the bottom of this page.)
+that if you make a fellow student uncomfortable through bullying, inappropriate
+jokes, or unwanted advances, that is *harassment* and will be taken seriously.
+(If you are a victim of harassment, please see the brief [list of
+resources](#resources) at the bottom of this page.)
 
 However, I hope that we can all approach this positively. Treat your classmates
 as respected colleagues, support each other when needed, have fun without
@@ -47,15 +50,16 @@ computer science jobs pay well and underrepresented groups correlate with
 historically economically disadvantaged groups, reducing opportunity for upward
 mobility. Part of this complicated problem is that underrepresented groups
 leave computer science programs at a higher rate, and [evidence
-shows][Retention] that this is a result of environmental conditions. I hope
-that our efforts in this course can help to improve this situation, in some
-small way, rather than make it worse.
+shows][Retention] that this is a result of environmental conditions (i.e.
+students drop out because they feel unwelcome in their computer science
+courses). I hope that our efforts in this course can help to improve this
+situation, in some small way, rather than make it worse.
 
 Many open source projects, companies, and professional societies have
-recognized that the lack of diversity amongst contributors is a problem since
+recognized that the lack of diversity among contributors is a problem since
 they miss out on ideas, perspectives, and contributions from underrepresented
 groups. To address this, they have established community guidelines and codes
-of conduct to support communities that are more welcoming to new and diverse
+of conduct to build communities that are more welcoming to new and diverse
 contributors. Here are a few examples that I recommend reading:
 
  * [Contributor Covenant][Covenant]: a code of conduct shared by many open
@@ -66,9 +70,9 @@ contributors. Here are a few examples that I recommend reading:
  * [Apple Inclusion and Diversity Statement][Apple]
  * [Google Diversity Statement][Google]
  * [Microsoft Global Diversity and Inclusion Statement][Microsoft]
- * [ACM Code of Conduct][ACM]
+ * [ACM Code of Ethics and Professional Conduct][ACM]
 
-Note that promoting diversity is also a [core value of Oregon State
+Note that promoting inclusion and diversity is also a [core value of Oregon State
 University][OSU] and a [goal of the College of Engineering][COE].
 
 
@@ -77,17 +81,19 @@ University][OSU] and a [goal of the College of Engineering][COE].
 If you are the victim of harassment in this class, there are several resources
 available to you:
 
- * You may schedule a private meeting to talk to me.
+ * You may schedule a private meeting to talk to me. I will do whatever I can
+   to help you, but please note that I am [required to report][Report] any
+   sexual misconduct or discrimination that I'm made aware of.
+   
  * You may contact the [University Ombuds Office][Ombud] for confidential
    guidance and advice.
+ 
  * You may contact the [Office of Equal Opportunity and Access][EOA] to file an
    informal or formal complaint.
 
 You may also want to read OSU's policies on [bullying][Bullying] and on [sexual
 harassment and misconduct][SexualHarassment].
 
-
-<br>
 
 [Covenant]: http://contributor-covenant.org/
 [Mozilla]: https://www.mozilla.org/en-US/about/governance/policies/participation/
@@ -96,12 +102,13 @@ harassment and misconduct][SexualHarassment].
 [Apple]: http://www.apple.com/diversity/
 [Google]: https://www.google.com/diversity/
 [Microsoft]: https://www.microsoft.com/en-us/diversity/
-[ACM]: http://www.acm.org/sigs/volunteer_resources/officers_manual/code%20of%20conduct
+[ACM]: https://ethics.acm.org/code-of-ethics/
 
 [Retention]: http://dl.acm.org/citation.cfm?id=374367
-[OSU]: http://leadership.oregonstate.edu/provost/osu-strategic-plan
+[OSU]: https://leadership.oregonstate.edu/strategic-plan/
 [COE]: http://engineering.oregonstate.edu/coe-strategic-plan
 
+[Report]: https://policy.oregonstate.edu/UPSM/05-005_responsible_employees
 [Ombud]: http://oregonstate.edu/ombuds/
 [EOA]: http://eoa.oregonstate.edu/
 [Bullying]: http://eoa.oregonstate.edu/bullying-policy

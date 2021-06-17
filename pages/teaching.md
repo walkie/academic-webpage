@@ -11,10 +11,17 @@ title: Teaching
 
 ## Past Courses
 
+  * Winter 2021 -- [CS 381: Programming Language Fundamentals](teaching/cs381-wi21/)
+  * Fall 2020 -- [CS 581: Programming Languages I](teaching/cs581-fa20/)
+  * Spring 2020 -- CS 583: Advanced Functional Programming
+  * Winter 2020 -- CS 381: Programming Language Fundamentals
+  * Fall 2019 -- CS 581: Programming Languages I
+  * Spring 2019 -- [CS 589: Special Topics in Programming Languages -- Modularity](teaching/cs589-sp19/)
+  * Winter 2019 -- CS 381: Programming Language Fundamentals
   * Fall 2018 -- CS 581: Programming Languages I
   * Winter 2018 -- CS 381 Programming Language Fundamentals
   * Fall 2017 -- CS 581: Programming Languages I
-  * Spring 2017 -- [CS 589 Special Topics in Programming Languages – Modularity](teaching/cs589-sp17)
+  * Spring 2017 -- CS 589 Special Topics in Programming Languages – Modularity
   * Winter 2017 -- CS 381: Programming Language Fundamentals 
   * Fall 2016 -- CS 581: Programming Languages I
   * Spring 2016 -- CS 583: Advanced Functional Programming

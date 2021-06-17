@@ -2,11 +2,16 @@
 title: Current Students
 ---
 
- * [Ghadeer Al Kubaish](https://github.com/alkubaig), MS student
+#### Graduate students
+
  * [Parisa Ataei](https://github.com/pataei), PhD candidate
- * [Sebastian Benjamin](http://people.oregonstate.edu/~benjamse/), undergraduate research
- * [Qiaoran Li](https://github.com/QiaoranChelsea), MS student
- * [Spencer Mitchell](https://smitchell556.github.io/), RELU student
- * Nasrin Sanati, MS student
- * Caleb Wilson, STEM Leaders student
- * [Jeff Young](https://github.com/doyougnu), PhD student
+ * Fariba Khan, PhD candidate
+ * [Jeff Young](https://github.com/doyougnu), PhD candidate
+
+#### Undergraduate students
+
+ * [Sebastian Benjamin](http://people.oregonstate.edu/~benjamse/), Honors thesis
+ * Margaret Walters, Honors thesis
+<!--
+ * Caleb Wilson, STEM Leaders
+-->

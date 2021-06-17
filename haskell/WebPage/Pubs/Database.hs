@@ -16,13 +16,16 @@ import WebPage.Pubs.Paper
 -- *** Me and my students
 walkingshaw   = author "Eric" "Walkingshaw"
 abbott        = author "Keeley" "Abbott"
+alkubaish     = author "Ghadeer" "Alkubaish"
 ataei         = author "Parisa" "Ataei"
+grasley       = author "Alexander" "Grasley"
 hubbard       = author "Spencer" "Hubbard"
+li            = author "Qiaoran" "Li"
 mcgirr        = Author "Michael" (Just "G.") "McGirr" Nothing
 meng          = author "Meng" "Meng"
 vandewetering = author "Miles" "Van de Wetering"
 wu            = author "Shujin" "Wu"
-young         = author "Jeffrey" "Young"
+young         = Author "Jeffrey" (Just "M.") "Young" Nothing
 
 -- *** Martin and his students
 erwig         = author "Martin" "Erwig"
@@ -41,7 +44,6 @@ berger        = author "Thorsten" "Berger"
 bodden        = author "Eric" "Bodden"
 bogart        = author "Christopher" "Bogart"
 gopinath      = author "Rahul" "Gopinath"
-grasley       = author "Alexander" "Grasley"
 kaestner      = author "Christian" "Kästner"
 meinicke      = author "Jens" "Meinicke"
 ostermann     = author "Klaus" "Ostermann"
@@ -49,6 +51,7 @@ rendel        = author "Tillmann" "Rendel"
 setzer        = author "Anton" "Setzer"
 stanciulescu  = author "Ștefan" "Stănciulescu"
 termehchy     = author "Arash" "Termehchy"
+thuem         = author "Thomas" "Thüm"
 wasowski      = author "Andrzej" "Wąsowski"
 wong          = author "Chu-Pan" "Wong"
 
@@ -81,6 +84,8 @@ ppdp   = short "PPDP" "ACM SIGPLAN Int. Symp. on Principles and Practice of Decl
 setta  = short "SETTA" "Int. Symp. on Dependable Software Engineering: Theories, Tools, and Applications"
 sigcse = short "SIGCSE" "ACM SIGCSE Technical Symp. on Computer Science Education"
 sle    = short "SLE" "ACM SIGPLAN Int. Conf. on Software Language Engineering"
+splc   = short "SPLC" "ACM SIGSOFT Int. Systems and Software Product Line Conf."
+vamosc = short "VaMoS" "Int. Working Conf. on Variability Modelling of Software-Intensive Systems"
 vlhcc  = short "VL/HCC" "IEEE Int. Symp. on Visual Languages and Human-Centric Computing"
 vlhccdc | Just s <- _shortName vlhcc = short s ("Doctoral Consortium at " ++ _longName vlhcc)
 
@@ -90,6 +95,7 @@ fosd     = short "FOSD" "Int. Workshop on Feature-Oriented Software Development"
 foser    = short "FoSER" "ACM SIGSOFT Workshop on the Future of Software Engineering Research"
 mutation = short "Mutation" "Int. Workshop on Mutation Analysis"
 vamos    = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Intensive Systems"
+varivol  = short "VariVolution" "Int. Workshop on Variability and Evolution of Software-Intensive Systems"
 
 
 --
@@ -99,6 +105,9 @@ vamos    = short "VaMoS" "Int. Workshop on Variability Modelling of Software-Int
 -- ** List of my papers in chronological order.
 
 drafts = []
+y21 = [vamos21]
+y20 = [splc20]
+y19 = [vv19]
 y18 = [icfp18,ppdp18,setta18,poly18,sigcse18,popl18]
 y17 = [dbpl17,mutation17,vamos17]
 y16 = [fosd16,icsme16,ecoop16]
@@ -110,7 +119,7 @@ y11 = [msthesis,vlhcc11,dsl11,sle11,tosem11]
 y10 = [foser10,vlhcc10,vlhcc10dc,qual]
 y09 = [vlhcc09,idetc09,jfp09,dsl09a,dsl09b]
 y08 = [vlhcc08,vlhcc08dc]
-myPubs = concat [y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
+myPubs = concat [y21,y20,y19,y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
 
 
 -- ** Papers for choicecalculus.org
@@ -118,6 +127,40 @@ myPubs = concat [y18,y17,y16,y15,y14,y13,y12,y11,y10,y09,y08]
 ccCore = []
 ccApps = []
 ccData = []
+
+
+-- ** 2021
+
+vamos21 = accepted Conference
+  "vamos21-variation-in-databases"
+  [ataei,li,walkingshaw]
+  "Should Variation Be Encoded Explicitly in Databases?"
+  2021
+  @@ vamosc
+
+
+-- ** 2020
+
+splc20 = conference
+  "splc20-variational-sat"
+  [young,walkingshaw,thuem]
+  "Variational Satisfiability Solving"
+  2020
+  `onPages` PagesIn 18 1 12
+  @@ splc
+
+
+-- ** 2019
+
+vv19 = workshop
+  "varivolution19-variation-in-time-and-space"
+  [thuem, author "Leopoldo" "Teixeira", author "Klaus" "Schmid", walkingshaw,
+   author "Mukelabai" "Mukelabai", author "Mahsa" "Varshosaz",
+   author "Goetz" "Botterweck", author "Ina" "Schaefer", author "Timo" "Kehrer"]
+  "Toward Efficient Analysis of Variation in Time and Space"
+  2019
+  `onPages` Pages 57 64
+  @@ varivol
 
 
 -- ** 2018
@@ -131,7 +174,7 @@ icfp18 = journal
   `onPages` PagesIn 98 1 30
   @@ icfp `setVolume` 2
 
-ppdp18 = accepted Conference
+ppdp18 = conference
   "ppdp18-declarative-guis"
   [adelsberger,setzer,walkingshaw]
   "Declarative GUIs: Simple, Consistent, and Verified"
@@ -140,7 +183,7 @@ ppdp18 = accepted Conference
   `onPages` PagesIn 4 1 15
   @@ ppdp
 
-setta18 = accepted Conference
+setta18 = conference
   "setta18-verified-guis"
   [adelsberger,setzer,walkingshaw]
   "Developing GUI Applications in a Verified Setting"
@@ -149,7 +192,7 @@ setta18 = accepted Conference
   `onPages` Pages 89 107
   @@ setta `setPublisher` "Springer"
 
-poly18 = accepted Workshop
+poly18 = workshop
   "poly18-heterogeneous-dbs-spls"
   [ataei,termehchy,walkingshaw]
   "Managing Structurally Heterogeneous Databases in Software Product Lines"
@@ -499,14 +542,30 @@ vlhcc08dc = appeared Consortium
 
 -- ** Student theses and reports
 
-studentTheses = [grasley18,mcgirr18,abbott17,ataei17,meng17,vandewetering17,wu17,hubbard16]
+studentTheses = [alkubaish20,li19,grasley18,mcgirr18,abbott17,ataei17,meng17,vandewetering17,wu17,hubbard16]
+
+alkubaish20 = thesis
+  "alkubaish-20-ms-thesis"
+  [alkubaish]
+  "Integrating Side Effects in Variational Programs Using Algebraic Effects"
+  2020
+  `atURL` "https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/0k225j366"
+  @@ venue osu `setVenueKind` "MS thesis"
+
+li19 = thesis
+  "li-19-ms-project"
+  [li]
+  "Application of the Variational Database Management System to Schema Evolution and Software Product Lines"
+  2019
+  `atURL` "https://ir.library.oregonstate.edu/concern/graduate_projects/hd76s6046"
+  @@ venue osu `setVenueKind` "MS project"
 
 grasley18 = thesis
   "grasley-18-ms-thesis"
   [grasley]
   "Imperative Programming with Variational Effects"
   2018
-  -- `atURL` ""
+  `atURL` "https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/z890s066h"
   @@ venue osu `setVenueKind` "MS thesis"
 
 mcgirr18 = thesis
@@ -562,5 +621,5 @@ hubbard16 = thesis
   [hubbard]
   "A Formal Foundation for Variational Programming Using the Choice Calculus"
   2016
-  -- `atURL` ""
+  `atURL` "https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/8p58ph92j"
   @@ venue osu `setVenueKind` "MS thesis"

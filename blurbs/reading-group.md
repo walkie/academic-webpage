@@ -13,7 +13,7 @@ If you're interested in programming languages, you're welcome to join too! Just
 send me an email so we know to expect you and so I can send you the paper to
 read in advance.
 
-Current weekly meeting time (Winter 2019): **Wednesday 1pm, KEC 3114**
+Current weekly meeting time (Spring 2020): **Friday 1pm, Zoom**
 
 <!-- 
  * Research talks: **Tuesday 2-3pm** (KEC 3057)

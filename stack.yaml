@@ -1,4 +1,4 @@
 # Stack configuration file:
 # http://docs.haskellstack.org/en/stable/yaml_configuration/
 
-resolver: lts-12.26
+resolver: lts-16.0

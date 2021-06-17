@@ -2,4 +2,4 @@
 title: Current Teaching
 ---
 
-**[CS 381: Programming Languages Fundamentals](teaching/cs381-wi19/)** (Winter 2019)
+**[CS 583: Advanced Functional Programming](teaching/cs583-sp21/)** (Spring 2021)
