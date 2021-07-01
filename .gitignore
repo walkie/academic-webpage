@@ -5,4 +5,5 @@ cabal.sandbox.config
 dist
 preprints
 scratch
+stack.yaml.lock
 Session.vim
