@@ -8,10 +8,13 @@ function setEmail() {
   var osu  = '&#64;&#111;&#114;&#101;&#103;&#111;&#110;&#115;&#116;&#97;&#116;&#101;&#46;&#101;&#100;&#117;';
   var osuList = '&#64;&#101;&#110;&#103;&#114;&#46;&#111;&#114;&#115;&#116;&#46;&#101;&#100;&#117;';
   var marburg = '&#64;&#105;&#110;&#102;&#111;&#114;&#109;&#97;&#116;&#105;&#107;&#46;&#117;&#110;&#105;&#45;&#109;&#97;&#114;&#98;&#117;&#114;&#103;&#46;&#100;&#101;';
+  var gmailUser = '\u0077\u0061\u006c\u006b\u0069\u006e\u0067\u0073\u0068\u0061\u0077\u002e\u0065\u0072\u0069\u0063'
+  var gmailDomain = '\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d'
 
   // insert my email address
   $('.osu-email').html(mailTo(user + osu));
   $('.marburg-email').html(mailTo(user + marburg));
+  $('.gmail-email').html(mailTo(gmailUser + gmailDomain));
   
   // insert OSU mailing list address
   $('.osu-mailing-list')
